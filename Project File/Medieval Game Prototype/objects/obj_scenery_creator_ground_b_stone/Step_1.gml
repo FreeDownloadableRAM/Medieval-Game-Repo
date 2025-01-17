@@ -1,0 +1,1 @@
+middle_ground = obj_ground_b_stone; 

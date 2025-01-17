@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_msc_03_liberty_awaits",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":0,
+  "conversionMode":0,
+  "duration":181.42719,
+  "name":"snd_msc_03_liberty_awaits",
+  "parent":{
+    "name":"gr_battle_music",
+    "path":"folders/Sounds/gr_debug/gr_music/gr_battle_music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_msc_03_liberty_awaits.wav",
+  "type":0,
+  "volume":1.0,
+}

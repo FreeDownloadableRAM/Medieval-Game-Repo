@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_msc_02_medieval_warfare_loopable",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":0,
+  "conversionMode":0,
+  "duration":121.306,
+  "name":"snd_msc_02_medieval_warfare_loopable",
+  "parent":{
+    "name":"gr_battle_music",
+    "path":"folders/Sounds/gr_debug/gr_music/gr_battle_music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_msc_02_medieval_warfare_loopable.wav",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,0 +1,206 @@
+/// Here is what we run when the game begins
+// This will be on the room before entering the main menu
+
+
+// Dev Globals
+global.dev_mode = false;
+
+// Pausing
+global.is_game_paused = false;
+
+// Global world characteristics
+global.gravity_value = 9.8;
+
+// Player room tracker, are we in a menu? this will help us keep track
+// this will be set to true whenever we are put into a menu room
+global.is_player_in_menu = false
+
+// Game Room Dimensions
+global.game_room_top_value = 0;
+global.game_room_bottom_value = 512;
+global.game_room_left_value = 0;
+global.game_room_top_value = 2048;
+
+global.current_map_size_x = 3456; // 3456 is medium
+global.current_map_size_y = 864; // 756 is height, which is always the same
+
+// Spawning constants
+global.left_side_spawn_offset_x = -128;
+
+global.right_side_spawn_offset_x = 128;
+global.spawn_height = 704;
+
+// Variables AI Use to help with navigating
+global.player_king_x_location = 0;
+global.enemy_king_x_location = 0;
+
+// AI Trackers
+// player ai trackers
+global.player_unit_count = 0;
+global.player_unit_count_enemy = 0;
+
+global.player_sm_count = 0;
+global.player_pm_count = 0;
+global.player_rg_count = 0;
+global.player_kn_count = 0;
+global.player_ab_count = 0;
+global.player_hb_count = 0;
+global.player_mg_count = 0;
+global.player_cp_count = 0;
+global.player_nc_count = 0;
+global.player_gh_count = 0;
+
+// enemy unit ai trackers
+global.enemy_sm_count = 0;
+global.enemy_pm_count = 0;
+global.enemy_rg_count = 0;
+global.enemy_kn_count = 0;
+global.enemy_ab_count = 0;
+global.enemy_hb_count = 0;
+global.enemy_mg_count = 0;
+global.enemy_cp_count = 0;
+global.enemy_nc_count = 0;
+global.enemy_gh_count = 0;
+
+// AI training timers
+global.ai_train_delay_sm = 3; // These are in seconds
+global.ai_train_delay_pm = 5;
+global.ai_train_delay_rg = 7;
+global.ai_train_delay_kn = 10;
+global.ai_train_delay_ab = 12;
+global.ai_train_delay_hb = 15;
+global.ai_train_delay_mg = 25;
+global.ai_train_delay_cp = 45;
+global.ai_train_delay_nc = 60;
+
+// Economic Trackers
+global.player_gold_gen = 5; // default is 5
+global.player_gold_amount = 75;
+global.player_gold_start_amount = 125; // 125 is default
+global.player_gold_cap = 10000;
+
+global.enemy_gold_gen = 5;
+global.enemy_gold_amount = 75;
+global.enemy_gold_start_amount = 125;
+global.enemy_gold_cap = 10000;
+
+// Global Economy variables
+// formula for these values are:
+// formula in algebriac form is 25x + 5x^{3}+5
+// 75, 105, 165, 285, 495, 825, 1305
+global.econ_up_cost_lv_0 = 75;
+global.econ_up_cost_lv_1 = 105;
+global.econ_up_cost_lv_2 = 165;
+global.econ_up_cost_lv_3 = 285;
+global.econ_up_cost_lv_4 = 495;
+global.econ_up_cost_lv_5 = 825;
+global.econ_up_cost_lv_6 = 1305;
+
+
+// Military Trackers
+global.player_unit_cap = 50;
+global.enemy_unit_cap = 50; 
+
+
+// Order 
+global.player_order = 1; // 0 = retreat, 1 = defend / hold, 2 = attack
+global.enemy_order = 0; // 0 = retreat, 1 = defend / hold, 2 = attack / 3 = force idle only
+
+// go to the next room
+alarm_set(0,180);
+
+// Unit Constants
+// Swordman
+global.swordman_atk = 20; 
+global.swordman_atk_duration = 60;
+global.unit_swordman_cost = 10;
+
+// Pikeman
+global.pikeman_atk = 30; // 16 is default, but for testing purposes, lets make it faster
+global.pikeman_atk_duration = 60;
+global.unit_pikeman_cost = 25;
+
+// Ranger
+global.ranger_atk = 35; 
+global.ranger_atk_duration = (73/9) * 60;
+global.unit_ranger_cost = 75;
+global.ranger_arrow_weight = 0.008; // kg
+global.ranger_arrow_initial_velocity = 40; // 128 pixels per second
+
+// Knight
+global.knight_atk = 75; 
+global.knight_atk_duration = 180;
+global.unit_knight_cost = 125;
+
+// Arbalest
+global.arbalest_atk = 30; 
+global.arbalest_atk_duration = (32/12) * 60; //32 frames. 12 fps, 60 fps
+global.unit_arbalest_cost = 175;
+global.arbalest_bolt_weight = 0.005; // kg
+global.arbalest_bolt_initial_velocity = 32; // 128 pixels per second
+
+// Halberd
+global.halberd_atk_slash = 60; 
+global.halberd_atk_thrust = 90; 
+global.halberd_atk_duration = (42/14) * 60; //42 frames. 14 fps, 60 fps
+global.unit_halberd_cost = 250;
+
+// Magician
+global.magician_atk = 1; // hits every frame
+global.magician_atk_duration = (20/12) * 60; //20 frames. 12 fps, 60 fps
+global.unit_magician_cost = 1250;
+
+// Catapult
+global.catapult_atk = 250; 
+global.catapult_atk_duration = (28/6) * 60;
+global.unit_catapult_cost = 1500;
+global.catapult_proj_weight = 0.25; // kg
+global.catapult_proj_initial_velocity = 8.5; // 32 pixels per second
+
+// necromancer
+global.necromancer_projectile_speed = 4;
+global.necromancer_atk = 15; // hits every frame
+global.necromancer_atk_duration = (16/8) * 60; //16 frames. 8 fps, 60 fps
+global.unit_necromancer_cost = 2000;
+
+// ghoul
+global.ghoul_atk = 25; // hits every frame
+global.ghoul_atk_duration = (7/12) * 60; //7 frames. 12 fps, 60 fps
+
+// Castle Properties
+global.player_castle_health = 2500;
+global.starting_player_castle_health = 2500;
+global.player_castle_health_enemy = 2500;
+global.starting_player_castle_health_enemy = 2500;
+
+// Map properties
+//global.ground_tile = obj_ground_b_stone; // sand and bricks is large (x: 128), rest are normal sized (x: 96)
+//global.ground_tile_width = 96; // 128 for the larger tiles, 96 is standard
+
+// save data 
+// PLACEHOLDER UNTIL SAVE STATES ARE IMPLEMENTED
+// game is non linear, you can complete all levels in multiple orders.
+// As long as you cleared
+// the nation next to whatever you wish to take on, you can take on the adjacent nations.
+global.lvl_1_clear = true;
+global.lvl_2_clear = true;
+global.lvl_3_clear = true;
+global.lvl_4_clear = true;
+global.lvl_5_clear = true;
+global.lvl_6_clear = true;
+global.lvl_7_clear = true;
+global.lvl_8_clear = true;
+global.lvl_9_clear = true;
+global.lvl_10_clear = true;
+
+// global audio controllers
+global.music_amp_decimal = 0.5;
+global.music_amp_slider_x = 0;
+
+global.sound_effects_amp_decimal = 0.75;
+global.sound_effects_slider_x = 0;
+
+// 8 more unit slots to go
+// 2 siege: siege ram, trebuchet
+// 4 cavalry: swordman, pikeman, knight (all have shields), archer (no shield)
+// 2 support: bard (heals all units in an aoe around them), necromancer (summons undead skele soldiers, weak and brittle but immune to magic)

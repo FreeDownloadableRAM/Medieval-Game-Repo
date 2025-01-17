@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_test_track",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":320,
+  "compression":0,
+  "conversionMode":0,
+  "duration":15.696689,
+  "name":"snd_test_track",
+  "parent":{
+    "name":"gr_debug",
+    "path":"folders/Sounds/gr_debug.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_test_track.wav",
+  "type":1,
+  "volume":1.0,
+}

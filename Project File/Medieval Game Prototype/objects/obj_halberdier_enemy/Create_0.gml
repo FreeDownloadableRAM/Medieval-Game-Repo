@@ -1,0 +1,93 @@
+/// Here we will set character properties
+// Global AI trackers
+global.player_unit_count_enemy += 1;
+
+// Information about myself
+internal_unit_number = global.player_unit_count_enemy;
+internal_unit_type = "Halberdier_NPC";
+num_of_debug_items = 8;
+
+// Character physical Properties
+// Attack Properties
+character_slash_attack = 0.0; // in hitpoints
+character_pierce_attack = 0.0; 
+character_thrust_attack = 1.0; 
+character_blunt_attack = 0.0;
+character_magic_attack = 0.0; 
+
+character_reach = 56.0 // in pixels
+
+// Defence Properties
+character_health = 350.0;
+character_slash_defence = 0.9; // these are percent values
+character_pierce_defence = 0.8;
+character_thrust_defence = 0.40;
+character_blunt_defence = 0.05;
+character_magic_defence = 0.0;
+
+// Movement Properties
+character_walking_speed = 0.5;
+character_running_speed = 1.5;
+
+// walk distance boundary, if the distance is smaller than this distance, walk, if not, run
+character_walking_boundary = random_range(8,32);
+
+// Set Sprites
+// The defaults are set to Pikeman, just because he was the first one made
+character_idle_anim = spr_hb_00_idle_enemy;
+character_ready_anim = spr_hb_01_ready_enemy;
+character_walk_anim = spr_hb_02_walking_enemy;
+character_run_anim = spr_hb_03_running_enemy;
+character_attack_anim_1 = spr_hb_04_attacking_1_enemy;
+character_attack_hitbox_1 = obj_halberdier_atk_hitbox_enemy;
+character_defend_anim = spr_hb_05_defend_enemy;
+character_death_anim_1 = spr_hb_06_death_1_enemy;
+
+
+// AI properties
+// AI State
+ai_state = "Idle"; // used to debug where in the ai code are we
+// attack properties
+character_attack_speed = 0; // in fps
+random_ai_attack_delay = random_range(0,3.75);
+
+// ai boundaries
+lower_ai_attack_delay_boundary = 0.5;
+upper_ai_attack_delay_boundary = 1.2;
+ai_movement_margin_of_error_allowed = 4;
+
+// ai Perception
+character_vision_distance = 320; // 32 pixel size tiles, 20 tiles long
+character_engage_distance = 204;
+
+character_attack_animation_duration = 180; // in fps, 60 = 1 second
+
+character_anim_frames_amount = 42;
+character_anim_fps = 14;
+
+in_attack_anim = false;
+
+// We want to set enemy target to something (ideally obj_generic_NPC_Enemy, but since not, we just set it to obj_dbg_enemy).
+enemy_target = obj_generic_npc;
+defend_rally_target = obj_enemy_rally_target;
+retreat_rally_target = obj_retreat_enemy_rally_object;
+enemy_castle_target = obj_castle_player;
+
+// Directional Headers, This is used for animation sprites and hitbox creation
+forward_direction = 1;
+backward_direction = 0 - 1;
+
+// distance location
+//ai_rally_distance_offset = (16 * (global.player_unit_count - 1)) + 16;
+
+// Random rally distance offset (random_range(-4,4)) * 4;
+ai_rally_distance_offset = (irandom_range(-4,8)) * 4;
+ai_attack_distance_offset = (irandom_range(0,4)) * 4;
+
+// ai_rally_distance_offset = 0;
+
+//on death spawn this obj
+death_character = obj_halberdier_dead_enemy;
+
+// Help AI track Information
+global.enemy_hb_count = global.enemy_hb_count + 1;
