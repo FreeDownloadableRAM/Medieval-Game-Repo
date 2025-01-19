@@ -12,19 +12,19 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0bb7a7f6-3519-4de6-9fda-7d3c5952839e","name":"0bb7a7f6-3519-4de6-9fda-7d3c5952839e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"38e7567f-3367-47d5-92b1-fd84a121dbd1","name":"38e7567f-3367-47d5-92b1-fd84a121dbd1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"3b557388-63cf-4956-8fe0-ebeadbce7fe7","name":"3b557388-63cf-4956-8fe0-ebeadbce7fe7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"641e4cf5-90b7-46a8-a7aa-f8438fbfb56a","name":"641e4cf5-90b7-46a8-a7aa-f8438fbfb56a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":128,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"f56bc57e-350f-44f1-97a6-3de7c3a4a1ff","blendMode":0,"displayName":"default","isLocked":false,"name":"f56bc57e-350f-44f1-97a6-3de7c3a4a1ff","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"87b81bb1-b47a-477f-bc71-f9ed73eb369d","blendMode":0,"displayName":"default","isLocked":false,"name":"87b81bb1-b47a-477f-bc71-f9ed73eb369d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_sm_00_idle_indx",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"gr_index_colour",
     "path":"folders/Sprites/gr_objects/gr_european/gr_objects/gr_characters/gr_swordman/gr_index_colour.yy",
@@ -70,17 +70,17 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0bb7a7f6-3519-4de6-9fda-7d3c5952839e","path":"sprites/spr_sm_00_idle_indx/spr_sm_00_idle_indx.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c427dda5-e1db-4835-8e61-7e3df5999941","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b557388-63cf-4956-8fe0-ebeadbce7fe7","path":"sprites/spr_sm_00_idle_indx/spr_sm_00_idle_indx.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"6337d196-ff0f-448c-a2e9-030007baba73","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"38e7567f-3367-47d5-92b1-fd84a121dbd1","path":"sprites/spr_sm_00_idle_indx/spr_sm_00_idle_indx.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2aa0a60d-0352-4393-9fa5-470ceb73c39c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"641e4cf5-90b7-46a8-a7aa-f8438fbfb56a","path":"sprites/spr_sm_00_idle_indx/spr_sm_00_idle_indx.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"936c2e30-a08e-422b-bb13-6d89655012ff","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":64,
+    "yorigin":64,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

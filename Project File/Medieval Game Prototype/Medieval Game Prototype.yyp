@@ -424,6 +424,7 @@
     {"id":{"name":"rm_lvl_end","path":"rooms/rm_lvl_end/rm_lvl_end.yy",},},
     {"id":{"name":"rm_lvl_select","path":"rooms/rm_lvl_select/rm_lvl_select.yy",},},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
+    {"id":{"name":"shd_indx_col_swapper","path":"shaders/shd_indx_col_swapper/shd_indx_col_swapper.yy",},},
     {"id":{"name":"snd_msc_01_conflicting_interests_loopable","path":"sounds/snd_msc_01_conflicting_interests_loopable/snd_msc_01_conflicting_interests_loopable.yy",},},
     {"id":{"name":"snd_msc_02_medieval_warfare_loopable","path":"sounds/snd_msc_02_medieval_warfare_loopable/snd_msc_02_medieval_warfare_loopable.yy",},},
     {"id":{"name":"snd_msc_03_liberty_awaits","path":"sounds/snd_msc_03_liberty_awaits/snd_msc_03_liberty_awaits.yy",},},

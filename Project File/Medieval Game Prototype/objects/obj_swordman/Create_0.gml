@@ -34,14 +34,14 @@ character_walking_boundary = random_range(8,32);
 
 // Set Sprites
 // The defaults are set to Pikeman, just because he was the first one made
-character_idle_anim = spr_sm_00_idle;
-character_ready_anim = spr_sm_01_ready;
-character_walk_anim = spr_sm_02_walking;
-character_run_anim = spr_sm_03_running;
-character_attack_anim_1 = spr_sm_04_attacking_1;
+character_idle_anim = spr_sm_00_idle_indx;
+character_ready_anim = spr_sm_01_ready_indx;
+character_walk_anim = spr_sm_02_walking_indx;
+character_run_anim = spr_sm_03_running_indx;
+character_attack_anim_1 = spr_sm_04_attacking_1_indx;
 character_attack_hitbox_1 = obj_swordman_atk_hitbox;
-character_defend_anim = spr_sm_05_defend;
-character_death_anim_1 = spr_sm_06_death_1;
+character_defend_anim = spr_sm_05_defend_indx;
+character_death_anim_1 = spr_sm_06_death_1_indx;
 
 
 // AI properties
@@ -91,3 +91,6 @@ death_character = obj_swordman_dead;
 
 // Help AI track Information
 global.player_sm_count += 1;
+
+// colour palette properties
+colour_palette_index = 0; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
