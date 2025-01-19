@@ -12,14 +12,17 @@ alarm_set(1,death_animation_time); // 1 second
 
 
 //Death animation
-sprite_index = spr_sm_06_death_1;
+sprite_index = spr_sm_06_death_1_indx;
 
 
 //Dead Body
-dead_body_sprite = spr_sm_07_dead_1;
+dead_body_sprite = spr_sm_07_dead_1_indx;
 
 //invisible
 invisible_sprite = spr_dbg_invisible;
 
 // Help AI track Information
 global.player_sm_count -= 1;
+
+// colour palette properties
+colour_palette_index = 0; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies

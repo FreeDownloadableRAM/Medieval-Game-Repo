@@ -4,30 +4,15 @@ shader_set(shd_indx_col_swapper);
 
 // variables
 var samp_palette = shader_get_sampler_index(shd_indx_col_swapper, "samp_palette"); // important that the "" name matches the one inside shader
-var palette_sprite = spr_sm_indx_col_plte_00_idle;
+var palette_sprite = spr_sm_indx_col_plte_06_dth;
 
-if (sprite_index == character_ready_anim){
+if (sprite_index == dead_body_sprite){
 	
-	palette_sprite = spr_sm_indx_col_plte_01_rdy;
+	palette_sprite = spr_sm_indx_col_plte_07_dead;
 }
-else if (sprite_index == character_walk_anim){
-	
-	palette_sprite = spr_sm_indx_col_plte_02_walk;
-}
-else if (sprite_index == character_run_anim){
-	
-	palette_sprite = spr_sm_indx_col_plte_03_run;
-}
-else if (sprite_index == character_attack_anim_1){
-	
-	palette_sprite = spr_sm_indx_col_plte_04_atk;
-}
-else if (sprite_index == character_defend_anim){
-	
-	palette_sprite = spr_sm_indx_col_plte_05_def;
-}
+
 else {
-	palette_sprite = spr_sm_indx_col_plte_00_idle;
+	palette_sprite = spr_sm_indx_col_plte_06_dth;
 }
 
 texture_set_stage(samp_palette,sprite_get_texture(palette_sprite,0)); // get the colour palette sprite
@@ -42,4 +27,3 @@ shader_set_uniform_f(u_palette_index,colour_palette_index);
 draw_self();
 
 shader_reset();
-
