@@ -210,7 +210,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"Medieval Game Prototype",
   "resources":[
@@ -706,6 +706,7 @@
     {"id":{"name":"spr_pm_unit_icon","path":"sprites/spr_pm_unit_icon/spr_pm_unit_icon.yy",},},
     {"id":{"name":"spr_pm_unlock_icon","path":"sprites/spr_pm_unlock_icon/spr_pm_unlock_icon.yy",},},
     {"id":{"name":"spr_projectile_trail","path":"sprites/spr_projectile_trail/spr_projectile_trail.yy",},},
+    {"id":{"name":"spr_purple_tree","path":"sprites/spr_purple_tree/spr_purple_tree.yy",},},
     {"id":{"name":"spr_rally_flag_blue_sway","path":"sprites/spr_rally_flag_blue_sway/spr_rally_flag_blue_sway.yy",},},
     {"id":{"name":"spr_rally_flag_blue","path":"sprites/spr_rally_flag_blue/spr_rally_flag_blue.yy",},},
     {"id":{"name":"spr_rally_flag_red_sway","path":"sprites/spr_rally_flag_red_sway/spr_rally_flag_red_sway.yy",},},
