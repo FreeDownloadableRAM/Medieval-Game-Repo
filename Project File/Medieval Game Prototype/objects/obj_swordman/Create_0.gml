@@ -93,4 +93,4 @@ death_character = obj_swordman_dead;
 global.player_sm_count += 1;
 
 // colour palette properties
-colour_palette_index = 0; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+colour_palette_index = 1; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
