@@ -1,0 +1,3 @@
+use walk animation to bring king to their designated spot, use run animation back to their side of 
+"off-screen" for their death animation, the king death object will despawn on its own after "x" amount
+of time.
