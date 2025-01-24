@@ -3,6 +3,7 @@
   "%Name":"obj_ranger",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_ranger",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rg_00_idle",
-    "path":"sprites/spr_rg_00_idle/spr_rg_00_idle.yy",
+    "name":"spr_rg_00_idle_indx",
+    "path":"sprites/spr_rg_00_idle_indx/spr_rg_00_idle_indx.yy",
   },
   "spriteMaskId":null,
   "visible":true,

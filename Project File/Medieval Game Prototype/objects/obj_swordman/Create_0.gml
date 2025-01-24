@@ -93,4 +93,12 @@ death_character = obj_swordman_dead;
 global.player_sm_count += 1;
 
 // colour palette properties
-colour_palette_index = 0; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+colour_palette_index = global.slot_one_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+// palette sprites
+col_pal_idle = spr_sm_indx_col_plte_00_idle;
+col_pal_ready = spr_sm_indx_col_plte_01_rdy;
+col_pal_walk = spr_sm_indx_col_plte_02_walk;
+col_pal_run = spr_sm_indx_col_plte_03_run;
+col_pal_attack = spr_sm_indx_col_plte_04_atk;
+col_pal_defend = spr_sm_indx_col_plte_05_def;

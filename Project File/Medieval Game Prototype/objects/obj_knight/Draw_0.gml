@@ -42,4 +42,3 @@ shader_set_uniform_f(u_palette_index,colour_palette_index);
 draw_self();
 
 shader_reset();
-

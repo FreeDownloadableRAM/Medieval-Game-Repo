@@ -34,14 +34,14 @@ character_walking_boundary = random_range(8,32);
 
 // Set Sprites
 // The defaults are set to Pikeman, just because he was the first one made
-character_idle_anim = spr_pm_00_idle;
-character_ready_anim = spr_pm_01_ready;
-character_walk_anim = spr_pm_02_walking;
-character_run_anim = spr_pm_03_running;
-character_attack_anim_1 = spr_pm_04_attacking_1;
+character_idle_anim = spr_pm_00_idle_indx;
+character_ready_anim = spr_pm_01_ready_indx;
+character_walk_anim = spr_pm_02_walking_indx;
+character_run_anim = spr_pm_03_running_indx;
+character_attack_anim_1 = spr_pm_04_attacking_1_indx;
 character_attack_hitbox_1 = obj_pikeman_atk_hitbox;
-character_defend_anim = spr_pm_05_defend;
-character_death_anim_1 = spr_pm_06_death_1;
+character_defend_anim = spr_pm_05_defend_indx;
+character_death_anim_1 = spr_pm_06_death_1_indx;
 
 
 // AI properties
@@ -91,3 +91,14 @@ death_character = obj_pikeman_dead;
 
 // Help AI track Information
 global.player_pm_count = global.player_pm_count + 1;
+
+// colour palette properties
+colour_palette_index = global.slot_one_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+// palette sprites
+col_pal_idle = spr_pm_indx_col_plte_00_idle;
+col_pal_ready = spr_pm_indx_col_plte_01_rdy;
+col_pal_walk = spr_pm_indx_col_plte_02_walk;
+col_pal_run = spr_pm_indx_col_plte_03_run;
+col_pal_attack = spr_pm_indx_col_plte_04_atk;
+col_pal_defend = spr_pm_indx_col_plte_05_def;

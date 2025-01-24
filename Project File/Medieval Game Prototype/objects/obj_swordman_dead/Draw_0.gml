@@ -4,15 +4,15 @@ shader_set(shd_indx_col_swapper);
 
 // variables
 var samp_palette = shader_get_sampler_index(shd_indx_col_swapper, "samp_palette"); // important that the "" name matches the one inside shader
-var palette_sprite = spr_sm_indx_col_plte_06_dth;
+var palette_sprite = col_pal_death;
 
 if (sprite_index == dead_body_sprite){
 	
-	palette_sprite = spr_sm_indx_col_plte_07_dead;
+	palette_sprite = col_pal_dead;
 }
 
 else {
-	palette_sprite = spr_sm_indx_col_plte_06_dth;
+	palette_sprite = col_pal_death;
 }
 
 texture_set_stage(samp_palette,sprite_get_texture(palette_sprite,0)); // get the colour palette sprite

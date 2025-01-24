@@ -25,4 +25,7 @@ invisible_sprite = spr_dbg_invisible;
 global.player_sm_count -= 1;
 
 // colour palette properties
-colour_palette_index = 0; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+colour_palette_index = global.slot_one_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+col_pal_death = spr_sm_indx_col_plte_06_dth;
+col_pal_dead = spr_sm_indx_col_plte_07_dead;
