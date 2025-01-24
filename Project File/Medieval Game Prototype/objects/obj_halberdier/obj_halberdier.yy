@@ -3,6 +3,7 @@
   "%Name":"obj_halberdier",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_halberdier",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hb_00_idle",
-    "path":"sprites/spr_hb_00_idle/spr_hb_00_idle.yy",
+    "name":"spr_hb_00_idle_indx",
+    "path":"sprites/spr_hb_00_idle_indx/spr_hb_00_idle_indx.yy",
   },
   "spriteMaskId":null,
   "visible":true,
