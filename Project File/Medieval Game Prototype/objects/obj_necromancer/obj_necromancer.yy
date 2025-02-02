@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_nc_00_idle",
-    "path":"sprites/spr_nc_00_idle/spr_nc_00_idle.yy",
+    "name":"spr_nc_00_idle_indx",
+    "path":"sprites/spr_nc_00_idle_indx/spr_nc_00_idle_indx.yy",
   },
   "spriteMaskId":null,
   "visible":true,

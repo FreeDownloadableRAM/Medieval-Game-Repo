@@ -76,7 +76,7 @@ global.ai_train_delay_nc = 60;
 // Economic Trackers
 global.player_gold_gen = 5; // default is 5
 global.player_gold_amount = 75;
-global.player_gold_start_amount = 125; // 125 is default
+global.player_gold_start_amount = 9125; // 125 is default
 global.player_gold_cap = 10000;
 
 global.enemy_gold_gen = 5;
