@@ -6,7 +6,7 @@ varying vec4 v_vColour;
 
 // Tell us which colour pallete to use
 // 0 = default (blue), 1-7 (8 total) are alternate colour palettes.
-// 1 = green, 2 = teal, 3 = purple // 1-3 are ally colours, 0 is player colour
+// 1 = green, 2 = cyan, 3 = purple // 1-3 are ally colours, 0 is player colour
 // 4 = red, 5 = orange, 6 = yellow, 7 = dark grey // 4-7 are enemy colours, 4 is default enemy colour
 
 uniform sampler2D samp_palette;
