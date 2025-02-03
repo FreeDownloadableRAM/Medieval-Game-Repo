@@ -206,7 +206,7 @@ global.sound_effects_slider_x = 0;
 // 2 support: bard (heals all units in an aoe around them), necromancer (summons undead skele soldiers, weak and brittle but immune to magic)
 
 // Colour Controllers (these are the default colours, 0-3 ally, 4-7 enemy)
-global.slot_one_colour = 7; // 0 = blue, 1 = green, 2 = cyan. 3 = purple
+global.slot_one_colour = 3; // 0 = blue, 1 = green, 2 = cyan. 3 = purple
 global.slot_two_colour = 1; // 4 = red, 5 = orange, 6 = yellow. 7 = gray
 global.slot_three_colour = 2;
 global.slot_four_colour = 3;
