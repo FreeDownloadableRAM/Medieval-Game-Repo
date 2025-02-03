@@ -19,8 +19,8 @@
   "name":"obj_generic_npc",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_ally",
-    "path":"folders/Objects/gr_parents/generic_character/gr_ally.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_parents/generic_character/gr_allies/gr_player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

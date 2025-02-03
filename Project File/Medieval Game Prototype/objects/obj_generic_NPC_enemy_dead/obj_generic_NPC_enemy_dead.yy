@@ -8,8 +8,8 @@
   "name":"obj_generic_NPC_enemy_dead",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_enemy",
-    "path":"folders/Objects/gr_parents/generic_character/gr_enemy.yy",
+    "name":"gr_enemy_1",
+    "path":"folders/Objects/gr_parents/generic_character/gr_enemies/gr_enemy_1.yy",
   },
   "parentObjectId":{
     "name":"obj_generic_NPC_dead",
