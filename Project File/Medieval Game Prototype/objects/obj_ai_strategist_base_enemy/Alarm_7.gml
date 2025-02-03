@@ -25,6 +25,7 @@ ai_mg_amount = global.enemy_mg_count;
 ai_nc_amount = global.enemy_nc_count;
 ai_gh_amount = global.enemy_gh_count;
 
+
 // keep track of our army variables
 ai_total_mel_units = ai_sm_amount + ai_pm_amount + ai_kn_amount + ai_hb_amount + ai_gh_amount;
 ai_total_rg_units = ai_rg_amount + ai_ab_amount + ai_mg_amount + ai_nc_amount;

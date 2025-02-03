@@ -36,9 +36,20 @@ global.enemy_king_x_location = 0;
 
 // AI Trackers
 // player ai trackers
-global.player_unit_count = 0;
-global.player_unit_count_enemy = 0;
+// player caps
+// ally cap
+global.player_unit_count = 0; // player // slot 0
+global.ally_1_unit_count = 0; // ai 1 // slot 1
+global.ally_2_unit_count = 0; // ai 2 // slot 2
+global.ally_3_unit_count = 0; // ai 3 // slot 3
 
+// enemy cap
+global.player_unit_count_enemy = 0; // ai 4 // slot 4
+global.enemy_2_unit_count = 0; // ai 5 // slot 5
+global.enemy_3_unit_count = 0; // ai 6 // slot 6
+global.enemy_4_unit_count = 0; // ai 7 // slot 7
+
+// player army trackers // slot 0
 global.player_sm_count = 0;
 global.player_pm_count = 0;
 global.player_rg_count = 0;
@@ -50,7 +61,47 @@ global.player_cp_count = 0;
 global.player_nc_count = 0;
 global.player_gh_count = 0;
 
-// enemy unit ai trackers
+// ally 1
+// ally ai 1 unit ai trackers // slot 1
+global.ally_1_sm_count = 0;
+global.ally_1_pm_count = 0;
+global.ally_1_rg_count = 0;
+global.ally_1_kn_count = 0;
+global.ally_1_ab_count = 0;
+global.ally_1_hb_count = 0;
+global.ally_1_mg_count = 0;
+global.ally_1_cp_count = 0;
+global.ally_1_nc_count = 0;
+global.ally_1_gh_count = 0;
+
+// ally 2
+// ally ai 2 unit ai trackers // slot 2
+global.ally_2_sm_count = 0;
+global.ally_2_pm_count = 0;
+global.ally_2_rg_count = 0;
+global.ally_2_kn_count = 0;
+global.ally_2_ab_count = 0;
+global.ally_2_hb_count = 0;
+global.ally_2_mg_count = 0;
+global.ally_2_cp_count = 0;
+global.ally_2_nc_count = 0;
+global.ally_2_gh_count = 0;
+
+// ally 3
+// ally ai 3 unit ai trackers // slot 3
+global.ally_3_sm_count = 0;
+global.ally_3_pm_count = 0;
+global.ally_3_rg_count = 0;
+global.ally_3_kn_count = 0;
+global.ally_3_ab_count = 0;
+global.ally_3_hb_count = 0;
+global.ally_3_mg_count = 0;
+global.ally_3_cp_count = 0;
+global.ally_3_nc_count = 0;
+global.ally_3_gh_count = 0;
+
+// enemy army trackers
+// enemy unit ai trackers // slot 4
 global.enemy_sm_count = 0;
 global.enemy_pm_count = 0;
 global.enemy_rg_count = 0;
@@ -61,6 +112,45 @@ global.enemy_mg_count = 0;
 global.enemy_cp_count = 0;
 global.enemy_nc_count = 0;
 global.enemy_gh_count = 0;
+
+// enemy 2
+// enemy ai 2 unit ai trackers // slot 5
+global.enemy_2_sm_count = 0;
+global.enemy_2_pm_count = 0;
+global.enemy_2_rg_count = 0;
+global.enemy_2_kn_count = 0;
+global.enemy_2_ab_count = 0;
+global.enemy_2_hb_count = 0;
+global.enemy_2_mg_count = 0;
+global.enemy_2_cp_count = 0;
+global.enemy_2_nc_count = 0;
+global.enemy_2_gh_count = 0;
+
+// enemy 3
+// enemy ai 3 unit ai trackers // slot 6
+global.enemy_3_sm_count = 0;
+global.enemy_3_pm_count = 0;
+global.enemy_3_rg_count = 0;
+global.enemy_3_kn_count = 0;
+global.enemy_3_ab_count = 0;
+global.enemy_3_hb_count = 0;
+global.enemy_3_mg_count = 0;
+global.enemy_3_cp_count = 0;
+global.enemy_3_nc_count = 0;
+global.enemy_3_gh_count = 0;
+
+// enemy 4
+// enemy ai 4 unit ai trackers // slot 7
+global.enemy_4_sm_count = 0;
+global.enemy_4_pm_count = 0;
+global.enemy_4_rg_count = 0;
+global.enemy_4_kn_count = 0;
+global.enemy_4_ab_count = 0;
+global.enemy_4_hb_count = 0;
+global.enemy_4_mg_count = 0;
+global.enemy_4_cp_count = 0;
+global.enemy_4_nc_count = 0;
+global.enemy_4_gh_count = 0;
 
 // AI training timers
 global.ai_train_delay_sm = 3; // These are in seconds
@@ -74,15 +164,55 @@ global.ai_train_delay_cp = 45;
 global.ai_train_delay_nc = 60;
 
 // Economic Trackers
+// player
 global.player_gold_gen = 5; // default is 5
 global.player_gold_amount = 75;
 global.player_gold_start_amount = 9125; // 125 is default
 global.player_gold_cap = 10000;
 
+// player allies
+// ally 1
+global.ally_1_gold_gen = 5; // default is 5
+global.ally_1_gold_amount = 75;
+global.ally_1_gold_start_amount = 125; // 125 is default
+global.ally_1_gold_cap = 10000;
+
+// ally 2
+global.ally_2_gold_gen = 5; // default is 5
+global.ally_2_gold_amount = 75;
+global.ally_2_gold_start_amount = 125; // 125 is default
+global.ally_2_gold_cap = 10000;
+
+// ally 3
+global.ally_3_gold_gen = 5; // default is 5
+global.ally_3_gold_amount = 75;
+global.ally_3_gold_start_amount = 125; // 125 is default
+global.ally_3_gold_cap = 10000;
+
+// enemy ai economy trackers
+// enemy
 global.enemy_gold_gen = 5;
 global.enemy_gold_amount = 75;
 global.enemy_gold_start_amount = 125;
 global.enemy_gold_cap = 10000;
+
+// enemy 2
+global.enemy_2_gold_gen = 5;
+global.enemy_2_gold_amount = 75;
+global.enemy_2_gold_start_amount = 125;
+global.enemy_2_gold_cap = 10000;
+
+// enemy 3
+global.enemy_3_gold_gen = 5;
+global.enemy_3_gold_amount = 75;
+global.enemy_3_gold_start_amount = 125;
+global.enemy_3_gold_cap = 10000;
+
+// enemy 4
+global.enemy_4_gold_gen = 5;
+global.enemy_4_gold_amount = 75;
+global.enemy_4_gold_start_amount = 125;
+global.enemy_4_gold_cap = 10000;
 
 // Global Economy variables
 // formula for these values are:
@@ -97,14 +227,51 @@ global.econ_up_cost_lv_5 = 825;
 global.econ_up_cost_lv_6 = 1305;
 
 
-// Military Trackers
+// Military Trackers Cap
+// we cannot train or summon units once this amount is reached
+// player
 global.player_unit_cap = 50;
+
+// allies
+// ally ai 1
+global.ally_1_unit_cap = 50;
+
+// ally ai 2
+global.ally_2_unit_cap = 50;
+
+// ally ai 3
+global.ally_3_unit_cap = 50;
+
+// enemies
+// enemy ai 1
 global.enemy_unit_cap = 50; 
+
+// enemy ai 2
+global.enemy_2_unit_cap = 50; 
+
+// enemy ai 3
+global.enemy_3_unit_cap = 50; 
+
+// enemy ai 4
+global.enemy_4_unit_cap = 50; 
 
 
 // Order 
+// control unit movement with these global ai orders.
+// player
 global.player_order = 1; // 0 = retreat, 1 = defend / hold, 2 = attack
+
+// ai
+// allies
+global.ally_1_order = 1; // 0 = retreat, 1 = defend / hold, 2 = attack
+global.ally_2_order = 1; // 0 = retreat, 1 = defend / hold, 2 = attack
+global.ally_3_order = 1; // 0 = retreat, 1 = defend / hold, 2 = attack
+
+// enemies
 global.enemy_order = 0; // 0 = retreat, 1 = defend / hold, 2 = attack / 3 = force idle only
+global.enemy_2_order = 0; // 0 = retreat, 1 = defend / hold, 2 = attack
+global.enemy_3_order = 0; // 0 = retreat, 1 = defend / hold, 2 = attack
+global.enemy_4_order = 0; // 0 = retreat, 1 = defend / hold, 2 = attack
 
 // go to the next room
 alarm_set(0,180);
@@ -206,7 +373,8 @@ global.sound_effects_slider_x = 0;
 // 2 support: bard (heals all units in an aoe around them), necromancer (summons undead skele soldiers, weak and brittle but immune to magic)
 
 // Colour Controllers (these are the default colours, 0-3 ally, 4-7 enemy)
-global.slot_one_colour = 3; // 0 = blue, 1 = green, 2 = cyan. 3 = purple
+// whilst its written here as one-eight, the value for palettes are 0-7.
+global.slot_one_colour = 0; // 0 = blue, 1 = green, 2 = cyan. 3 = purple
 global.slot_two_colour = 1; // 4 = red, 5 = orange, 6 = yellow. 7 = gray
 global.slot_three_colour = 2;
 global.slot_four_colour = 3;
