@@ -10,8 +10,8 @@
   "name":"obj_ghoul_summon",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_blue",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_necromancer/gr_blue.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_necromancer/gr_player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

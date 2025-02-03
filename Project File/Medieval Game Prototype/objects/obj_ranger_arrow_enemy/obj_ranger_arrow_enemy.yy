@@ -12,8 +12,8 @@
   "name":"obj_ranger_arrow_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_red",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_ranger/gr_red.yy",
+    "name":"gr_enemy",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_ranger/gr_enemy.yy",
   },
   "parentObjectId":{
     "name":"obj_generic_atk_melee_hitbox_enemy",

@@ -10,8 +10,8 @@
   "name":"obj_ghoul_summon_enemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_red",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_necromancer/gr_red.yy",
+    "name":"gr_enemy",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_necromancer/gr_enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -9,8 +9,8 @@
   "name":"obj_halberdier_dead",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_blue",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_halberdier/gr_blue.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_halberdier/gr_player.yy",
   },
   "parentObjectId":{
     "name":"obj_generic_NPC_dead",

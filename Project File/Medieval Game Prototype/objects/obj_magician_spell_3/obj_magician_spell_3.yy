@@ -8,8 +8,8 @@
   "name":"obj_magician_spell_3",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_blue",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_magician/gr_blue.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_magician/gr_player.yy",
   },
   "parentObjectId":{
     "name":"obj_magician_spell_0",

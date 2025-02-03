@@ -8,8 +8,8 @@
   "name":"obj_swordman_atk_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_blue",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_swordman/gr_blue.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_swordman/gr_player.yy",
   },
   "parentObjectId":{
     "name":"obj_generic_atk_melee_hitbox",
