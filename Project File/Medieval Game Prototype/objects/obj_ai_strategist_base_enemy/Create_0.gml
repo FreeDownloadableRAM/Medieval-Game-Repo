@@ -21,38 +21,38 @@ can_train_nc = true;
 
 // Trackers
 // Here we keep track of the units the player is using, these values are taken from the units spawned by the player themself.
-p_sm_amount = global.player_sm_count;
-p_pm_amount = global.player_pm_count;
-p_rg_amount = global.player_rg_count;
-p_kn_amount = global.player_kn_count;
-p_ab_amount = global.player_ab_count;
-p_hb_amount = global.player_hb_count;
-p_mg_amount = global.player_mg_count;
+allied_sm_amount = global.player_sm_count + global.ally_1_sm_count + global.ally_2_sm_count + global.ally_3_sm_count;
+allied_pm_amount = global.player_pm_count + global.ally_1_pm_count + global.ally_2_pm_count + global.ally_3_pm_count;
+allied_rg_amount = global.player_rg_count + global.ally_1_rg_count + global.ally_2_rg_count + global.ally_3_rg_count;
+allied_kn_amount = global.player_kn_count + global.ally_1_kn_count + global.ally_2_kn_count + global.ally_3_kn_count;
+allied_ab_amount = global.player_ab_count + global.ally_1_ab_count + global.ally_2_ab_count + global.ally_3_ab_count;
+allied_hb_amount = global.player_hb_count + global.ally_1_hb_count + global.ally_2_hb_count + global.ally_3_hb_count;
+allied_mg_amount = global.player_mg_count + global.ally_1_mg_count + global.ally_2_mg_count + global.ally_3_mg_count;
 // wip
-p_cp_amount = global.player_cp_count;
-p_nc_amount = global.player_nc_count;
-p_gh_amount = global.player_gh_count;
+allied_cp_amount = global.player_cp_count + global.ally_1_cp_count + global.ally_2_cp_count + global.ally_3_cp_count;
+allied_nc_amount = global.player_nc_count + global.ally_1_nc_count + global.ally_2_nc_count + global.ally_3_nc_count;
+allied_gh_amount = global.player_gh_count + global.ally_1_gh_count + global.ally_2_gh_count + global.ally_3_gh_count;
 
 // here we track what units we are using
-ai_sm_amount = global.enemy_sm_count;
-ai_pm_amount = global.enemy_pm_count;
-ai_rg_amount = global.enemy_rg_count;
-ai_kn_amount = global.enemy_kn_count;
-ai_ab_amount = global.enemy_ab_count;
-ai_hb_amount = global.enemy_hb_count;
-ai_mg_amount = global.enemy_mg_count;
+enemies_sm_amount = global.enemy_sm_count + global.enemy_2_sm_count + global.enemy_3_sm_count + global.enemy_4_sm_count;
+enemies_pm_amount = global.enemy_pm_count + global.enemy_2_pm_count + global.enemy_3_pm_count + global.enemy_4_pm_count;
+enemies_rg_amount = global.enemy_rg_count + global.enemy_2_rg_count + global.enemy_3_rg_count + global.enemy_4_rg_count;
+enemies_kn_amount = global.enemy_kn_count + global.enemy_2_kn_count + global.enemy_3_kn_count + global.enemy_4_kn_count;
+enemies_ab_amount = global.enemy_ab_count + global.enemy_2_ab_count + global.enemy_3_ab_count + global.enemy_4_ab_count;
+enemies_hb_amount = global.enemy_hb_count + global.enemy_2_hb_count + global.enemy_3_hb_count + global.enemy_4_hb_count;
+enemies_mg_amount = global.enemy_mg_count + global.enemy_2_mg_count + global.enemy_3_mg_count + global.enemy_4_mg_count;
 // wip
 // ai_cp_amount = global.enemy_cp_count; // NOT AVAILABLE YET
-ai_nc_amount = global.enemy_nc_count;
-ai_gh_amount = global.enemy_gh_count;
+enemies_nc_amount = global.enemy_nc_count + global.enemy_2_nc_count + global.enemy_3_nc_count + global.enemy_4_nc_count;
+enemies_gh_amount = global.enemy_gh_count + global.enemy_2_gh_count + global.enemy_3_gh_count + global.enemy_4_gh_count;
 
 // total
-ai_total_rg_units = 0;
-ai_total_mel_units = 0;
+enemies_total_rg_units = 0;
+enemies_total_mel_units = 0;
 
 // maintain army compositions ratios
-ai_ranged_army_perc_targ = 0.75; 
-ai_ranged_army_percent = 0.0;
+enemies_ranged_army_perc_targ = 0.75; 
+enemies_ranged_army_percent = 0.0;
 
 
 // Training timers
@@ -90,34 +90,34 @@ alarm_set(8,(7*fps)); // every 7 seconds
 
 // Player army composition modifiers, the player army composition is tracked here.
 // Ranged units to melee units ratio
-p_army_range_to_melee_ratio = (p_rg_amount + p_ab_amount)/(global.player_unit_count);
+allied_army_range_to_melee_ratio = (allied_rg_amount + allied_ab_amount)/(global.player_unit_count);
 
 // Swordman ratio to rest of army
-p_sm_to_army_ratio = (p_sm_amount)/(global.player_unit_count);
+allied_sm_to_army_ratio = (allied_sm_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Pikeman ratio to rest of army
-p_pm_to_army_ratio = (p_pm_amount)/(global.player_unit_count);
+allied_pm_to_army_ratio = (allied_pm_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Ranger ratio to rest of army
-p_rg_to_army_ratio = (p_rg_amount)/(global.player_unit_count);
+allied_rg_to_army_ratio = (allied_rg_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Knight ratio to rest of army
-p_kn_to_army_ratio = (p_kn_amount)/(global.player_unit_count);
+allied_kn_to_army_ratio = (allied_kn_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Arbalest ratio to rest of army
-p_ab_to_army_ratio = (p_ab_amount)/(global.player_unit_count);
+allied_ab_to_army_ratio = (allied_ab_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Halberdier ratio to rest of army
-p_hb_to_army_ratio = (p_hb_amount)/(global.player_unit_count);
+allied_hb_to_army_ratio = (allied_hb_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Magician ratio to rest of army
-p_mg_to_army_ratio = (p_mg_amount)/(global.player_unit_count);
+allied_mg_to_army_ratio = (allied_mg_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Necromancer ratio to rest of army
-p_cp_to_army_ratio = (p_cp_amount)/(global.player_unit_count);
+allied_cp_to_army_ratio = (allied_cp_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Necromancer ratio to rest of army
-p_nc_to_army_ratio = (p_nc_amount)/(global.player_unit_count);
+allied_nc_to_army_ratio = (allied_nc_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // AI modifiers
 // Here we tweak modifiers that influence how the ai determines importance of different variables.
