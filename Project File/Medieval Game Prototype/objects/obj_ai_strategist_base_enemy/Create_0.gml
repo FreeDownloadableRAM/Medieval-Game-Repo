@@ -19,6 +19,16 @@ can_train_mg = true;
 // can_train_cp = true;
 can_train_nc = true;
 
+// objects that we train ourselves
+ai_swordsman = obj_swordman_enemy;
+ai_pikeman = obj_pikeman_enemy;
+ai_ranger = obj_ranger_enemy;
+ai_knight = obj_knight_enemy;
+ai_arbalest = obj_arbalest_enemy;
+ai_halberdier = obj_halberdier_enemy;
+ai_magician = obj_magician_enemy;
+ai_necromancer = obj_necromancer_enemy;
+
 // Trackers
 // Here we keep track of the units the player is using, these values are taken from the units spawned by the player themself.
 allied_sm_amount = global.player_sm_count + global.ally_1_sm_count + global.ally_2_sm_count + global.ally_3_sm_count;
@@ -32,6 +42,9 @@ allied_mg_amount = global.player_mg_count + global.ally_1_mg_count + global.ally
 allied_cp_amount = global.player_cp_count + global.ally_1_cp_count + global.ally_2_cp_count + global.ally_3_cp_count;
 allied_nc_amount = global.player_nc_count + global.ally_1_nc_count + global.ally_2_nc_count + global.ally_3_nc_count;
 allied_gh_amount = global.player_gh_count + global.ally_1_gh_count + global.ally_2_gh_count + global.ally_3_gh_count;
+
+// total
+allied_unit_amount = global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count;
 
 // here we track what units we are using
 enemies_sm_amount = global.enemy_sm_count + global.enemy_2_sm_count + global.enemy_3_sm_count + global.enemy_4_sm_count;
@@ -54,6 +67,9 @@ enemies_total_mel_units = 0;
 enemies_ranged_army_perc_targ = 0.75; 
 enemies_ranged_army_percent = 0.0;
 
+// total
+enemy_unit_amount = global.player_unit_count_enemy + global.enemy_2_unit_count + global.enemy_3_unit_count + global.enemy_4_unit_count;
+
 
 // Training timers
 ai_sm_train_delay = global.ai_train_delay_sm * fps; // here we set the seconds in to terms of fps.
@@ -63,6 +79,8 @@ ai_kn_train_delay = global.ai_train_delay_kn * fps;
 ai_ab_train_delay = global.ai_train_delay_ab * fps;
 ai_hb_train_delay = global.ai_train_delay_hb * fps;
 ai_mg_train_delay = global.ai_train_delay_mg * fps;
+
+
 
 // wip
 ai_nc_train_delay = global.ai_train_delay_nc * fps;

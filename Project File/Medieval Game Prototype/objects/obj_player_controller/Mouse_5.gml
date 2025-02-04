@@ -20,13 +20,15 @@ else {
 	if (global.dev_mode == true){
 		// Right click will have the following effect
 		// Create a enemy obj
-		//instance_create_layer(x,704,"Targets",obj_necromancer_enemy);
+		//instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a1);
 
 		//global.player_unit_count = global.player_unit_count + 1;
 	}
 	else {
 		// nothing
-		//instance_create_layer(x,704,"Targets",obj_necromancer_enemy);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a3);
 	
 	}
 	

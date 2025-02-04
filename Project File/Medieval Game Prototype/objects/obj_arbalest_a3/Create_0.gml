@@ -1,9 +1,9 @@
 /// Here we will set character properties
 // Global AI trackers
-global.ally_1_unit_count += 1;
+global.ally_3_unit_count += 1;
 
 // Information about myself
-internal_unit_number = global.ally_1_unit_count;
+internal_unit_number = global.ally_3_unit_count;
 internal_unit_type = "generic_ranged_NPC";
 num_of_debug_items = 12;
 
@@ -110,16 +110,16 @@ ai_attack_distance_offset = (irandom_range(0,8)) * 4;
 // ai_rally_distance_offset = 0;
 
 //on death spawn this obj
-death_character = obj_arbalest_dead_a1;
+death_character = obj_arbalest_dead_a2;
 
 // Help AI track Information
-global.ally_1_ab_count = global.ally_1_ab_count + 1;
+global.ally_3_ab_count = global.ally_3_ab_count + 1;
 
 // retreat offset
 ai_range_retreat_offset = (irandom_range(1,8))*4;
 
 // colour palette properties
-colour_palette_index = global.slot_two_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+colour_palette_index = global.slot_four_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
 
 // palette sprites
 col_pal_idle = spr_ab_indx_col_plte_00_idle;

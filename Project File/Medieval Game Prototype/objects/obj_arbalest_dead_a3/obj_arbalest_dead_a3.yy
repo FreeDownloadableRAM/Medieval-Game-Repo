@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_arbalest_a1",
+  "%Name":"obj_arbalest_dead_a3",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_arbalest_a1",
+  "name":"obj_arbalest_dead_a3",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_ally_1",
     "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player/gr_ally_1.yy",
   },
   "parentObjectId":{
-    "name":"obj_arbalest",
-    "path":"objects/obj_arbalest/obj_arbalest.yy",
+    "name":"obj_arbalest_dead",
+    "path":"objects/obj_arbalest_dead/obj_arbalest_dead.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ab_00_idle_indx",
-    "path":"sprites/spr_ab_00_idle_indx/spr_ab_00_idle_indx.yy",
+    "name":"spr_ab_07_dead_1",
+    "path":"sprites/spr_ab_07_dead_1/spr_ab_07_dead_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

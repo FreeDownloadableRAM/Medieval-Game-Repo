@@ -22,12 +22,12 @@ dead_body_sprite = spr_ab_07_dead_1_indx;
 invisible_sprite = spr_dbg_invisible;
 
 // Help AI track Information
-global.ally_1_ab_count -= 1;
+global.ally_3_ab_count -= 1;
 
-global.ally_1_unit_count -= 1;
+global.ally_3_unit_count -= 1;
 
 // colour palette properties
-colour_palette_index = global.slot_two_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+colour_palette_index = global.slot_four_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
 
 col_pal_death = spr_ab_indx_col_plte_06_dth;
 col_pal_dead = spr_ab_indx_col_plte_07_dead;

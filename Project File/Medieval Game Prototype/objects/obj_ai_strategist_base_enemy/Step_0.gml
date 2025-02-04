@@ -29,7 +29,7 @@ else {
 	// In order from most preferential, to least.
 	// If the AI can afford it and its not on Cool down, they will go for it.
 	
-	if ((ai_eco_up_save == false) && (global.player_unit_count_enemy < global.player_unit_cap) && ai_king_health > 0.25){
+	if ((ai_eco_up_save == false) && (enemy_unit_amount < global.player_unit_cap) && ai_king_health > 0.25){
 		// ONLY spawn troops or attempt to when we are NOT saving up for eco upgrades.
 		// If we are in here, we are NOT planning to eco upgrade.
 		
@@ -81,7 +81,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -90,11 +90,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -104,10 +104,10 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. Range, training necromancer";
@@ -117,7 +117,7 @@ else {
 							alarm_set(11,ai_nc_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 							
 						}
 						
@@ -131,7 +131,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -140,11 +140,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -154,10 +154,10 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. Range, training necromancer";
@@ -167,7 +167,7 @@ else {
 							alarm_set(11,ai_nc_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 							
 						}
 					}
@@ -178,7 +178,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training halberdier";
@@ -188,11 +188,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training knight";
@@ -202,11 +202,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training pikeman";
@@ -216,11 +216,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training swordman";
@@ -230,7 +230,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 						
@@ -243,7 +243,7 @@ else {
 					// Debug
 					ai_choice = "AI wants to counter swordmen and range, NO access to ranged units";
 					// Train these units in upper most priority (most expensive to least expensive)
-					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -253,11 +253,11 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
 					// Halberd training
-					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training halberdier";
@@ -267,11 +267,11 @@ else {
 						alarm_set(5,ai_hb_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 					}
 					// Knight training
-					if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training knight";
@@ -281,11 +281,11 @@ else {
 						alarm_set(3,ai_kn_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 					}
 					// pikeman training
-					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training pikeman";
@@ -295,11 +295,11 @@ else {
 						alarm_set(1,ai_pm_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 					}
 					// swordman training
-					if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training swordman";
@@ -309,7 +309,7 @@ else {
 						alarm_set(0,ai_sm_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 					}
 						
@@ -339,7 +339,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training arbalest";
@@ -348,11 +348,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training ranger";
@@ -362,11 +362,11 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 						// Magician training
-						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training magician";
@@ -376,7 +376,7 @@ else {
 							alarm_set(10,ai_mg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 						}
 						
@@ -390,7 +390,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -399,11 +399,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -413,11 +413,11 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 						// Magician training
-						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training magician";
@@ -427,7 +427,7 @@ else {
 							alarm_set(10,ai_mg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 						}
 					}
@@ -438,7 +438,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -448,11 +448,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -462,11 +462,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -476,11 +476,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -490,7 +490,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 						
@@ -504,7 +504,7 @@ else {
 					ai_choice = "AI wants to counter swordmen, NO access to ranged units";
 					// Train these units in upper most priority (most expensive to least expensive)
 					// Magician training
-					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -514,11 +514,11 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
 					// Halberd training
-					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training halberdier";
@@ -528,11 +528,11 @@ else {
 						alarm_set(5,ai_hb_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 					}
 					// Knight training
-					if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training knight";
@@ -542,11 +542,11 @@ else {
 						alarm_set(3,ai_kn_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 					}
 					// pikeman training
-					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training pikeman";
@@ -556,11 +556,11 @@ else {
 						alarm_set(1,ai_pm_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 					}
 					// swordman training
-					if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training swordman";
@@ -570,7 +570,7 @@ else {
 						alarm_set(0,ai_sm_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 					}
 						
@@ -599,7 +599,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -608,11 +608,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -622,7 +622,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -632,7 +632,7 @@ else {
 					ai_choice = "def. army. 1. training melee";
 						
 					// Halberd training
-					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -642,11 +642,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 					// pikeman training
-					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -656,7 +656,7 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 					
@@ -677,7 +677,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -686,11 +686,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -700,10 +700,10 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -713,10 +713,10 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -726,7 +726,7 @@ else {
 						alarm_set(11,ai_nc_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 					}
 				}
@@ -739,7 +739,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -748,11 +748,11 @@ else {
 						global.enemy_gold_amount -= global.unit_arbalest_cost;
 						alarm_set(4,ai_ab_train_delay);
 						// spawn
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -762,10 +762,10 @@ else {
 						alarm_set(2,ai_rg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -775,7 +775,7 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
 				}
@@ -786,7 +786,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -796,11 +796,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -810,11 +810,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -824,11 +824,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -838,7 +838,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -860,7 +860,7 @@ else {
 			ai_choice = "cntr. army. KN. possible";
 			
 			// Halberd training
-			if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+			if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -870,11 +870,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 			// pikeman training
-			if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+			if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -884,10 +884,10 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
-			if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+			if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 				// alarm is at 0s, and we have the funds, and this unit is available.
 				// Debug
 				ai_choice = "Counter P. SM, training magician";
@@ -897,7 +897,7 @@ else {
 				alarm_set(10,ai_mg_train_delay);
 				// spawn
 				// replace with enemy ranger unit once that is completed.
-				instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+				instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 			}
 						
@@ -918,7 +918,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -927,11 +927,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -941,7 +941,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -954,7 +954,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -963,11 +963,11 @@ else {
 						global.enemy_gold_amount -= global.unit_arbalest_cost;
 						alarm_set(4,ai_ab_train_delay);
 						// spawn
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -977,10 +977,10 @@ else {
 						alarm_set(2,ai_rg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -990,10 +990,10 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1003,7 +1003,7 @@ else {
 						alarm_set(11,ai_nc_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 					}
 				}
@@ -1014,7 +1014,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1024,11 +1024,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1038,11 +1038,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1052,11 +1052,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1066,7 +1066,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -1095,7 +1095,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1105,10 +1105,10 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training magician";
@@ -1118,7 +1118,7 @@ else {
 							alarm_set(10,ai_mg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 						}
 					}
@@ -1128,7 +1128,7 @@ else {
 				ai_choice = "cntr. army. HB. training melee";
 						
 				// Halberd training
-				if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+				if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1138,11 +1138,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 				// pikeman training
-				if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+				if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1152,7 +1152,7 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						
@@ -1173,7 +1173,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1182,11 +1182,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1196,10 +1196,10 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training magician";
@@ -1209,10 +1209,10 @@ else {
 							alarm_set(10,ai_mg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 						}
-						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. Range, training necromancer";
@@ -1222,7 +1222,7 @@ else {
 							alarm_set(11,ai_nc_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 						}
 					}
@@ -1235,7 +1235,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1244,11 +1244,11 @@ else {
 						global.enemy_gold_amount -= global.unit_arbalest_cost;
 						alarm_set(4,ai_ab_train_delay);
 						// spawn
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -1258,10 +1258,10 @@ else {
 						alarm_set(2,ai_rg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1271,7 +1271,7 @@ else {
 						alarm_set(11,ai_nc_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 					}
 				}
@@ -1282,7 +1282,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1292,11 +1292,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1306,11 +1306,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1320,11 +1320,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1334,7 +1334,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -1364,7 +1364,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1374,10 +1374,10 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap && p_hb_amount > 0){
+						if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap && allied_hb_amount > 0){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training magician";
@@ -1387,7 +1387,7 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
 					}
@@ -1397,7 +1397,7 @@ else {
 						ai_choice = "cntr. army. Range. training melee";
 						
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1407,11 +1407,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1421,10 +1421,10 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
-						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1434,7 +1434,7 @@ else {
 						alarm_set(11,ai_nc_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 					}
 					}
@@ -1454,7 +1454,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1463,11 +1463,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1477,7 +1477,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -1491,7 +1491,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1500,11 +1500,11 @@ else {
 						global.enemy_gold_amount -= global.unit_arbalest_cost;
 						alarm_set(4,ai_ab_train_delay);
 						// spawn
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -1514,10 +1514,10 @@ else {
 						alarm_set(2,ai_rg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -1527,10 +1527,10 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1540,7 +1540,7 @@ else {
 						alarm_set(11,ai_nc_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 					}
 				}
@@ -1551,7 +1551,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1561,11 +1561,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1575,11 +1575,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1589,11 +1589,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1603,7 +1603,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -1642,7 +1642,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1651,11 +1651,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1665,7 +1665,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -1675,7 +1675,7 @@ else {
 						ai_choice = "def. army. 0. training melee";
 						
 						// Train Knights in higher priority, then swordmen
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1685,11 +1685,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// Swordmen
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1699,7 +1699,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -1720,7 +1720,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1729,11 +1729,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1743,7 +1743,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -1755,7 +1755,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1764,11 +1764,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1778,7 +1778,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -1789,7 +1789,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1799,11 +1799,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1813,11 +1813,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1827,11 +1827,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1841,7 +1841,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -1870,7 +1870,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1879,11 +1879,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1893,7 +1893,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -1903,7 +1903,7 @@ else {
 						ai_choice = "def. army. 1. training melee";
 						
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1913,11 +1913,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1927,7 +1927,7 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 					
@@ -1948,7 +1948,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1957,11 +1957,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1971,7 +1971,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -1983,7 +1983,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1992,11 +1992,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2006,7 +2006,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2017,7 +2017,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2027,11 +2027,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2041,11 +2041,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2055,11 +2055,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2069,7 +2069,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -2093,7 +2093,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2102,11 +2102,11 @@ else {
 						global.enemy_gold_amount -= global.unit_arbalest_cost;
 						alarm_set(4,ai_ab_train_delay);
 						// spawn
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -2116,7 +2116,7 @@ else {
 						alarm_set(2,ai_rg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
 				
@@ -2135,7 +2135,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2144,11 +2144,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2158,7 +2158,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2170,7 +2170,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2179,11 +2179,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2193,7 +2193,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2204,7 +2204,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2214,11 +2214,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2228,11 +2228,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2242,11 +2242,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2256,7 +2256,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -2286,7 +2286,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2296,7 +2296,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2306,7 +2306,7 @@ else {
 						ai_choice = "def. army. 3. training melee";
 						
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2316,11 +2316,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2330,7 +2330,7 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 					}
@@ -2350,7 +2350,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2359,11 +2359,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2373,7 +2373,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2385,7 +2385,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2394,11 +2394,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2408,7 +2408,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2419,7 +2419,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2429,11 +2429,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2443,11 +2443,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2457,11 +2457,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2471,7 +2471,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -2501,7 +2501,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2511,7 +2511,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2521,7 +2521,7 @@ else {
 						ai_choice = "def. army. 4. training melee";
 						
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2531,11 +2531,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2545,7 +2545,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					}
@@ -2565,7 +2565,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2574,11 +2574,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2588,7 +2588,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2601,7 +2601,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2610,11 +2610,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2624,7 +2624,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2635,7 +2635,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2645,11 +2645,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2659,11 +2659,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2673,11 +2673,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2687,7 +2687,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -2709,7 +2709,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2718,11 +2718,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2732,7 +2732,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 				}
@@ -2744,7 +2744,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2753,11 +2753,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+						if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2767,7 +2767,7 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 					}
@@ -2778,7 +2778,7 @@ else {
 						
 					// Train these units in upper most priority (most expensive to least expensive)
 					// Halberd training
-					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2788,11 +2788,11 @@ else {
 							alarm_set(5,ai_hb_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 						}
 					// Knight training
-					if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2802,11 +2802,11 @@ else {
 							alarm_set(3,ai_kn_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 						}
 					// pikeman training
-					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2816,11 +2816,11 @@ else {
 							alarm_set(1,ai_pm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
 					// swordman training
-					if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+					if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2830,7 +2830,7 @@ else {
 							alarm_set(0,ai_sm_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 						}
 					
@@ -2842,11 +2842,11 @@ else {
 	}
 	// We are low health, Spawn whatever you can as a last ditch effort to live
 	
-	else if ((ai_eco_up_save == false) && (global.player_unit_count_enemy < global.player_unit_cap) && ai_king_health <= 0.25){
+	else if ((ai_eco_up_save == false) && (enemy_unit_amount < global.player_unit_cap) && ai_king_health <= 0.25){
 		ai_choice = "AI Is training whatever it can, ASAP";
 		// train whatever we can
 		// Train these units in upper most priority (most expensive to least expensive)
-		if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[10] <= 0 && global.enemy_gold_amount >= global.unit_magician_cost && can_train_mg == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -2856,10 +2856,10 @@ else {
 						alarm_set(10,ai_mg_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-		if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[11] <= 0 && global.enemy_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -2869,11 +2869,11 @@ else {
 						alarm_set(11,ai_nc_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_necromancer);
 						
 					}
 		// Halberd training
-		if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[5] <= 0 && global.enemy_gold_amount >= global.unit_halberd_cost && can_train_hb == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training halberdier";
@@ -2883,11 +2883,11 @@ else {
 						alarm_set(5,ai_hb_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_halberdier);
 						
 					}
 		// Knight training
-		if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[3] <= 0 && global.enemy_gold_amount >= global.unit_knight_cost && can_train_kn == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training knight";
@@ -2897,10 +2897,10 @@ else {
 						alarm_set(3,ai_kn_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_knight);
 						
 					}
-		if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[4] <= 0 && global.enemy_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2909,11 +2909,11 @@ else {
 							global.enemy_gold_amount -= global.unit_arbalest_cost;
 							alarm_set(4,ai_ab_train_delay);
 							// spawn
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_arbalest);
 						
 						}
 		// are we able to train ranger?
-		if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[2] <= 0 && global.enemy_gold_amount >= global.unit_ranger_cost && can_train_rg == true && enemy_unit_amount < global.player_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2923,11 +2923,11 @@ else {
 							alarm_set(2,ai_rg_train_delay);
 							// spawn
 							// replace with enemy ranger unit once that is completed.
-							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+							instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
 		// pikeman training
-		if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[1] <= 0 && global.enemy_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training pikeman";
@@ -2937,11 +2937,11 @@ else {
 						alarm_set(1,ai_pm_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_pikeman);
 						
 					}
 		// swordman training
-		if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.player_unit_count_enemy < global.player_unit_cap){
+		if (alarm[0] <= 0 && global.enemy_gold_amount >= global.unit_swordman_cost && can_train_sm == true && enemy_unit_amount < global.player_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training swordman";
@@ -2951,7 +2951,7 @@ else {
 						alarm_set(0,ai_sm_train_delay);
 						// spawn
 						// replace with enemy ranger unit once that is completed.
-						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+						instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",ai_swordsman);
 						
 					}
 	}
@@ -3063,20 +3063,20 @@ else {
 			ai_order_situation = "Sit, 1";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 10.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 10.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 10x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 7.5)){
+				else if (allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 7.5)){
 					// If the player has 7.5x the amount of knights and halberdiers
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_kn_amount + enemies_hb_amount) * 7.5)){
+				else if (allied_unit_amount < ((enemies_kn_amount + enemies_hb_amount) * 7.5)){
 					// If the player has less than 7.5x the amount of ai knights and halberdiers
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3091,20 +3091,20 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 4.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 4.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 4x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 2.0)){
+				else if (allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 2.0)){
 					// If the player has 2x the amount of swordmen and pikemen
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_sm_amount + enemies_pm_amount) * 2.0)){
+				else if (allied_unit_amount < ((enemies_sm_amount + enemies_pm_amount) * 2.0)){
 					// If the player has less than 2x the amount of ai swordmen and pikemen
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3125,20 +3125,20 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 2x the amount of rangers and arbalests
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 1.0)){
+				else if (allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.0)){
 					// If the player has 1x the amount of rangers and arbalests
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_rg_amount + enemies_ab_amount) * 1.0)){
+				else if (allied_unit_amount < ((enemies_rg_amount + enemies_ab_amount) * 1.0)){
 					// If the player has less than 1x the amount of ai rangers and arbalests
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3162,20 +3162,20 @@ else {
 			ai_order_situation = "Sit. 2";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 10.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 10.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 10x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 5.0)){
+				else if (allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 5.0)){
 					// If the player has 5.0x the amount of knights and halberdiers
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_kn_amount + enemies_hb_amount) * 5.0)){
+				else if (allied_unit_amount < ((enemies_kn_amount + enemies_hb_amount) * 5.0)){
 					// If the player has less than 5.0x the amount of ai knights and halberdiers
 					// Attack
 					global.enemy_order = 2; // Attack
@@ -3190,20 +3190,20 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 2x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
+				else if (allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
 					// If the player has 1.5x the amount of swordmen and pikemen
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
+				else if (allied_unit_amount < ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
 					// If the player has less than 1.5x the amount of ai swordmen and pikemen
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3220,7 +3220,7 @@ else {
 			else if ((can_train_mg == true) && (can_train_sm == false && can_train_pm == false && can_train_rg == false && can_train_kn == false && can_train_ab == false && can_train_hb == false)){
 				// order logic
 				// player has any amount of range
-				if (p_ab_amount > 0 || p_rg_amount > 0){
+				if (allied_ab_amount > 0 || allied_rg_amount > 0){
 					// attack
 					global.enemy_order = 2;
 				}
@@ -3229,64 +3229,64 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((p_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_pm_amount > 0 || p_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
-					else if((p_sm_amount > 0) && (enemies_mg_amount < 2)){
+					else if((allied_sm_amount > 0) && (enemies_mg_amount < 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 pikeman and we do not have enough magicians
-					else if((p_pm_amount > 0) && (enemies_mg_amount < 3)){
+					else if((allied_pm_amount > 0) && (enemies_mg_amount < 3)){
 						global.enemy_order = 1;
 					}	
 					// if player has at least 1 knight and we do not have enough magicians
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 5)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 5)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 halberdier and we do not have enough magicians
-					else if((p_hb_amount > 0) && (enemies_mg_amount < 7)){
+					else if((allied_hb_amount > 0) && (enemies_mg_amount < 7)){
 						global.enemy_order = 1;
 					}
 					// if nothing applies, you can attack
@@ -3298,14 +3298,14 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 3x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 1.5)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
+				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.5)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
 					&& (global.player_order == 2)){
 					// If the player has 2x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
@@ -3314,13 +3314,13 @@ else {
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 1.25)) && ((p_rg_amount + p_ab_amount) > 0)){
+				else if((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.25)) && ((allied_rg_amount + allied_ab_amount) > 0)){
 					// If player has 1.25x amount units the amount of rangers and arbalests ai has
 					// AND has ranged units
 					global.enemy_order = 1; // Defend
 				
 				}
-				else if (global.player_unit_count < ((enemies_rg_amount + enemies_ab_amount) * 1.5) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
+				else if (allied_unit_amount < ((enemies_rg_amount + enemies_ab_amount) * 1.5) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
 					// If the player has less than 2.0x the amount of ai rangers and arbalests
 					// AND the ai has more than 25% army capacity filled with range
 					// Attack
@@ -3345,20 +3345,20 @@ else {
 			ai_order_situation = "Sit. 3";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 3.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 3.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 3x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 2.0)){
+				else if (allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 2.0)){
 					// If the player has 2.0x the amount of knights and halberdiers
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_kn_amount + enemies_hb_amount) * 2.0)){
+				else if (allied_unit_amount < ((enemies_kn_amount + enemies_hb_amount) * 2.0)){
 					// If the player has less than 5.0x the amount of ai knights and halberdiers
 					// Attack
 					global.enemy_order = 2; // Attack
@@ -3373,20 +3373,20 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 2x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
+				else if (allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
 					// If the player has 1.5x the amount of swordmen and pikemen
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
+				else if (allied_unit_amount < ((enemies_sm_amount + enemies_pm_amount) * 1.5)){
 					// If the player has less than 1.5x the amount of ai swordmen and pikemen
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3403,7 +3403,7 @@ else {
 			else if ((can_train_mg == true) && (can_train_sm == false && can_train_pm == false && can_train_rg == false && can_train_kn == false && can_train_ab == false && can_train_hb == false)){
 				// order logic
 				// player has any amount of range
-				if (p_ab_amount > 0 || p_rg_amount > 0){
+				if (allied_ab_amount > 0 || allied_rg_amount > 0){
 					// attack
 					global.enemy_order = 2;
 				}
@@ -3412,64 +3412,64 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((p_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_pm_amount > 0 || p_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
-					else if((p_sm_amount > 0) && (enemies_mg_amount < 2)){
+					else if((allied_sm_amount > 0) && (enemies_mg_amount < 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 pikeman and we do not have enough magicians
-					else if((p_pm_amount > 0) && (enemies_mg_amount < 3)){
+					else if((allied_pm_amount > 0) && (enemies_mg_amount < 3)){
 						global.enemy_order = 1;
 					}	
 					// if player has at least 1 knight and we do not have enough magicians
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 5)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 5)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 halberdier and we do not have enough magicians
-					else if((p_hb_amount > 0) && (enemies_mg_amount < 7)){
+					else if((allied_hb_amount > 0) && (enemies_mg_amount < 7)){
 						global.enemy_order = 1;
 					}
 					// if nothing applies, you can attack
@@ -3481,14 +3481,14 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 2x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 1.25)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
+				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.25)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
 					&& (global.player_order == 2)){
 					// If the player has 1.25x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
@@ -3497,13 +3497,13 @@ else {
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 1.1)) && ((p_rg_amount + p_ab_amount) > 0)){
+				else if((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.1)) && ((allied_rg_amount + allied_ab_amount) > 0)){
 					// If player has 1.1x amount units the amount of rangers and arbalests ai has
 					// AND has ranged units
 					global.enemy_order = 1; // Defend
 				
 				}
-				else if (global.player_unit_count < ((enemies_rg_amount + enemies_ab_amount) * 1.75) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
+				else if (allied_unit_amount < ((enemies_rg_amount + enemies_ab_amount) * 1.75) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
 					// If the player has less than 1.75x the amount of ai rangers and arbalests
 					// AND the ai has more than 25% army capacity filled with range
 					// Attack
@@ -3528,20 +3528,20 @@ else {
 			ai_order_situation = "Sit. 4";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 2x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 1.5)){
+				else if (allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 1.5)){
 					// If the player has 1.5x the amount of knights and halberdiers
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_kn_amount + enemies_hb_amount) * 1.5)){
+				else if (allied_unit_amount < ((enemies_kn_amount + enemies_hb_amount) * 1.5)){
 					// If the player has less than 1.5x the amount of ai knights and halberdiers
 					// Attack
 					global.enemy_order = 2; // Attack
@@ -3556,20 +3556,20 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 1.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 2x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 1.25)){
+				else if (allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.25)){
 					// If the player has 1.25x the amount of swordmen and pikemen
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_sm_amount + enemies_pm_amount) * 1.25)){
+				else if (allied_unit_amount < ((enemies_sm_amount + enemies_pm_amount) * 1.25)){
 					// If the player has less than 1.25x the amount of ai swordmen and pikemen
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3586,7 +3586,7 @@ else {
 			else if ((can_train_mg == true) && (can_train_sm == false && can_train_pm == false && can_train_rg == false && can_train_kn == false && can_train_ab == false && can_train_hb == false)){
 				// order logic
 				// player has any amount of range
-				if (p_ab_amount > 0 || p_rg_amount > 0){
+				if (allied_ab_amount > 0 || allied_rg_amount > 0){
 					// attack
 					global.enemy_order = 2;
 				}
@@ -3595,64 +3595,64 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((p_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_pm_amount > 0 || p_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
-					else if((p_sm_amount > 0) && (enemies_mg_amount < 2)){
+					else if((allied_sm_amount > 0) && (enemies_mg_amount < 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 pikeman and we do not have enough magicians
-					else if((p_pm_amount > 0) && (enemies_mg_amount < 3)){
+					else if((allied_pm_amount > 0) && (enemies_mg_amount < 3)){
 						global.enemy_order = 1;
 					}	
 					// if player has at least 1 knight and we do not have enough magicians
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 5)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 5)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 halberdier and we do not have enough magicians
-					else if((p_hb_amount > 0) && (enemies_mg_amount < 7)){
+					else if((allied_hb_amount > 0) && (enemies_mg_amount < 7)){
 						global.enemy_order = 1;
 					}
 					// if nothing applies, you can attack
@@ -3664,14 +3664,14 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 1.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 1.0x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 0.5)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
+				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.5)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
 					&& (global.player_order == 2)){
 					// If the player has 0.5x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
@@ -3680,13 +3680,13 @@ else {
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 0.4)) && ((p_rg_amount + p_ab_amount) > 0)){
+				else if((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.4)) && ((allied_rg_amount + allied_ab_amount) > 0)){
 					// If player has 0.4x amount units the amount of rangers and arbalests ai has
 					// AND has ranged units
 					global.enemy_order = 1; // Defend
 				
 				}
-				else if (global.player_unit_count < ((enemies_rg_amount + enemies_ab_amount) * 0.75) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
+				else if (allied_unit_amount < ((enemies_rg_amount + enemies_ab_amount) * 0.75) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
 					// If the player has less than 0.75x the amount of ai rangers and arbalests
 					// AND the ai has more than 25% army capacity filled with range
 					// Attack
@@ -3711,20 +3711,20 @@ else {
 			ai_order_situation = "Sit. 5";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 1.5) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 1.5) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 1.5x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_kn_amount + enemies_hb_amount) * 1.25)){
+				else if (allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 1.25)){
 					// If the player has 1.25x the amount of knights and halberdiers
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_kn_amount + enemies_hb_amount) * 1.25)){
+				else if (allied_unit_amount < ((enemies_kn_amount + enemies_hb_amount) * 1.25)){
 					// If the player has less than 1.25x the amount of ai knights and halberdiers
 					// Attack
 					global.enemy_order = 2; // Attack
@@ -3739,20 +3739,20 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 1.25) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.25) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 1.25x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if (global.player_unit_count >= ((enemies_sm_amount + enemies_pm_amount) * 1.1)){
+				else if (allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.1)){
 					// If the player has 1.1x the amount of swordmen and pikemen
 					// Defend
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if (global.player_unit_count < ((enemies_sm_amount + enemies_pm_amount) * 1.1)){
+				else if (allied_unit_amount < ((enemies_sm_amount + enemies_pm_amount) * 1.1)){
 					// If the player has less than 1.1x the amount of ai swordmen and pikemen
 					// Defend
 					global.enemy_order = 2; // Attack
@@ -3769,7 +3769,7 @@ else {
 			else if ((can_train_mg == true) && (can_train_sm == false && can_train_pm == false && can_train_rg == false && can_train_kn == false && can_train_ab == false && can_train_hb == false)){
 				// order logic
 				// player has any amount of range
-				if (p_ab_amount > 0 || p_rg_amount > 0){
+				if (allied_ab_amount > 0 || allied_rg_amount > 0){
 					// attack
 					global.enemy_order = 2;
 				}
@@ -3778,64 +3778,64 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((p_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_pm_amount > 0 || p_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
-					else if((p_sm_amount > 0) && (enemies_mg_amount < 2)){
+					else if((allied_sm_amount > 0) && (enemies_mg_amount < 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 pikeman and we do not have enough magicians
-					else if((p_pm_amount > 0) && (enemies_mg_amount < 3)){
+					else if((allied_pm_amount > 0) && (enemies_mg_amount < 3)){
 						global.enemy_order = 1;
 					}	
 					// if player has at least 1 knight and we do not have enough magicians
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 5)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 5)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 halberdier and we do not have enough magicians
-					else if((p_hb_amount > 0) && (enemies_mg_amount < 7)){
+					else if((allied_hb_amount > 0) && (enemies_mg_amount < 7)){
 						global.enemy_order = 1;
 					}
 					// if nothing applies, you can attack
@@ -3847,14 +3847,14 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 0.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
 					// If the player has 0.75x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
 					global.enemy_order = 0; // Retreat
 		
 				}
-				else if ((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 0.4)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
+				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.4)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
 					&& (global.player_order == 2)){
 					// If the player has 0.4x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
@@ -3863,13 +3863,13 @@ else {
 					global.enemy_order = 1; // Defend
 					
 				}
-				else if((global.player_unit_count >= ((enemies_rg_amount + enemies_ab_amount) * 0.3)) && ((p_rg_amount + p_ab_amount) > 0)){
+				else if((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.3)) && ((allied_rg_amount + allied_ab_amount) > 0)){
 					// If player has 0.3x amount units the amount of rangers and arbalests ai has
 					// AND has ranged units
 					global.enemy_order = 1; // Defend
 				
 				}
-				else if (global.player_unit_count < ((enemies_rg_amount + enemies_ab_amount) * 0.5) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
+				else if (allied_unit_amount < ((enemies_rg_amount + enemies_ab_amount) * 0.5) && ((enemies_rg_amount + enemies_ab_amount) > (global.player_unit_cap * 0.25))){
 					// If the player has less than 0.5x the amount of ai rangers and arbalests
 					// AND the ai has more than 25% army capacity filled with range
 					// Attack
@@ -3897,7 +3897,7 @@ else {
 			if ((can_train_mg == true) && (can_train_sm == false && can_train_pm == false && can_train_rg == false && can_train_kn == false && can_train_ab == false && can_train_hb == false)){
 				// order logic
 				// player has any amount of range
-				if (p_ab_amount > 0 || p_rg_amount > 0){
+				if (allied_ab_amount > 0 || allied_rg_amount > 0){
 					// attack
 					global.enemy_order = 2;
 				}
@@ -3906,64 +3906,64 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((p_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((p_pm_amount > 0 || p_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((p_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((p_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((p_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((p_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
-					else if((p_sm_amount > 0) && (enemies_mg_amount < 2)){
+					else if((allied_sm_amount > 0) && (enemies_mg_amount < 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 pikeman and we do not have enough magicians
-					else if((p_pm_amount > 0) && (enemies_mg_amount < 3)){
+					else if((allied_pm_amount > 0) && (enemies_mg_amount < 3)){
 						global.enemy_order = 1;
 					}	
 					// if player has at least 1 knight and we do not have enough magicians
-					else if((p_kn_amount > 0) && (enemies_mg_amount < 5)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 5)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 halberdier and we do not have enough magicians
-					else if((p_hb_amount > 0) && (enemies_mg_amount < 7)){
+					else if((allied_hb_amount > 0) && (enemies_mg_amount < 7)){
 						global.enemy_order = 1;
 					}
 					// if nothing applies, you can attack
@@ -3977,14 +3977,14 @@ else {
 			else {
 				// Retreat Conditions
 				// So under which situation should the ai retreat?
-				if ((global.player_unit_count > (global.player_unit_count_enemy * 1.5)) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+				if ((allied_unit_amount > (enemy_unit_amount * 1.5)) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
 					// If the player has 50% more units than the enemy
 					global.enemy_order = 0; // Retreat
 				}
 				// Defend Conditions
 		
 				// So under which situations should the AI defend?
-				else if ((global.player_unit_count > (global.player_unit_count_enemy * 1.25)) && (ai_king_health > ai_def_cutoff_perc)){
+				else if ((allied_unit_amount > (enemy_unit_amount * 1.25)) && (ai_king_health > ai_def_cutoff_perc)){
 					// If the player has 25% more units than the ai
 					global.enemy_order = 1; // Defend
 				}
@@ -4029,56 +4029,56 @@ else {
 		// spawn them in
 		if (reinf_sm_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_swordsman);
 			// decrease counter
 			reinf_sm_amount --;
 		
 		}
 		if (reinf_pm_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_pikeman);
 			// decrease counter
 			reinf_pm_amount --;
 		
 		}
 		if (reinf_rg_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_ranger);
 			// decrease counter
 			reinf_rg_amount --;
 		
 		}
 		if (reinf_kn_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_knight);
 			// decrease counter
 			reinf_kn_amount --;
 		
 		}
 		if (reinf_ab_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x  + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+			instance_create_layer(enemy_spawn_location_x  + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_arbalest);
 			// decrease counter
 			reinf_ab_amount --;
 		
 		}
 		if (reinf_hb_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_halberdier);
 			// decrease counter
 			reinf_hb_amount --;
 		
 		}
 		if (reinf_mg_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_magician);
 			// decrease counter
 			reinf_mg_amount --;
 		
 		}
 		if (reinf_nc_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_necromancer);
 			// decrease counter
 			reinf_nc_amount --;
 		
@@ -4107,56 +4107,56 @@ else {
 		// spawn them in
 		if (lstand_sm_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_swordman_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_swordsman);
 			// decrease counter
 			lstand_sm_amount --;
 		
 		}
 		if (lstand_pm_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_pikeman_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_pikeman);
 			// decrease counter
 			lstand_pm_amount --;
 		
 		}
 		if (lstand_rg_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_ranger_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_ranger);
 			// decrease counter
 			lstand_rg_amount --;
 		
 		}
 		if (lstand_kn_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_knight_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_knight);
 			// decrease counter
 			lstand_kn_amount --;
 		
 		}
 		if (lstand_ab_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_arbalest_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_arbalest);
 			// decrease counter
 			lstand_ab_amount --;
 		
 		}
 		if (lstand_hb_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_halberdier_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_halberdier);
 			// decrease counter
 			lstand_hb_amount --;
 		
 		}
 		if (lstand_mg_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_magician);
 			// decrease counter
 			lstand_mg_amount --;
 		
 		}
 		if (lstand_nc_amount > 0){
 			// spawn
-			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",obj_necromancer_enemy);
+			instance_create_layer(enemy_spawn_location_x + (irandom_range(0,16)*4),enemy_spawn_location_y,"NPCs",ai_necromancer);
 			// decrease counter
 			lstand_nc_amount --;
 		

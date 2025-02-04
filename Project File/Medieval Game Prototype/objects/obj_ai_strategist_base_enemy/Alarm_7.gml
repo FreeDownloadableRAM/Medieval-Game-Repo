@@ -13,6 +13,9 @@ allied_cp_amount = global.player_cp_count + global.ally_1_cp_count + global.ally
 allied_nc_amount = global.player_nc_count + global.ally_1_nc_count + global.ally_2_nc_count + global.ally_3_nc_count;
 allied_gh_amount = global.player_gh_count + global.ally_1_gh_count + global.ally_2_gh_count + global.ally_3_gh_count;
 
+// total
+allied_unit_amount = global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count;
+
 // here we track what units we are using
 enemies_sm_amount = global.enemy_sm_count + global.enemy_2_sm_count + global.enemy_3_sm_count + global.enemy_4_sm_count;
 enemies_pm_amount = global.enemy_pm_count + global.enemy_2_pm_count + global.enemy_3_pm_count + global.enemy_4_pm_count;
@@ -25,6 +28,8 @@ enemies_mg_amount = global.enemy_mg_count + global.enemy_2_mg_count + global.ene
 enemies_nc_amount = global.enemy_nc_count + global.enemy_2_nc_count + global.enemy_3_nc_count + global.enemy_4_nc_count;
 enemies_gh_amount = global.enemy_gh_count + global.enemy_2_gh_count + global.enemy_3_gh_count + global.enemy_4_gh_count;
 
+// total
+enemy_unit_amount = global.player_unit_count_enemy + global.enemy_2_unit_count + global.enemy_3_unit_count + global.enemy_4_unit_count;
 
 // keep track of our army variables
 enemies_total_mel_units = enemies_sm_amount + enemies_pm_amount + enemies_kn_amount + enemies_hb_amount + enemies_gh_amount;
