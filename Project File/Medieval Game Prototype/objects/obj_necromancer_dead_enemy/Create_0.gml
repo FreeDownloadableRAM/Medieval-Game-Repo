@@ -23,4 +23,8 @@ invisible_sprite = spr_dbg_invisible;
 
 // Help AI track Information
 global.enemy_nc_count -= 1;
+
+// track enemy 1 unit count
+global.player_unit_count_enemy -= 1;
+
 image_xscale = -1; // 1 = original, -1 = flipped on x-axis

@@ -22,3 +22,6 @@ dead_body_sprite = spr_pm_07_dead_1_enemy;
 invisible_sprite = spr_dbg_invisible;
 
 image_xscale = -1;
+
+// track enemy 1 unit count
+global.player_unit_count_enemy -= 1;

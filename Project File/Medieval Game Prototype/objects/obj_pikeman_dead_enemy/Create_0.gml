@@ -25,3 +25,6 @@ image_xscale = -1;
 
 // Help AI track Information
 global.enemy_pm_count -= 1;
+
+// track enemy 1 unit count
+global.player_unit_count_enemy -= 1;

@@ -23,3 +23,6 @@ invisible_sprite = spr_dbg_invisible;
 
 // Help AI track Information
 global.enemy_gh_count -= 1;
+
+// track enemy 1 unit count
+global.player_unit_count_enemy -= 1;
