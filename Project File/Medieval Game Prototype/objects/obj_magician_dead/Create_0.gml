@@ -64,3 +64,6 @@ invisible_sprite = spr_dbg_invisible;
 
 // Help AI track Information
 global.player_mg_count -= 1;
+
+// lower player unit count
+global.player_unit_count -= 1;

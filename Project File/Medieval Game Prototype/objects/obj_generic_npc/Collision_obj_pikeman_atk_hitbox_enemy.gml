@@ -14,7 +14,7 @@ else{
 	// AI doesnt target it
 	if (character_health <= 0){
 		instance_destroy();
-		global.player_unit_count -= 1;
+		// global.player_unit_count -= 1;
 		// update unit count for formations
 		
 		//spawn dead character

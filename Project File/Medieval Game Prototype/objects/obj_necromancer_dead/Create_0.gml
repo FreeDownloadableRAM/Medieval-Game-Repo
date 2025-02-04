@@ -24,6 +24,9 @@ invisible_sprite = spr_dbg_invisible;
 // Help AI track Information
 global.player_nc_count -= 1;
 
+// lower player unit count
+global.player_unit_count -= 1;
+
 // colour palette properties
 colour_palette_index = global.slot_one_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
 

@@ -20,3 +20,6 @@ dead_body_sprite = spr_pm_07_dead_1;
 
 //invisible
 invisible_sprite = spr_dbg_invisible;
+
+// lower player unit count
+global.player_unit_count -= 1;

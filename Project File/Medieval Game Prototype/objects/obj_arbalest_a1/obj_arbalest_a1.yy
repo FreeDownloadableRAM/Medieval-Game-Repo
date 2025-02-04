@@ -3,7 +3,6 @@
   "%Name":"obj_arbalest_a1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_arbalest_a1",
@@ -13,8 +12,8 @@
     "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player/gr_ally_1.yy",
   },
   "parentObjectId":{
-    "name":"obj_generic_npc_ranged",
-    "path":"objects/obj_generic_npc_ranged/obj_generic_npc_ranged.yy",
+    "name":"obj_arbalest",
+    "path":"objects/obj_arbalest/obj_arbalest.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
