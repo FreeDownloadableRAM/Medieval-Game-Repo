@@ -8,8 +8,8 @@
   "name":"obj_arbalest_dead_a1",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_ally_1",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player/gr_ally_1.yy",
+    "name":"gr_allies",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player/gr_allies.yy",
   },
   "parentObjectId":{
     "name":"obj_arbalest_dead",

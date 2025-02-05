@@ -26,9 +26,41 @@ else {
 	}
 	else {
 		// nothing
+		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_a1);
+		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_a2);
+		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_a3);
+		
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a1);
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a2);
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_halberdier_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_halberdier_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_halberdier_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_knight_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_knight_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_knight_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_necromancer_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_necromancer_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_necromancer_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_pikeman_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_pikeman_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_pikeman_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_ranger_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_ranger_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_ranger_a3);
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a1);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a3);
 	
 	}
 	
