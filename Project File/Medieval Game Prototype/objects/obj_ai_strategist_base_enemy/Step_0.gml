@@ -3258,19 +3258,19 @@ else {
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
@@ -3298,7 +3298,7 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 3x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
@@ -3306,7 +3306,7 @@ else {
 		
 				}
 				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.5)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
-					&& (global.player_order == 2)){
+					&& (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 2x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
 					// AND player is on attack order
@@ -3345,7 +3345,7 @@ else {
 			ai_order_situation = "Sit. 3";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 3.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 3.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 3x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
@@ -3373,7 +3373,7 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 2x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
@@ -3412,48 +3412,48 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
@@ -3481,7 +3481,7 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 2x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
@@ -3489,7 +3489,7 @@ else {
 		
 				}
 				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.25)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
-					&& (global.player_order == 2)){
+					&& (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 1.25x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
 					// AND player is on attack order
@@ -3528,7 +3528,7 @@ else {
 			ai_order_situation = "Sit. 4";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 2.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 2x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
@@ -3556,7 +3556,7 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 2x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
@@ -3595,48 +3595,48 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
@@ -3664,7 +3664,7 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 1.0) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 1.0x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
@@ -3672,7 +3672,7 @@ else {
 		
 				}
 				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.5)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
-					&& (global.player_order == 2)){
+					&& (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 0.5x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
 					// AND player is on attack order
@@ -3711,7 +3711,7 @@ else {
 			ai_order_situation = "Sit. 5";
 			// If the AI has access to knights or halberdiers
 			if ((can_train_kn == true || can_train_hb == true) && (enemies_kn_amount || enemies_hb_amount > 0)){
-				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 1.5) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_kn_amount + enemies_hb_amount) * 1.5) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 1.5x the amount of knights and halberdiers
 					// AND King health is greater than 30%
 					// Retreat
@@ -3739,7 +3739,7 @@ else {
 			}
 			// If the AI does not have access to knights, but does have access to swordmen and pikemen
 			else if ((can_train_pm == true || can_train_sm == true) && (enemies_pm_amount || enemies_sm_amount > 0)){
-				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.25) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_sm_amount + enemies_pm_amount) * 1.25) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 1.25x the amount of swordmen and pikemen
 					// AND King health is greater than 30%
 					// Retreat
@@ -3778,48 +3778,48 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
@@ -3847,7 +3847,7 @@ else {
 			}
 			// ai only has access to ranged units
 			else {
-				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2)){
+				if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.75) && (ai_king_health > ai_retr_cutoff_perc)) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 0.75x the amount of rangers and arbalests
 					// AND king health is higher than 30%
 					// Retreat
@@ -3855,7 +3855,7 @@ else {
 		
 				}
 				else if ((allied_unit_amount >= ((enemies_rg_amount + enemies_ab_amount) * 0.4)) && ((enemies_rg_amount + enemies_ab_amount) < (global.player_unit_cap * 0.5))
-					&& (global.player_order == 2)){
+					&& (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 0.4x the amount of rangers and arbalests
 					// AND the ai has less than 50% army capacity filled with range
 					// AND player is on attack order
@@ -3906,48 +3906,48 @@ else {
 					// under what situations do we Retreat?
 					// if we do not have enough troops to defend attackers
 					// halberdiers
-					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					if((allied_hb_amount > 0) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 0) && (enemies_mg_amount < 4) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// knights
-					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 0 || allied_sm_amount > 0) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 5 or more halberdiers and we dont have sufficient amount of magicians to defend (less than 10)
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 						global.enemy_order = 0;
 					}
 					// under which situation do we defend?
 					// the next four are the same as above, but player is not attacking
-					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_hb_amount > 4) && (enemies_mg_amount < 10) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 10 or more knights and we dont have sufficient amount of magicians to defend (less than 7)
-					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_kn_amount > 10) && (enemies_mg_amount < 7) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more pikemen and we dont have sufficient amount of magicians to defend (less than 5)
-					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_pm_amount > 14) && (enemies_mg_amount < 5) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has 15 or more swordmen and we dont have sufficient amount of magicians to defend (less than 3)
-					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2)){
+					else if((allied_sm_amount > 14) && (enemies_mg_amount < 3) && (ai_king_health > ai_def_cutoff_perc) && (global.player_order != 2 && global.ally_1_order != 2  && global.ally_2_order != 2  && global.ally_3_order != 2)){
 						global.enemy_order = 1;
 					}
 					// if player has at least 1 swordmen and we do not have enough magicians
@@ -3977,7 +3977,7 @@ else {
 			else {
 				// Retreat Conditions
 				// So under which situation should the ai retreat?
-				if ((allied_unit_amount > (enemy_unit_amount * 1.5)) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2)){
+				if ((allied_unit_amount > (enemy_unit_amount * 1.5)) && (ai_king_health > ai_retr_cutoff_perc) && (global.player_order == 2 || global.ally_1_order == 2 || global.ally_2_order == 2 || global.ally_3_order == 2)){
 					// If the player has 50% more units than the enemy
 					global.enemy_order = 0; // Retreat
 				}
