@@ -26,6 +26,7 @@ else {
 	}
 	else {
 		// nothing
+		/*
 		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_a1);
 		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_a2);
 		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_a3);
@@ -61,7 +62,11 @@ else {
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a1);
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a2);
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a3);
-	
+		*/
+		
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_enemy_e2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_enemy_e3);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_arbalest_enemy_e4);
 	}
 	
 	

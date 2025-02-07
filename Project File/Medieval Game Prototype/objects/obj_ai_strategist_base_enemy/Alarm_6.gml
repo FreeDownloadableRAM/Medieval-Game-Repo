@@ -33,13 +33,13 @@ opposition_nc_to_army_ratio = (opposition_nc_amount)/(global.player_unit_count +
 
 // Gold Income
 // formula in algebriac form is 5x^{2}+5
-if (global.enemy_gold_amount > (global.enemy_gold_cap - ((global.enemy_gold_gen * (ai_eco_lv * ai_eco_lv)) + global.enemy_gold_gen))){
+if (our_gold_amount > (our_gold_cap - ((our_gold_gen * (ai_eco_lv * ai_eco_lv)) + our_gold_gen))){
 	// If we are going to go above the gold cap, do nothing.
 
 }
 else{
 	// We will not reach gold cap
-	global.enemy_gold_amount = global.enemy_gold_amount + ((global.enemy_gold_gen * (ai_eco_lv * ai_eco_lv)) + global.enemy_gold_gen);
+	our_gold_amount = our_gold_amount + ((our_gold_gen * (ai_eco_lv * ai_eco_lv)) + our_gold_gen);
 	
 }
 

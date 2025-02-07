@@ -9,15 +9,15 @@
 
 // Training Modifiers
 // Training pool, what units are we allowed to train?
-can_train_sm = true;
-can_train_pm = true;
-can_train_rg = true;
-can_train_kn = true;
-can_train_ab = true;
-can_train_hb = true;
-can_train_mg = true;
-// can_train_cp = true;
-can_train_nc = true;
+can_train_sm = global.enemy_can_train_sm;
+can_train_pm = global.enemy_can_train_pm;
+can_train_rg = global.enemy_can_train_rg;
+can_train_kn = global.enemy_can_train_kn;
+can_train_ab = global.enemy_can_train_ab;
+can_train_hb = global.enemy_can_train_hb;
+can_train_mg = global.enemy_can_train_mg;
+// can_train_cp = global.enemy_can_train_cp;
+can_train_nc = global.enemy_can_train_nc;
 
 // objects that we train ourselves
 ai_swordsman = obj_swordman_enemy;
@@ -216,7 +216,10 @@ attack_population_threshold = 20;
 global.enemy_order = 0;
 
 // reset enemy gold amount
-global.enemy_gold_amount = global.enemy_gold_start_amount;
+our_gold_amount = global.enemy_gold_start_amount;
+
+our_gold_gen = global.enemy_gold_gen;
+our_gold_cap = global.enemy_gold_cap;
 
 // Prevent forever games
 ai_patience = irandom_range((300*fps),(420*fps)); // 5 to 8 mins randomly

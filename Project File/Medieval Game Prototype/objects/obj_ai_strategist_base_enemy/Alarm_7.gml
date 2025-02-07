@@ -40,7 +40,7 @@ allies_king_health = global.player_castle_health_enemy / global.starting_player_
 opposition_king_health = global.player_castle_health / global.starting_player_castle_health;
 
 // if the AI does not have units, just set range army percent and all other percents to 0.
-if (global.player_unit_count_enemy == 0){
+if (allied_unit_amount == 0){
 	// just set percentages to 0
 	allied_ranged_army_percent = 0.0;
 

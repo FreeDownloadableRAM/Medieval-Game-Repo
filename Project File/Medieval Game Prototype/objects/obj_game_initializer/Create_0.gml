@@ -74,6 +74,17 @@ global.ally_1_cp_count = 0;
 global.ally_1_nc_count = 0;
 global.ally_1_gh_count = 0;
 
+global.ally_1_can_train_sm = true;
+global.ally_1_can_train_pm = true;
+global.ally_1_can_train_rg = true;
+global.ally_1_can_train_kn = true;
+global.ally_1_can_train_ab = true;
+global.ally_1_can_train_hb = true;
+global.ally_1_can_train_mg = true;
+global.ally_1_can_train_cp = false;
+global.ally_1_can_train_nc = true;
+global.ally_1_can_train_gh = true;
+
 // ally 2
 // ally ai 2 unit ai trackers // slot 2
 global.ally_2_sm_count = 0;
@@ -86,6 +97,17 @@ global.ally_2_mg_count = 0;
 global.ally_2_cp_count = 0;
 global.ally_2_nc_count = 0;
 global.ally_2_gh_count = 0;
+
+global.ally_2_can_train_sm = true;
+global.ally_2_can_train_pm = true;
+global.ally_2_can_train_rg = true;
+global.ally_2_can_train_kn = true;
+global.ally_2_can_train_ab = true;
+global.ally_2_can_train_hb = true;
+global.ally_2_can_train_mg = true;
+global.ally_2_can_train_cp = false;
+global.ally_2_can_train_nc = true;
+global.ally_2_can_train_gh = true;
 
 // ally 3
 // ally ai 3 unit ai trackers // slot 3
@@ -100,6 +122,17 @@ global.ally_3_cp_count = 0;
 global.ally_3_nc_count = 0;
 global.ally_3_gh_count = 0;
 
+global.ally_3_can_train_sm = true;
+global.ally_3_can_train_pm = true;
+global.ally_3_can_train_rg = true;
+global.ally_3_can_train_kn = true;
+global.ally_3_can_train_ab = true;
+global.ally_3_can_train_hb = true;
+global.ally_3_can_train_mg = true;
+global.ally_3_can_train_cp = false;
+global.ally_3_can_train_nc = true;
+global.ally_3_can_train_gh = true;
+
 // enemy army trackers
 // enemy unit ai trackers // slot 4
 global.enemy_sm_count = 0;
@@ -112,6 +145,17 @@ global.enemy_mg_count = 0;
 global.enemy_cp_count = 0;
 global.enemy_nc_count = 0;
 global.enemy_gh_count = 0;
+
+global.enemy_can_train_sm = true;
+global.enemy_can_train_pm = true;
+global.enemy_can_train_rg = true;
+global.enemy_can_train_kn = true;
+global.enemy_can_train_ab = true;
+global.enemy_can_train_hb = true;
+global.enemy_can_train_mg = true;
+global.enemy_can_train_cp = false;
+global.enemy_can_train_nc = true;
+global.enemy_can_train_gh = true;
 
 // enemy 2
 // enemy ai 2 unit ai trackers // slot 5
@@ -126,6 +170,17 @@ global.enemy_2_cp_count = 0;
 global.enemy_2_nc_count = 0;
 global.enemy_2_gh_count = 0;
 
+global.enemy_2_can_train_sm = false;
+global.enemy_2_can_train_pm = false;
+global.enemy_2_can_train_rg = false;
+global.enemy_2_can_train_kn = false;
+global.enemy_2_can_train_ab = true;
+global.enemy_2_can_train_hb = false;
+global.enemy_2_can_train_mg = false;
+global.enemy_2_can_train_cp = false;
+global.enemy_2_can_train_nc = false;
+global.enemy_2_can_train_gh = false;
+
 // enemy 3
 // enemy ai 3 unit ai trackers // slot 6
 global.enemy_3_sm_count = 0;
@@ -139,6 +194,17 @@ global.enemy_3_cp_count = 0;
 global.enemy_3_nc_count = 0;
 global.enemy_3_gh_count = 0;
 
+global.enemy_3_can_train_sm = false;
+global.enemy_3_can_train_pm = false;
+global.enemy_3_can_train_rg = false;
+global.enemy_3_can_train_kn = false;
+global.enemy_3_can_train_ab = true;
+global.enemy_3_can_train_hb = false;
+global.enemy_3_can_train_mg = false;
+global.enemy_3_can_train_cp = false;
+global.enemy_3_can_train_nc = false;
+global.enemy_3_can_train_gh = false;
+
 // enemy 4
 // enemy ai 4 unit ai trackers // slot 7
 global.enemy_4_sm_count = 0;
@@ -151,6 +217,17 @@ global.enemy_4_mg_count = 0;
 global.enemy_4_cp_count = 0;
 global.enemy_4_nc_count = 0;
 global.enemy_4_gh_count = 0;
+
+global.enemy_4_can_train_sm = false;
+global.enemy_4_can_train_pm = false;
+global.enemy_4_can_train_rg = false;
+global.enemy_4_can_train_kn = false;
+global.enemy_4_can_train_ab = true;
+global.enemy_4_can_train_hb = false;
+global.enemy_4_can_train_mg = false;
+global.enemy_4_can_train_cp = false;
+global.enemy_4_can_train_nc = false;
+global.enemy_4_can_train_gh = false;
 
 // AI training timers
 global.ai_train_delay_sm = 3; // These are in seconds
