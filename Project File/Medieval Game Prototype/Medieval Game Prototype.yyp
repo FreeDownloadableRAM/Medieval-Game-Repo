@@ -58,6 +58,7 @@
     {"$GMFolder":"","%Name":"gr_characters","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters.yy","name":"gr_characters","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gr_arbalest","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest.yy","name":"gr_arbalest","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gr_enemy","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_enemy.yy","name":"gr_enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"gr_enemy_allies","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_enemy/gr_enemy_allies.yy","name":"gr_enemy_allies","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gr_player","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player.yy","name":"gr_player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gr_allies","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player/gr_allies.yy","name":"gr_allies","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gr_catapult","folderPath":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_catapult.yy","name":"gr_catapult","resourceType":"GMFolder","resourceVersion":"2.0",},

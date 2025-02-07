@@ -45,6 +45,7 @@
     {"name":"gr_characters","order":1,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters.yy",},
     {"name":"gr_arbalest","order":7,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest.yy",},
     {"name":"gr_enemy","order":4,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_enemy.yy",},
+    {"name":"gr_enemy_allies","order":3,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_enemy/gr_enemy_allies.yy",},
     {"name":"gr_player","order":3,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player.yy",},
     {"name":"gr_allies","order":3,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_player/gr_allies.yy",},
     {"name":"gr_catapult","order":12,"path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_catapult.yy",},
