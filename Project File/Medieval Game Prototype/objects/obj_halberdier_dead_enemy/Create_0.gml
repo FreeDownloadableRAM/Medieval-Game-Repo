@@ -12,12 +12,12 @@ alarm_set(1,death_animation_time); // 1 second
 
 
 //Death animation
-sprite_index = spr_hb_06_death_1_enemy;
+sprite_index = spr_hb_06_death_1_indx;
 
 image_xscale = -1;
 
 //Dead Body
-dead_body_sprite = spr_hb_07_dead_1_enemy;
+dead_body_sprite = spr_hb_07_dead_1_indx;
 
 //invisible
 invisible_sprite = spr_dbg_invisible;
@@ -27,3 +27,9 @@ global.enemy_hb_count -= 1;
 
 // track enemy 1 unit count
 global.player_unit_count_enemy -= 1;
+
+// colour palette properties
+colour_palette_index = global.slot_five_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+col_pal_death = spr_hb_indx_col_plte_06_dth;
+col_pal_dead = spr_hb_indx_col_plte_07_dead;

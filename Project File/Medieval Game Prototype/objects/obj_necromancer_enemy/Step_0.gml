@@ -34,14 +34,14 @@ else{
 	// toggle attack animation from summon to attack and vice versa
 	if (summon_countdown <= 0){
 		// set attack animation to summon
-		character_attack_anim_1 = spr_nc_08_summon_enemy;
+		character_attack_anim_1 = character_summon_anim;
 		// we want this guy to spawn even if hes really far away from enemies
 		character_reach = character_reach_summon;
 	
 	}
 	else {
 		// set it back to attack animation
-		character_attack_anim_1 = spr_nc_04_attacking_1_enemy;
+		character_attack_anim_1 = chracter_projectile_anim;
 		// reset character reach so we dont fire from really far away
 		character_reach = character_reach_original;
 	}

@@ -12,7 +12,7 @@ alarm_set(1,death_animation_time); // 1 second
 
 
 //Death animation
-sprite_index = spr_nc_06_death_1_enemy;
+sprite_index = spr_nc_06_death_1_indx;
 
 
 //Dead Body
@@ -28,3 +28,8 @@ global.enemy_nc_count -= 1;
 global.player_unit_count_enemy -= 1;
 
 image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+
+// colour palette properties
+colour_palette_index = global.slot_five_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+col_pal_death = spr_nc_indx_col_plte_06_dth;

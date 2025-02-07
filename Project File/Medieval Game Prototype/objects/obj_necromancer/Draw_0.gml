@@ -53,7 +53,8 @@ shader_reset();
 // if using one of these animations, draw this animation as well
 if (sprite_index == character_ready_anim){
 	// correlate frame to current object
-	draw_sprite(spr_nc_01_ready_indx_overlay,-1,x,y);
+	
+	draw_sprite_ext(spr_nc_01_ready_indx_overlay,-1,x,y,-1,1,0,c_white,1)
 
 }
 else if (sprite_index == character_attack_anim_1){
@@ -61,11 +62,11 @@ else if (sprite_index == character_attack_anim_1){
 	// we are throwing projectiles
 	if (character_attack_anim_1 == spr_nc_04_attacking_1_indx){
 		// correlate frame to current object
-		draw_sprite(spr_nc_04_attacking_1_indx_overlay,-1,x,y);
+		draw_sprite_ext(spr_nc_04_attacking_1_indx_overlay,-1,x,y,-1,1,0,c_white,1)
 	}
 	// we are summoning
 	else {
-		draw_sprite(spr_nc_08_summon_indx_overlay,-1,x,y);
+		draw_sprite_ext(spr_nc_08_summon_indx_overlay,-1,x,y,-1,1,0,c_white,1)
 	}
 
 }

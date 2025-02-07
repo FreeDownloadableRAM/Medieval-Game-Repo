@@ -36,14 +36,18 @@ character_walking_boundary = random_range(6,32);
 
 // Set Sprites
 // The defaults are set to Pikeman, just because he was the first one made
-character_idle_anim = spr_nc_00_idle_enemy;
-character_ready_anim = spr_nc_01_ready_enemy;
-character_walk_anim = spr_nc_02_walking_enemy;
-character_run_anim = spr_nc_02_walking_enemy;
-character_attack_anim_1 = spr_nc_04_attacking_1_enemy;
+character_idle_anim = spr_nc_00_idle_indx;
+character_ready_anim = spr_nc_01_ready_indx;
+character_ready_overlay = spr_nc_01_ready_indx_overlay;
+character_walk_anim = spr_nc_02_walking_indx;
+character_run_anim = spr_nc_02_walking_indx;
+character_attack_anim_1 = spr_nc_04_attacking_1_indx;
+character_attack_anim_1_overlay = spr_nc_04_attacking_1_indx_overlay;
 character_attack_projectile = obj_necro_proj_enemy;
-character_defend_anim = spr_nc_01_ready_enemy;
-character_death_anim_1 = spr_nc_06_death_1_enemy;
+character_defend_anim = spr_nc_01_ready_indx;
+character_death_anim_1 = spr_nc_06_death_1_indx;
+character_summon_anim = spr_nc_08_summon_indx;
+chracter_projectile_anim = spr_nc_04_attacking_1_indx;
 
 // Ranged Properties
 projectile_weight = 0.0; // kg
@@ -123,3 +127,15 @@ global.enemy_nc_count = global.enemy_nc_count + 1;
 
 // retreat offset
 ai_range_retreat_offset = (irandom_range(1,12))*4;
+
+// colour palette properties
+colour_palette_index = global.slot_five_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+// palette sprites
+col_pal_idle = spr_nc_indx_col_plte_00_idle;
+col_pal_ready = spr_nc_indx_col_plte_01_rdy;
+col_pal_walk = spr_nc_indx_col_plte_02_walk;
+col_pal_run = spr_nc_indx_col_plte_02_walk;
+col_pal_attack = spr_nc_indx_col_plte_04_atk;
+col_pal_defend = spr_nc_indx_col_plte_01_rdy;
+col_pal_summon = spr_nc_indx_col_plte_08_summon;
