@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_arbalest_enemy_e4",
+  "%Name":"obj_halberdier_e2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_arbalest_enemy_e4",
+  "name":"obj_halberdier_e2",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_enemy_allies",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_arbalest/gr_enemy/gr_enemy_allies.yy",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_halberdier/gr_enemy/gr_enemy_allies.yy",
   },
   "parentObjectId":{
-    "name":"obj_arbalest_enemy",
-    "path":"objects/obj_arbalest_enemy/obj_arbalest_enemy.yy",
+    "name":"obj_halberdier_enemy",
+    "path":"objects/obj_halberdier_enemy/obj_halberdier_enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ab_00_idle_enemy",
-    "path":"sprites/spr_ab_00_idle_enemy/spr_ab_00_idle_enemy.yy",
+    "name":"spr_hb_00_idle_enemy",
+    "path":"sprites/spr_hb_00_idle_enemy/spr_hb_00_idle_enemy.yy",
   },
   "spriteMaskId":null,
   "visible":true,
