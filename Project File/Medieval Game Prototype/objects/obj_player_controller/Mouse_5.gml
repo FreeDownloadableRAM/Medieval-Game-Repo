@@ -64,9 +64,9 @@ else {
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a3);
 		*/
 		
-		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician_e2);
-		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician_e3);
-		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician_e4);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_necromancer_e2);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_necromancer_e3);
+		instance_create_layer(x,global.spawn_height,"NPCs",obj_necromancer_e4);
 	}
 	
 	

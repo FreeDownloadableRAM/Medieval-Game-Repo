@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ghoul_enemy",
+  "%Name":"obj_ghoul_dead_a1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ghoul_enemy",
+  "name":"obj_ghoul_dead_a1",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_enemy",
-    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_necromancer/gr_enemy.yy",
+    "name":"gr_allies",
+    "path":"folders/Objects/gr_parents/gr_children/gr_european/gr_characters/gr_necromancer/gr_player/gr_allies.yy",
   },
   "parentObjectId":{
-    "name":"obj_generic_npc_enemy",
-    "path":"objects/obj_generic_npc_enemy/obj_generic_npc_enemy.yy",
+    "name":"obj_ghoul_dead",
+    "path":"objects/obj_ghoul_dead/obj_ghoul_dead.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gh_00_idle",
-    "path":"sprites/spr_gh_00_idle/spr_gh_00_idle.yy",
+    "name":"spr_mg_07_dead_1",
+    "path":"sprites/spr_mg_07_dead_1/spr_mg_07_dead_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

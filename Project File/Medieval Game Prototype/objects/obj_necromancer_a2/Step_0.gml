@@ -103,11 +103,11 @@ else{
 					// summon ghouls
 					
 					
-					instance_create_layer(x+64,704,"Targets",obj_ghoul_summon);
+					instance_create_layer(x+64,704,"Targets",obj_ghoul_summon_a2);
 				
-					instance_create_layer(x-32,704,"Targets",obj_ghoul_summon);
+					instance_create_layer(x-32,704,"Targets",obj_ghoul_summon_a2);
 				
-					instance_create_layer(x+8,704,"Targets",obj_ghoul_summon);
+					instance_create_layer(x+8,704,"Targets",obj_ghoul_summon_a2);
 					
 				
 					// once done, reset summon count down

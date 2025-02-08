@@ -30,6 +30,7 @@ else{
 		
 	}
 	
+	
 	// toggle attack animation from summon to attack and vice versa
 	if (summon_countdown <= 0){
 		// set attack animation to summon
@@ -103,11 +104,11 @@ else{
 					// summon ghouls
 					
 					
-					instance_create_layer(x+64,704,"Targets",obj_ghoul_summon_a3);
+					instance_create_layer(x+64,704,"Targets",obj_ghoul_summon_e2);
 				
-					instance_create_layer(x-32,704,"Targets",obj_ghoul_summon_a3);
+					instance_create_layer(x-32,704,"Targets",obj_ghoul_summon_e2);
 				
-					instance_create_layer(x+8,704,"Targets",obj_ghoul_summon_a3);
+					instance_create_layer(x+8,704,"Targets",obj_ghoul_summon_e2);
 					
 				
 					// once done, reset summon count down
@@ -143,7 +144,7 @@ else{
 	
 	
 		// retreat
-		if (global.ally_3_order == 0){
+		if (global.enemy_2_order == 0){
 			// Debugging
 			ai_state = "retreat order";
 			// there is no if conditions, you just retreat to retreat position and stay there, no engagements or anything.
@@ -151,18 +152,20 @@ else{
 			if (instance_exists(retreat_rally_target)){
 				// just move towards rally point
 				// if x is greater than the lower rally point |<- offset and is smaller than the ->| offset, you are fine stay still.
-				if (x > (retreat_rally_target.x - ai_movement_margin_of_error_allowed - ai_range_retreat_offset) && x < (retreat_rally_target.x + ai_movement_margin_of_error_allowed - ai_range_retreat_offset)){
+				if (x > (retreat_rally_target.x - ai_movement_margin_of_error_allowed + ai_range_retreat_offset) && x < (retreat_rally_target.x + ai_movement_margin_of_error_allowed + ai_range_retreat_offset)){
 					// You can now just stay and idle
 					// Idle Anim
+					
+					ai_state = "retreat order, on retreat rally point";
 					sprite_index = character_defend_anim;
 					// since it is a player unit, we want it to face right
-					image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+					image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 		
 				}
 				// You havent reached your movement target
 				else{
 					// is the movement target to the left or right?
-					if (x >= retreat_rally_target.x - ai_range_retreat_offset){
+					if (x > retreat_rally_target.x + ai_range_retreat_offset){
 							
 						// we run
 						// we walk here
@@ -170,10 +173,10 @@ else{
 						sprite_index = character_run_anim;
 						image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
-									
+						ai_state = "retreat order, run left towards retreat point";			
 						
 					}
-					else if (x < retreat_rally_target.x - ai_range_retreat_offset){
+					else if (x <= retreat_rally_target.x + ai_range_retreat_offset){
 									
 						// we run
 						// we walk here
@@ -181,6 +184,7 @@ else{
 						sprite_index = character_run_anim;
 						image_xscale = 1; // 1 = original, -1 = flipped on x-axis
 			
+						ai_state = "retreat order, run right to retreat point";	
 									
 					}
 						
@@ -191,14 +195,16 @@ else{
 				// defend anim
 				sprite_index = character_defend_anim;
 				// since it is a player unit, we want it to face right
-				image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+				image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+				
+				ai_state = "retreat order, no retreat rally found";	
 			}
 				
 			
 		
 		}
 		// Defend
-		else if (global.ally_3_order == 1){
+		else if (global.enemy_2_order == 1){
 			// debug tracker
 			ai_state = "defend order";
 			
@@ -206,9 +212,9 @@ else{
 			if (instance_exists(defend_rally_target)){
 				// It exists, now check if there are any enemies
 				if (instance_exists(enemy_target)){
-					// is the enemy in vision and to the right? If not, pretend they dont exist
+					// is the enemy in vision and to the left? If not, pretend they dont exist
 					
-					if (distance_to_object(_closest_enemy) > (x + character_vision_distance) && _closest_enemy.x > defend_rally_target && x > (round(retreat_rally_target.x + ai_attack_distance_offset)) && x < defend_rally_target.x + ai_attack_distance_offset){
+					if (distance_to_object(_closest_enemy) > (x + character_vision_distance) && _closest_enemy.x < defend_rally_target.x && x < (round(retreat_rally_target.x + ai_attack_distance_offset)) && x > defend_rally_target.x + ai_attack_distance_offset){
 						// Debugging
 						ai_state = "Situation A";
 						// enemy is not in vision and is to the right of the rally point
@@ -220,7 +226,7 @@ else{
 							// Idle Anim
 							sprite_index = character_idle_anim;
 							// since it is a player unit, we want it to face right
-							image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+							image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 					
 						}
 						// You havent reached your movement target
@@ -274,8 +280,8 @@ else{
 						}
 						
 					}
-					// What if the enemy is in vision, and is to the right of the rally point?
-					else if (distance_to_object(_closest_enemy) < (x + character_vision_distance) && _closest_enemy.x > defend_rally_target && _closest_enemy.x < (x + character_reach) && x > (round(retreat_rally_target.x + ai_attack_distance_offset)) && x < defend_rally_target.x + ai_attack_distance_offset){ // not triggering for some reason
+					// What if the enemy is in vision, and is to the left of the rally point?
+					else if (distance_to_object(_closest_enemy) < (x + character_vision_distance) && _closest_enemy.x < defend_rally_target.x && _closest_enemy.x > (x - character_reach) && x < (round(retreat_rally_target.x + ai_attack_distance_offset)) && x > defend_rally_target.x + ai_attack_distance_offset){ // not triggering for some reason
 						// Debugging
 						ai_state = "Situation B";
 						// Enemy is in vision, and is to the right of the rally point
@@ -304,13 +310,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 			
 											image_xscale = -1;
@@ -327,7 +333,7 @@ else{
 								else {
 									// in between hits, stay ready
 									sprite_index = character_ready_anim;
-									image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+									image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 								}
 								
@@ -348,13 +354,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 		
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 			
 											image_xscale = -1;
@@ -424,8 +430,8 @@ else{
 						
 					}
 				
-					// what if the enemy is in vision and is on top of or to the left of the rally point?
-					else if ((distance_to_object(_closest_enemy) <= character_vision_distance) && (_closest_enemy.x <= defend_rally_target.x) && x > (round(retreat_rally_target.x + ai_attack_distance_offset)) && x < defend_rally_target.x + ai_attack_distance_offset){
+					// what if the enemy is in vision and is on top of or to the right of the rally point?
+					else if ((distance_to_object(_closest_enemy) <= character_vision_distance) && (_closest_enemy.x >= defend_rally_target.x) && x < (round(retreat_rally_target.x - ai_attack_distance_offset)) && x > defend_rally_target.x - ai_attack_distance_offset){
 						// THERE IS A BUG HERE SOMEWHERE, AI WILL NOT RUN TOWARDS CLOSEST ENEMY UPON SPOTTING THEM
 						// Debugging
 						ai_state = "Situation C";
@@ -453,13 +459,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 		
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 			
 											image_xscale = -1;
@@ -476,7 +482,7 @@ else{
 								else {
 									// in between hits, stay ready
 									sprite_index = character_ready_anim;
-									image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+									image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 								}
 								
@@ -494,13 +500,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 		
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 			
 											image_xscale = -1;
@@ -517,7 +523,7 @@ else{
 								else {
 									// in between hits, stay ready
 									sprite_index = character_ready_anim;
-									image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+									image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 								}
 								
@@ -546,13 +552,13 @@ else{
 										// in between hits, stay ready
 										// if we are facing right
 										if (image_xscale = 1){
-											//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 		
 										}
 										// if not, spawn a mirrored version
 										else{
 											/*
-											var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 											with (_inst){
 			
 												image_xscale = -1;
@@ -569,7 +575,7 @@ else{
 									else {
 										// in between hits, stay ready
 										sprite_index = character_ready_anim;
-										image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+										image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 									}
 								
@@ -587,13 +593,13 @@ else{
 										// in between hits, stay ready
 										// if we are facing right
 										if (image_xscale = 1){
-											//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 		
 										}
 										// if not, spawn a mirrored version
 										else{
 											/*
-											var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 											with (_inst){
 			
 												image_xscale = -1;
@@ -610,7 +616,7 @@ else{
 									else {
 										// in between hits, stay ready
 										sprite_index = character_ready_anim;
-										image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+										image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 									}
 								
@@ -649,7 +655,7 @@ else{
 							// Idle Anim
 							sprite_index = character_ready_anim;
 							// since it is a player unit, we want it to face right
-							image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+							image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 					
 						}
 						// You havent reached your movement target
@@ -693,7 +699,7 @@ else{
 						// Idle Anim
 						sprite_index = character_idle_anim;
 						// since it is a player unit, we want it to face right
-						image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+						image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 					
 					}
 					// You havent reached your movement target
@@ -762,19 +768,19 @@ else{
 				// Idle Anim
 				sprite_index = character_idle_anim;
 				// since it is a player unit, we want it to face right
-				image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+				image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 			}
 			
 			
 		}
 	
 		// Attack
-		else if (global.ally_3_order == 2){
+		else if (global.enemy_2_order == 2){
 			// for debugging purposes
 			ai_state = "attack order";
 			
 			// Before we do anything, we want to make sure we are IN the map
-			if (x >= retreat_rally_target.x + ai_attack_distance_offset){
+			if (x <= retreat_rally_target.x - ai_attack_distance_offset){
 			
 			
 				// keep making your way to the right of the map
@@ -786,8 +792,8 @@ else{
 						// There are enemies and a castle
 						ai_state = "AO Enemy + Castle up";
 						// Are the enemies in front or behind the enemy castle?
-						//if (enemy_castle_target.x < enemy_target.x){
-						if (_closest_enemy.x > instance_nearest(x,y,enemy_castle_target).x){
+						//if (enemy_castle_target.x >= enemy_target.x){
+						if (_closest_enemy.x < instance_nearest(x,y,enemy_castle_target).x){
 							// Enemy x is larger than x, since -> is more positive, that means the enemy x value is larger
 							// Enemies are behind the enemy castle
 							// Move to and attack Castle
@@ -805,6 +811,7 @@ else{
 								if (enemy_castle_target.x >= x){
 									// On the right
 									// Since we are on the left, we look to the right
+									ai_state = "AO Enemy, Castle up, Enemy behind castle, repositioning, CR";
 									// First we check, can we attack?
 									if (character_attack_speed <= 0){
 										// so the timer is at zero
@@ -813,13 +820,13 @@ else{
 										// in between hits, stay ready
 										// if we are facing right
 										if (image_xscale = 1){
-											//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 										}
 										// if not, spawn a mirrored version
 										else{
 											/*
-											var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 											with (_inst){
 		
 												image_xscale = -1;
@@ -841,24 +848,27 @@ else{
 										// If enemies are to our left, dont bother repositioning
 										if (instance_exists(enemy_target)){
 									
-											if (x >= (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+											if (x > (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
 												// Move away from enemy
 												// Move to the left
 												if (x >= obj_retreat_player_rally_object && in_attack_anim == false){
 													sprite_index = character_run_anim;
 													image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 													x -= character_running_speed;
+													ai_state = "AO Enemy, Castle up, Enemy behind castle, repositioning";
 												}
 												else{
 													sprite_index = character_ready_anim;
-													image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+													image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+													ai_state = "AO Enemy, Castle up, Enemy behind castle, repositioning ready";
 												}
 									
 											}
 											else {
 									
 												sprite_index = character_ready_anim;
-												image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+												ai_state = "AO Enemy, Castle up, Enemy behind castle, no reposition";
 									
 											}
 									
@@ -866,7 +876,7 @@ else{
 										else{
 									
 											sprite_index = character_ready_anim;
-											image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+											image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 										}
 						
@@ -878,21 +888,23 @@ else{
 								else {
 									// On the right
 									// Since we are on the left, we look to the right
+									ai_state = "AO Enemy, Castle up, Enemy behind castle, CL";
 									// First we check, can we attack?
 								if (character_attack_speed <= 0){
 										// so the timer is at zero
+										ai_state = "AO Enemy, Castle up, Enemy behind castle, CL, in atk anim";
 										in_attack_anim = true;
 										image_xscale = -1;
 										// in between hits, stay ready
 										// if we are facing right
 										if (image_xscale = 1){
-											//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 										}
 										// if not, spawn a mirrored version
 										else{
 											/*
-											var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 											with (_inst){
 			
 												image_xscale = -1;
@@ -908,8 +920,43 @@ else{
 									}
 									else {
 										// in between hits, stay ready
-										sprite_index = character_ready_anim;
-										image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+										ai_state = "AO Enemy, Castle up, Enemy behind castle, CL, rdy";
+										
+										// Reposition if need be // mirror version logic
+										// Check if we are too far away from enemy on the left
+										// If enemies are to our right, dont bother repositioning
+										if (instance_exists(enemy_target)){
+											
+											ai_state = "AO Enemy, Castle up, Enemy behind castle, CL, tg exists,rdy 110";
+									
+											if (x < (_closest_enemy.x  + character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x < global.enemy_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+												// Move away from enemy
+												// Move to the left
+												if (x <= obj_retreat_enemy_rally_object.x && in_attack_anim == false){
+													sprite_index = character_run_anim;
+													image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+													x += character_running_speed;
+													ai_state = "AO Enemy, Castle up, Enemy behind castle, repositioning 111";
+												}
+												else{
+													ai_state = "AO Enemy, Castle up, Enemy behind castle, repositioning, rdy 112";
+													sprite_index = character_ready_anim;
+													image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+												}
+									
+											}
+											else {
+												ai_state = "AO Enemy, Castle up, Enemy behind castle, no reposition 113";
+												sprite_index = character_ready_anim;
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+									
+											}
+									
+										}
+										
+										
+										//sprite_index = character_ready_anim;
+										//image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 									}
 								
@@ -963,13 +1010,13 @@ else{
 										// in between hits, stay ready
 										// if we are facing right
 										if (image_xscale = 1){
-											//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 										}
 										// if not, spawn a mirrored version
 										else{
 											/*
-											var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 											with (_inst){
 		
 												image_xscale = -1;
@@ -991,7 +1038,7 @@ else{
 										// If enemies are to our left, dont bother repositioning
 										if (instance_exists(enemy_target)){
 									
-											if (x >= (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+											if (x > (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
 												// Move away from enemy
 												// Move to the left
 												if (x >= obj_retreat_player_rally_object && in_attack_anim == false){
@@ -1001,14 +1048,14 @@ else{
 												}
 												else{
 													sprite_index = character_ready_anim;
-													image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+													image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 												}
 									
 											}
 											else {
 									
 												sprite_index = character_ready_anim;
-												image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 											}
 									
@@ -1016,7 +1063,7 @@ else{
 										else{
 									
 											sprite_index = character_ready_anim;
-											image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+											image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 										}
 						
@@ -1036,13 +1083,13 @@ else{
 										// in between hits, stay ready
 										// if we are facing right
 										if (image_xscale = 1){
-											//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 										}
 										// if not, spawn a mirrored version
 										else{
 											/*
-											var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+											var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 											with (_inst){
 			
 												image_xscale = -1;
@@ -1058,8 +1105,41 @@ else{
 									}
 									else {
 										// in between hits, stay ready
-										sprite_index = character_ready_anim;
-										image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+										// Reposition if need be // mirror version logic
+										// Check if we are too far away from enemy on the left
+										// If enemies are to our right, dont bother repositioning
+										if (instance_exists(enemy_target)){
+											
+											ai_state = "AO Enemy, Castle up, Enemy in front castle, CL, tg exists,rdy 110";
+									
+											if (x < (_closest_enemy.x  + character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x < global.enemy_king_x_location && x < (_closest_enemy.x  + character_reach  - ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+												// Move away from enemy
+												// Move to the left
+												if (x <= obj_retreat_enemy_rally_object.x && in_attack_anim == false){
+													sprite_index = character_run_anim;
+													image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+													x += character_running_speed;
+													ai_state = "AO Enemy, Castle up, Enemy in front castle, repositioning 111";
+												}
+												else{
+													ai_state = "AO Enemy, Castle up, Enemy in front castle, repositioning, rdy 112";
+													sprite_index = character_ready_anim;
+													image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+												}
+									
+											}
+											else {
+												ai_state = "AO Enemy, Castle up, Enemy in front castle, no reposition 113";
+												sprite_index = character_ready_anim;
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+									
+											}
+									
+										}
+										
+										
+										//sprite_index = character_ready_anim;
+										//image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 									}
 								
@@ -1116,13 +1196,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 		
 											image_xscale = -1;
@@ -1145,7 +1225,7 @@ else{
 									// If enemies are to our left, dont bother repositioning
 									if (instance_exists(enemy_target)){
 									
-										if (x >= (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+										if (x > (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
 											// Move away from enemy
 											// Move to the left
 											if (x >= obj_retreat_player_rally_object && in_attack_anim == false){
@@ -1155,14 +1235,14 @@ else{
 											}
 											else{
 												sprite_index = character_ready_anim;
-												image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 											}
 									
 										}
 										else {
 									
 											sprite_index = character_ready_anim;
-											image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+											image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 										}
 									
@@ -1170,7 +1250,7 @@ else{
 									else{
 									
 										sprite_index = character_ready_anim;
-										image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+										image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 									}
 						
@@ -1190,13 +1270,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 			
 											image_xscale = -1;
@@ -1213,7 +1293,7 @@ else{
 								else {
 									// in between hits, stay ready
 									sprite_index = character_ready_anim;
-									image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+									image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 								}
 								
@@ -1265,13 +1345,13 @@ else{
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 		
 											image_xscale = -1;
@@ -1293,7 +1373,7 @@ else{
 									// If enemies are to our left, dont bother repositioning
 									if (instance_exists(enemy_target)){
 									
-										if (x >= (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+										if (x > (_closest_enemy.x  - character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x > global.player_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
 											// Move away from enemy
 											// Move to the left
 											if (x >= obj_retreat_player_rally_object && in_attack_anim == false){
@@ -1303,14 +1383,14 @@ else{
 											}
 											else{
 												sprite_index = character_ready_anim;
-												image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 											}
 									
 										}
 										else {
 									
 											sprite_index = character_ready_anim;
-											image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+											image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 										}
 									
@@ -1318,7 +1398,7 @@ else{
 									else{
 									
 										sprite_index = character_ready_anim;
-										image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+										image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 									
 									}
 									
@@ -1328,25 +1408,27 @@ else{
 								
 								
 							}
-							// on the left
+							// on the right
 							else {
-								// On the right
-								// Since we are on the left, we look to the right
+								// On the left
+								// Since we are on the right, we look to the left
+								ai_state = "AO No Enemy, Castle up, aiming left";
 								// First we check, can we attack?
 								if (character_attack_speed <= 0){
 									// so the timer is at zero
+									ai_state = "AO No Enemy, Castle up, aiming left, in attack anim";
 									in_attack_anim = true;
 									image_xscale = -1;
 									// in between hits, stay ready
 									// if we are facing right
 									if (image_xscale = 1){
-										//instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										//instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 	
 									}
 									// if not, spawn a mirrored version
 									else{
 										/*
-										var _inst = instance_create_layer(x,768,"hitbox_layer",character_attack_projectile);
+										var _inst = instance_create_layer(x,y,"hitbox_layer",character_attack_projectile);
 										with (_inst){
 			
 											image_xscale = -1;
@@ -1362,8 +1444,38 @@ else{
 								}
 								else {
 									// in between hits, stay ready
+									ai_state = "AO No Enemy, Castle up, aiming left, ready";
+									// Reposition if need be // mirror version logic
+									// Check if we are too far away from enemy on the right
+									// If enemies are to our left, dont bother repositioning
+									if (instance_exists(enemy_target)){
+									
+										if (x < (_closest_enemy.x  + character_reach + ai_attack_distance_offset + ai_movement_margin_of_error_allowed) && x < global.enemy_king_x_location && x < (_closest_enemy.x  + character_reach  + ai_attack_distance_offset - ai_movement_margin_of_error_allowed) && instance_exists(enemy_target)){
+											// Move away from enemy
+											// Move to the left
+											if (x <= obj_retreat_enemy_rally_object && in_attack_anim == false){
+												sprite_index = character_run_anim;
+												image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+												x += character_running_speed;
+												ai_state = "AO No Enemy, Castle up, aiming left, repositioning";
+											}
+											else{
+												sprite_index = character_ready_anim;
+												image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+											}
+									
+										}
+										else {
+											ai_state = "AO No Enemy, Castle up, aiming left, no reposition";
+											sprite_index = character_ready_anim;
+											image_xscale = -1; // 1 = original, -1 = flipped on x-axis
+									
+										}
+									
+									}
+									
 									sprite_index = character_ready_anim;
-									image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+									image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 						
 								}
 								
@@ -1407,7 +1519,7 @@ else{
 						// Idle Anim
 						sprite_index = character_ready_anim;
 						// since it is a player unit, we want it to face right
-						image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+						image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 					}
 			
 				}
@@ -1416,9 +1528,9 @@ else{
 			}
 			else {
 			// If we arent in the map, but are in attack orders, just run forward
-				x = x + character_running_speed;
+				x = x - character_running_speed;
 				sprite_index = character_run_anim;
-				image_xscale = 1;
+				image_xscale = -1;
 			}
 		
 		
@@ -1428,7 +1540,7 @@ else{
 			// Idle Anim
 			sprite_index = character_idle_anim;
 			// since it is a player unit, we want it to face right
-			image_xscale = 1; // 1 = original, -1 = flipped on x-axis
+			image_xscale = -1; // 1 = original, -1 = flipped on x-axis
 	
 		}
 	
