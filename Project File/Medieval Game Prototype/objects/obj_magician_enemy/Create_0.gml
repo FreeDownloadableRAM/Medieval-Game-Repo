@@ -40,7 +40,7 @@ if (global.slot_five_colour == 0){
 	character_walk_anim = spr_mg_02_walking;
 	character_run_anim = spr_mg_03_running;
 	character_attack_anim_1 = spr_mg_04_attacking_1;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend;
 	character_death_anim_1 = spr_mg_06_death_1;
 }
@@ -51,7 +51,7 @@ else if (global.slot_five_colour == 1){
 	character_walk_anim = spr_mg_02_walking_green;
 	character_run_anim = spr_mg_03_running_green;
 	character_attack_anim_1 = spr_mg_04_attacking_1_green;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend_green;
 	character_death_anim_1 = spr_mg_06_death_1_green;
 }
@@ -62,7 +62,7 @@ else if (global.slot_five_colour == 2){
 	character_walk_anim = spr_mg_02_walking_cyan;
 	character_run_anim = spr_mg_03_running_cyan;
 	character_attack_anim_1 = spr_mg_04_attacking_1_cyan;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend_cyan;
 	character_death_anim_1 = spr_mg_06_death_1_cyan;
 }
@@ -84,7 +84,7 @@ else if (global.slot_five_colour == 4){
 	character_walk_anim = spr_mg_02_walking_enemy;
 	character_run_anim = spr_mg_03_running_enemy;
 	character_attack_anim_1 = spr_mg_04_attacking_1_enemy;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend_enemy;
 	character_death_anim_1 = spr_mg_06_death_1_enemy;
 }
@@ -95,7 +95,7 @@ else if (global.slot_five_colour == 5){
 	character_walk_anim = spr_mg_02_walking_orange;
 	character_run_anim = spr_mg_03_running_orange;
 	character_attack_anim_1 = spr_mg_04_attacking_1_orange;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend_orange;
 	character_death_anim_1 = spr_mg_06_death_1_orange;
 }
@@ -106,7 +106,7 @@ else if (global.slot_five_colour == 6){
 	character_walk_anim = spr_mg_02_walking_yellow;
 	character_run_anim = spr_mg_03_running_yellow;
 	character_attack_anim_1 = spr_mg_04_attacking_1_yellow;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend_yellow;
 	character_death_anim_1 = spr_mg_06_death_1_yellow;
 }
@@ -117,7 +117,7 @@ else {
 	character_walk_anim = spr_mg_02_walking_gray;
 	character_run_anim = spr_mg_03_running_gray;
 	character_attack_anim_1 = spr_mg_04_attacking_1_gray;
-	character_attack_projectile = obj_magician_spell_0;
+	character_attack_projectile = obj_magician_spell_0_enemy;
 	character_defend_anim = spr_mg_05_defend_gray;
 	character_death_anim_1 = spr_mg_06_death_1_gray;
 }
