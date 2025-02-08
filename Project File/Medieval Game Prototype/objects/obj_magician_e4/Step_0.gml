@@ -109,7 +109,7 @@ else{
 	
 	
 		// retreat
-		if (global.enemy_3_order == 0){
+		if (global.enemy_4_order == 0){
 			// Debugging
 			ai_state = "retreat order";
 			// there is no if conditions, you just retreat to retreat position and stay there, no engagements or anything.
@@ -169,7 +169,7 @@ else{
 		
 		}
 		// Defend
-		else if (global.enemy_3_order == 1){
+		else if (global.enemy_4_order == 1){
 			// debug tracker
 			ai_state = "defend order";
 			
@@ -740,7 +740,7 @@ else{
 		}
 	
 		// Attack
-		else if (global.enemy_3_order == 2){
+		else if (global.enemy_4_order == 2){
 			// for debugging purposes
 			ai_state = "attack order";
 			
