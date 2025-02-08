@@ -220,6 +220,9 @@
     {"name":"gr_lvl_tmls","order":1,"path":"folders/Timelines/gr_lvl_tmls.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_ai_strategist_ally_2","order":5,"path":"objects/obj_ai_strategist_ally_2/obj_ai_strategist_ally_2.yy",},
+    {"name":"obj_ai_strategist_ally_3","order":6,"path":"objects/obj_ai_strategist_ally_3/obj_ai_strategist_ally_3.yy",},
+    {"name":"obj_ai_strategist_base_ally","order":4,"path":"objects/obj_ai_strategist_base_ally/obj_ai_strategist_base_ally.yy",},
     {"name":"obj_ai_strategist_elites","order":1,"path":"objects/obj_ai_strategist_elites/obj_ai_strategist_elites.yy",},
     {"name":"obj_ai_strategist_enemy_2","order":1,"path":"objects/obj_ai_strategist_enemy_2/obj_ai_strategist_enemy_2.yy",},
     {"name":"obj_ai_strategist_enemy_3","order":2,"path":"objects/obj_ai_strategist_enemy_3/obj_ai_strategist_enemy_3.yy",},
