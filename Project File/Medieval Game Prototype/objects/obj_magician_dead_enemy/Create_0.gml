@@ -12,7 +12,46 @@ alarm_set(1,death_animation_time); // 1 second
 
 
 //Death animation
-sprite_index = spr_mg_06_death_1_enemy;
+if (global.slot_five_colour == 0){
+	// 0 = blue
+	sprite_index = spr_mg_06_death_1;
+	
+}
+else if (global.slot_five_colour == 1){
+	// 1 = green
+	sprite_index = spr_mg_06_death_1_green;
+	
+}
+else if (global.slot_five_colour == 2){
+	// 2 = cyan
+	sprite_index = spr_mg_06_death_1_cyan;
+	
+}
+else if (global.slot_five_colour == 3){
+	// 3 = purple
+	sprite_index = spr_mg_06_death_1_purple;
+	
+}
+else if (global.slot_five_colour == 4){
+	// 4 = red
+	sprite_index = spr_mg_06_death_1_enemy;
+	
+}
+else if (global.slot_five_colour == 5){
+	// 5 = orange
+	sprite_index = spr_mg_06_death_1_orange;
+	
+}
+else if (global.slot_five_colour == 6){
+	// 6 = yellow
+	sprite_index = spr_mg_06_death_1_yellow;
+	
+}
+else{
+	// 7 = gray
+	sprite_index = spr_mg_06_death_1_gray;
+	
+}
 
 // Mirror
 image_xscale = -1;

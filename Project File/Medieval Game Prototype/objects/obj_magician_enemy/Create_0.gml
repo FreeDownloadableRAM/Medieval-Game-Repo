@@ -32,16 +32,95 @@ character_running_speed = 1.52;
 // walk distance boundary, if the distance is smaller than this distance, walk, if not, run
 character_walking_boundary = random_range(12,48);
 
-// Set Sprites
-// The defaults are set to Pikeman, just because he was the first one made
-character_idle_anim = spr_mg_00_idle_enemy;
-character_ready_anim = spr_mg_01_ready_enemy;
-character_walk_anim = spr_mg_02_walking_enemy;
-character_run_anim = spr_mg_03_running_enemy;
-character_attack_anim_1 = spr_mg_04_attacking_1_enemy;
-character_attack_projectile = obj_magician_spell_0_enemy;
-character_defend_anim = spr_mg_05_defend_enemy;
-character_death_anim_1 = spr_mg_06_death_1_enemy;
+// Sprite
+if (global.slot_five_colour == 0){
+	// 0 = blue
+	character_idle_anim = spr_mg_00_idle;
+	character_ready_anim = spr_mg_01_ready;
+	character_walk_anim = spr_mg_02_walking;
+	character_run_anim = spr_mg_03_running;
+	character_attack_anim_1 = spr_mg_04_attacking_1;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend;
+	character_death_anim_1 = spr_mg_06_death_1;
+}
+else if (global.slot_five_colour == 1){
+	// 0 = green
+	character_idle_anim = spr_mg_00_idle_green;
+	character_ready_anim = spr_mg_01_ready_green;
+	character_walk_anim = spr_mg_02_walking_green;
+	character_run_anim = spr_mg_03_running_green;
+	character_attack_anim_1 = spr_mg_04_attacking_1_green;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_green;
+	character_death_anim_1 = spr_mg_06_death_1_green;
+}
+else if (global.slot_five_colour == 2){
+	// 2 = cyan
+	character_idle_anim = spr_mg_00_idle_cyan;
+	character_ready_anim = spr_mg_01_ready_cyan;
+	character_walk_anim = spr_mg_02_walking_cyan;
+	character_run_anim = spr_mg_03_running_cyan;
+	character_attack_anim_1 = spr_mg_04_attacking_1_cyan;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_cyan;
+	character_death_anim_1 = spr_mg_06_death_1_cyan;
+}
+else if (global.slot_five_colour == 3){
+	// 3 = purple
+	character_idle_anim = spr_mg_00_idle_purple;
+	character_ready_anim = spr_mg_01_ready_purple;
+	character_walk_anim = spr_mg_02_walking_purple;
+	character_run_anim = spr_mg_03_running_purple;
+	character_attack_anim_1 = spr_mg_04_attacking_1_purple;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_purple;
+	character_death_anim_1 = spr_mg_06_death_1_purple;
+}
+else if (global.slot_five_colour == 4){
+	// 4 = red
+	character_idle_anim = spr_mg_00_idle_enemy;
+	character_ready_anim = spr_mg_01_ready_enemy;
+	character_walk_anim = spr_mg_02_walking_enemy;
+	character_run_anim = spr_mg_03_running_enemy;
+	character_attack_anim_1 = spr_mg_04_attacking_1_enemy;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_enemy;
+	character_death_anim_1 = spr_mg_06_death_1_enemy;
+}
+else if (global.slot_five_colour == 5){
+	// 5 = orange
+	character_idle_anim = spr_mg_00_idle_orange;
+	character_ready_anim = spr_mg_01_ready_orange;
+	character_walk_anim = spr_mg_02_walking_orange;
+	character_run_anim = spr_mg_03_running_orange;
+	character_attack_anim_1 = spr_mg_04_attacking_1_orange;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_orange;
+	character_death_anim_1 = spr_mg_06_death_1_orange;
+}
+else if (global.slot_five_colour == 6){
+	// 6 = yellow
+	character_idle_anim = spr_mg_00_idle_yellow;
+	character_ready_anim = spr_mg_01_ready_yellow;
+	character_walk_anim = spr_mg_02_walking_yellow;
+	character_run_anim = spr_mg_03_running_yellow;
+	character_attack_anim_1 = spr_mg_04_attacking_1_yellow;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_yellow;
+	character_death_anim_1 = spr_mg_06_death_1_yellow;
+}
+else {
+	// 7 = gray
+	character_idle_anim = spr_mg_00_idle_gray;
+	character_ready_anim = spr_mg_01_ready_gray;
+	character_walk_anim = spr_mg_02_walking_gray;
+	character_run_anim = spr_mg_03_running_gray;
+	character_attack_anim_1 = spr_mg_04_attacking_1_gray;
+	character_attack_projectile = obj_magician_spell_0;
+	character_defend_anim = spr_mg_05_defend_gray;
+	character_death_anim_1 = spr_mg_06_death_1_gray;
+}
 
 // Ranged Properties
 projectile_weight = 0.0; // kg
