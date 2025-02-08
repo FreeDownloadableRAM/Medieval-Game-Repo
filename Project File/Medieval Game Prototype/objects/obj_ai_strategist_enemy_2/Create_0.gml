@@ -15,14 +15,14 @@ can_train_mg = global.enemy_2_can_train_mg;
 can_train_nc = global.enemy_2_can_train_nc;
 
 // objects that we train ourselves
-ai_swordsman = obj_swordman_enemy;
-ai_pikeman = obj_pikeman_enemy;
-ai_ranger = obj_ranger_enemy;
-ai_knight = obj_knight_enemy;
+ai_swordsman = obj_swordman_e2;
+ai_pikeman = obj_pikeman_e2;
+ai_ranger = obj_ranger_e2;
+ai_knight = obj_knight_e2;
 ai_arbalest = obj_arbalest_e2;
-ai_halberdier = obj_halberdier_enemy;
-ai_magician = obj_magician_enemy;
-ai_necromancer = obj_necromancer_enemy;
+ai_halberdier = obj_halberdier_e2;
+ai_magician = obj_magician_e2;
+ai_necromancer = obj_necromancer_e2;
 
 // AI modifiers
 // Here we tweak modifiers that influence how the ai determines importance of different variables.

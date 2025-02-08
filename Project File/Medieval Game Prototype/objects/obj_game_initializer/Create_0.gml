@@ -170,16 +170,16 @@ global.enemy_2_cp_count = 0;
 global.enemy_2_nc_count = 0;
 global.enemy_2_gh_count = 0;
 
-global.enemy_2_can_train_sm = false;
-global.enemy_2_can_train_pm = false;
-global.enemy_2_can_train_rg = false;
-global.enemy_2_can_train_kn = false;
+global.enemy_2_can_train_sm = true;
+global.enemy_2_can_train_pm = true;
+global.enemy_2_can_train_rg = true;
+global.enemy_2_can_train_kn = true;
 global.enemy_2_can_train_ab = true;
-global.enemy_2_can_train_hb = false;
-global.enemy_2_can_train_mg = false;
+global.enemy_2_can_train_hb = true;
+global.enemy_2_can_train_mg = true;
 global.enemy_2_can_train_cp = false;
-global.enemy_2_can_train_nc = false;
-global.enemy_2_can_train_gh = false;
+global.enemy_2_can_train_nc = true;
+global.enemy_2_can_train_gh = true;
 
 // enemy 3
 // enemy ai 3 unit ai trackers // slot 6
@@ -194,16 +194,16 @@ global.enemy_3_cp_count = 0;
 global.enemy_3_nc_count = 0;
 global.enemy_3_gh_count = 0;
 
-global.enemy_3_can_train_sm = false;
-global.enemy_3_can_train_pm = false;
-global.enemy_3_can_train_rg = false;
-global.enemy_3_can_train_kn = false;
+global.enemy_3_can_train_sm = true;
+global.enemy_3_can_train_pm = true;
+global.enemy_3_can_train_rg = true;
+global.enemy_3_can_train_kn = true;
 global.enemy_3_can_train_ab = true;
-global.enemy_3_can_train_hb = false;
-global.enemy_3_can_train_mg = false;
+global.enemy_3_can_train_hb = true;
+global.enemy_3_can_train_mg = true;
 global.enemy_3_can_train_cp = false;
-global.enemy_3_can_train_nc = false;
-global.enemy_3_can_train_gh = false;
+global.enemy_3_can_train_nc = true;
+global.enemy_3_can_train_gh = true;
 
 // enemy 4
 // enemy ai 4 unit ai trackers // slot 7
@@ -218,16 +218,16 @@ global.enemy_4_cp_count = 0;
 global.enemy_4_nc_count = 0;
 global.enemy_4_gh_count = 0;
 
-global.enemy_4_can_train_sm = false;
-global.enemy_4_can_train_pm = false;
-global.enemy_4_can_train_rg = false;
-global.enemy_4_can_train_kn = false;
+global.enemy_4_can_train_sm = true;
+global.enemy_4_can_train_pm = true;
+global.enemy_4_can_train_rg = true;
+global.enemy_4_can_train_kn = true;
 global.enemy_4_can_train_ab = true;
-global.enemy_4_can_train_hb = false;
-global.enemy_4_can_train_mg = false;
+global.enemy_4_can_train_hb = true;
+global.enemy_4_can_train_mg = true;
 global.enemy_4_can_train_cp = false;
-global.enemy_4_can_train_nc = false;
-global.enemy_4_can_train_gh = false;
+global.enemy_4_can_train_nc = true;
+global.enemy_4_can_train_gh = true;
 
 // AI training timers
 global.ai_train_delay_sm = 3; // These are in seconds
