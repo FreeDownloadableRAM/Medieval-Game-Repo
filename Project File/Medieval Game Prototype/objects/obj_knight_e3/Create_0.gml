@@ -1,0 +1,104 @@
+/// Here we will set character properties
+// Global AI trackers
+global.enemy_3_unit_count += 1;
+
+// Information about myself
+internal_unit_number = global.enemy_3_unit_count;
+internal_unit_type = "knight_NPC";
+num_of_debug_items = 8;
+
+// Character physical Properties
+// Attack Properties
+character_slash_attack = 0.0; // in hitpoints
+character_pierce_attack = 0.0; 
+character_thrust_attack = 1.0; 
+character_blunt_attack = 0.0;
+character_magic_attack = 0.0; 
+
+character_reach = 56.0 // in pixels
+
+// Defence Properties
+character_health = 225.0;
+character_slash_defence = 0.6; // these are percent values
+character_pierce_defence = 0.7;
+character_thrust_defence = 0.25;
+character_blunt_defence = 0.1;
+character_magic_defence = 0.0;
+
+// Movement Properties
+character_walking_speed = 0.55;
+character_running_speed = 1.6;
+
+// walk distance boundary, if the distance is smaller than this distance, walk, if not, run
+character_walking_boundary = random_range(8,32);
+
+// Set Sprites
+// The defaults are set to Pikeman, just because he was the first one made
+character_idle_anim = spr_kn_00_idle_indx;
+character_ready_anim = spr_kn_01_ready_indx;
+character_walk_anim = spr_kn_02_walking_indx;
+character_run_anim = spr_kn_03_running_indx;
+character_attack_anim_1 = spr_kn_04_attacking_1_indx;
+character_attack_hitbox_1 = obj_knight_atk_hitbox_enemy;
+character_defend_anim = spr_kn_05_defend_indx;
+character_death_anim_1 = spr_kn_06_death_1_indx;
+
+
+// AI properties
+// AI State
+ai_state = "Idle"; // used to debug where in the ai code are we
+// attack properties
+character_attack_speed = 0; // in fps
+random_ai_attack_delay = random_range(0,2.5);
+
+// ai boundaries
+lower_ai_attack_delay_boundary = 0.5;
+upper_ai_attack_delay_boundary = 1.2;
+ai_movement_margin_of_error_allowed = 4;
+
+// ai Perception
+character_vision_distance = 320; // 32 pixel size tiles, 20 tiles long
+character_engage_distance = 208;
+
+character_attack_animation_duration = 180; // in fps, 60 = 1 second
+
+character_anim_frames_amount = 21;
+character_anim_fps = 7;
+
+in_attack_anim = false;
+
+// We want to set enemy target to something (ideally obj_generic_NPC_Enemy, but since not, we just set it to obj_dbg_enemy).
+enemy_target = obj_generic_npc;
+defend_rally_target = obj_enemy_rally_target;
+retreat_rally_target = obj_retreat_enemy_rally_object;
+enemy_castle_target = obj_castle_player;
+
+// Directional Headers, This is used for animation sprites and hitbox creation
+forward_direction = 1;
+backward_direction = 0 - 1;
+
+// distance location
+//ai_rally_distance_offset = (16 * (global.player_unit_count - 1)) + 16;
+
+// Random rally distance offset (random_range(-4,4)) * 4;
+ai_rally_distance_offset = (irandom_range(-12,4)) * 4;
+ai_attack_distance_offset = (irandom_range(0,4)) * 4;
+
+// ai_rally_distance_offset = 0;
+
+//on death spawn this obj
+death_character = obj_knight_dead_e3;
+
+// Help AI track Information
+global.enemy_3_kn_count = global.enemy_3_kn_count + 1;
+
+// colour palette properties
+colour_palette_index = global.slot_seven_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+// palette sprites
+col_pal_idle = spr_kn_indx_col_plte_00_idle;
+col_pal_ready = spr_kn_indx_col_plte_01_rdy;
+col_pal_walk = spr_kn_indx_col_plte_02_walk;
+col_pal_run = spr_kn_indx_col_plte_03_run;
+col_pal_attack = spr_kn_indx_col_plte_04_atk;
+col_pal_defend = spr_kn_indx_col_plte_05_def;
