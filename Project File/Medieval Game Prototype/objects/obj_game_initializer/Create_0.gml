@@ -244,51 +244,51 @@ global.ai_train_delay_nc = 60;
 // player
 global.player_gold_gen = 5; // default is 5
 global.player_gold_amount = 75;
-global.player_gold_start_amount = 9125; // 125 is default
+global.player_gold_start_amount = 250; // 125 is default
 global.player_gold_cap = 10000;
 
 // player allies
 // ally 1
 global.ally_1_gold_gen = 5; // default is 5
 global.ally_1_gold_amount = 75;
-global.ally_1_gold_start_amount = 125; // 125 is default
+global.ally_1_gold_start_amount = 250; // 125 is default
 global.ally_1_gold_cap = 10000;
 
 // ally 2
 global.ally_2_gold_gen = 5; // default is 5
 global.ally_2_gold_amount = 75;
-global.ally_2_gold_start_amount = 125; // 125 is default
+global.ally_2_gold_start_amount = 250; // 125 is default
 global.ally_2_gold_cap = 10000;
 
 // ally 3
 global.ally_3_gold_gen = 5; // default is 5
 global.ally_3_gold_amount = 75;
-global.ally_3_gold_start_amount = 125; // 125 is default
+global.ally_3_gold_start_amount = 250; // 125 is default
 global.ally_3_gold_cap = 10000;
 
 // enemy ai economy trackers
 // enemy
 global.enemy_gold_gen = 5;
 global.enemy_gold_amount = 75;
-global.enemy_gold_start_amount = 125;
+global.enemy_gold_start_amount = 250;
 global.enemy_gold_cap = 10000;
 
 // enemy 2
 global.enemy_2_gold_gen = 5;
 global.enemy_2_gold_amount = 75;
-global.enemy_2_gold_start_amount = 125;
+global.enemy_2_gold_start_amount = 250;
 global.enemy_2_gold_cap = 10000;
 
 // enemy 3
 global.enemy_3_gold_gen = 5;
 global.enemy_3_gold_amount = 75;
-global.enemy_3_gold_start_amount = 125;
+global.enemy_3_gold_start_amount = 250;
 global.enemy_3_gold_cap = 10000;
 
 // enemy 4
 global.enemy_4_gold_gen = 5;
 global.enemy_4_gold_amount = 75;
-global.enemy_4_gold_start_amount = 125;
+global.enemy_4_gold_start_amount = 250;
 global.enemy_4_gold_cap = 10000;
 
 // Global Economy variables

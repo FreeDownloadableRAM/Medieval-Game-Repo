@@ -29,7 +29,7 @@ else {
 	// In order from most preferential, to least.
 	// If the AI can afford it and its not on Cool down, they will go for it.
 	
-	if ((ai_eco_up_save == false) && (allied_unit_amount < global.player_unit_cap) && allies_king_health > 0.25){
+	if ((ai_eco_up_save == false) && (global.ally_2_unit_count < global.ally_2_unit_cap) && allies_king_health > 0.25){
 		// ONLY spawn troops or attempt to when we are NOT saving up for eco upgrades.
 		// If we are in here, we are NOT planning to eco upgrade.
 		
@@ -81,7 +81,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -94,7 +94,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -107,7 +107,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. Range, training necromancer";
@@ -131,7 +131,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -144,7 +144,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -157,7 +157,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. Range, training necromancer";
@@ -178,7 +178,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training halberdier";
@@ -192,7 +192,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training knight";
@@ -206,7 +206,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training pikeman";
@@ -220,7 +220,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training swordman";
@@ -243,7 +243,7 @@ else {
 					// Debug
 					ai_choice = "AI wants to counter swordmen and range, NO access to ranged units";
 					// Train these units in upper most priority (most expensive to least expensive)
-					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -257,7 +257,7 @@ else {
 						
 					}
 					// Halberd training
-					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training halberdier";
@@ -271,7 +271,7 @@ else {
 						
 					}
 					// Knight training
-					if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training knight";
@@ -285,7 +285,7 @@ else {
 						
 					}
 					// pikeman training
-					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training pikeman";
@@ -299,7 +299,7 @@ else {
 						
 					}
 					// swordman training
-					if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training swordman";
@@ -339,7 +339,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training arbalest";
@@ -352,7 +352,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training ranger";
@@ -366,7 +366,7 @@ else {
 						
 						}
 						// Magician training
-						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training magician";
@@ -390,7 +390,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -403,7 +403,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -417,7 +417,7 @@ else {
 						
 						}
 						// Magician training
-						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training magician";
@@ -438,7 +438,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -452,7 +452,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -466,7 +466,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -480,7 +480,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -504,7 +504,7 @@ else {
 					ai_choice = "AI wants to counter swordmen, NO access to ranged units";
 					// Train these units in upper most priority (most expensive to least expensive)
 					// Magician training
-					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -518,7 +518,7 @@ else {
 						
 					}
 					// Halberd training
-					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training halberdier";
@@ -532,7 +532,7 @@ else {
 						
 					}
 					// Knight training
-					if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training knight";
@@ -546,7 +546,7 @@ else {
 						
 					}
 					// pikeman training
-					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training pikeman";
@@ -560,7 +560,7 @@ else {
 						
 					}
 					// swordman training
-					if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training swordman";
@@ -599,7 +599,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -612,7 +612,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -632,7 +632,7 @@ else {
 					ai_choice = "def. army. 1. training melee";
 						
 					// Halberd training
-					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -646,7 +646,7 @@ else {
 						
 						}
 					// pikeman training
-					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -677,7 +677,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -690,7 +690,7 @@ else {
 						
 						}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -703,7 +703,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -716,7 +716,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -739,7 +739,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -752,7 +752,7 @@ else {
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -765,7 +765,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -786,7 +786,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -800,7 +800,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -814,7 +814,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -828,7 +828,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -860,7 +860,7 @@ else {
 			ai_choice = "cntr. army. KN. possible";
 			
 			// Halberd training
-			if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+			if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -874,7 +874,7 @@ else {
 						
 						}
 			// pikeman training
-			if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+			if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -887,7 +887,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_pikeman);
 						
 						}
-			if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+			if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 				// alarm is at 0s, and we have the funds, and this unit is available.
 				// Debug
 				ai_choice = "Counter P. SM, training magician";
@@ -918,7 +918,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -931,7 +931,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -954,7 +954,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -967,7 +967,7 @@ else {
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -980,7 +980,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -993,7 +993,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1014,7 +1014,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1028,7 +1028,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1042,7 +1042,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1056,7 +1056,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1095,7 +1095,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1108,7 +1108,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training magician";
@@ -1128,7 +1128,7 @@ else {
 				ai_choice = "cntr. army. HB. training melee";
 						
 				// Halberd training
-				if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+				if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1142,7 +1142,7 @@ else {
 						
 						}
 				// pikeman training
-				if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+				if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1173,7 +1173,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1186,7 +1186,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1199,7 +1199,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training magician";
@@ -1212,7 +1212,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_magician);
 						
 						}
-						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. Range, training necromancer";
@@ -1235,7 +1235,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1248,7 +1248,7 @@ else {
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -1261,7 +1261,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1282,7 +1282,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1296,7 +1296,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1310,7 +1310,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1324,7 +1324,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1364,7 +1364,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1377,7 +1377,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 						}
-						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap && opposition_hb_amount > 0){
+						if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap && opposition_hb_amount > 0){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training magician";
@@ -1397,7 +1397,7 @@ else {
 						ai_choice = "cntr. army. Range. training melee";
 						
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1411,7 +1411,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1424,7 +1424,7 @@ else {
 							instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_knight);
 						
 						}
-						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1454,7 +1454,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1467,7 +1467,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1491,7 +1491,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1504,7 +1504,7 @@ else {
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -1517,7 +1517,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_ranger);
 						
 					}
-					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM, training magician";
@@ -1530,7 +1530,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. Range, training necromancer";
@@ -1551,7 +1551,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1565,7 +1565,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1579,7 +1579,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1593,7 +1593,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1642,7 +1642,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1655,7 +1655,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1675,7 +1675,7 @@ else {
 						ai_choice = "def. army. 0. training melee";
 						
 						// Train Knights in higher priority, then swordmen
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1689,7 +1689,7 @@ else {
 						
 						}
 						// Swordmen
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1720,7 +1720,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1733,7 +1733,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1755,7 +1755,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1768,7 +1768,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1789,7 +1789,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1803,7 +1803,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -1817,7 +1817,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1831,7 +1831,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -1870,7 +1870,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1883,7 +1883,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1903,7 +1903,7 @@ else {
 						ai_choice = "def. army. 1. training melee";
 						
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -1917,7 +1917,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -1948,7 +1948,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1961,7 +1961,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -1983,7 +1983,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -1996,7 +1996,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2017,7 +2017,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2031,7 +2031,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2045,7 +2045,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2059,7 +2059,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2093,7 +2093,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2106,7 +2106,7 @@ else {
 						
 					}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training ranger";
@@ -2135,7 +2135,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2148,7 +2148,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2170,7 +2170,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2183,7 +2183,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2204,7 +2204,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2218,7 +2218,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2232,7 +2232,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2246,7 +2246,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2286,7 +2286,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2306,7 +2306,7 @@ else {
 						ai_choice = "def. army. 3. training melee";
 						
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2320,7 +2320,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2350,7 +2350,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2363,7 +2363,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2385,7 +2385,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2398,7 +2398,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2419,7 +2419,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2433,7 +2433,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2447,7 +2447,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2461,7 +2461,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2501,7 +2501,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2521,7 +2521,7 @@ else {
 						ai_choice = "def. army. 4. training melee";
 						
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2535,7 +2535,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2565,7 +2565,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2578,7 +2578,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2601,7 +2601,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2614,7 +2614,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2635,7 +2635,7 @@ else {
 						
 						// Train these units in upper most priority (most expensive to least expensive)
 						// Halberd training
-						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2649,7 +2649,7 @@ else {
 						
 						}
 						// Knight training
-						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2663,7 +2663,7 @@ else {
 						
 						}
 						// pikeman training
-						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2677,7 +2677,7 @@ else {
 						
 						}
 						// swordman training
-						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2709,7 +2709,7 @@ else {
 					// Train arbalest in highest priority
 					// then train ranger in next highest priority
 					// are we able to train an arbalest? if so, train one
-					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2722,7 +2722,7 @@ else {
 						
 						}
 					// are we able to train ranger?
-					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2744,7 +2744,7 @@ else {
 						// Train arbalest in highest priority
 						// then train ranger in next highest priority
 						// are we able to train an arbalest? if so, train one
-						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2757,7 +2757,7 @@ else {
 						
 						}
 						// are we able to train ranger?
-						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+						if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2778,7 +2778,7 @@ else {
 						
 					// Train these units in upper most priority (most expensive to least expensive)
 					// Halberd training
-					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training halberdier";
@@ -2792,7 +2792,7 @@ else {
 						
 						}
 					// Knight training
-					if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training knight";
@@ -2806,7 +2806,7 @@ else {
 						
 						}
 					// pikeman training
-					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training pikeman";
@@ -2820,7 +2820,7 @@ else {
 						
 						}
 					// swordman training
-					if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+					if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM, training swordman";
@@ -2842,11 +2842,11 @@ else {
 	}
 	// We are low health, Spawn whatever you can as a last ditch effort to live
 	
-	else if ((ai_eco_up_save == false) && (allied_unit_amount < global.player_unit_cap) && allies_king_health <= 0.25){
+	else if ((ai_eco_up_save == false) && (global.ally_2_unit_count < global.ally_2_unit_cap) && allies_king_health <= 0.25){
 		ai_choice = "AI Is training whatever it can, ASAP";
 		// train whatever we can
 		// Train these units in upper most priority (most expensive to least expensive)
-		if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[10] <= 0 && our_gold_amount >= global.unit_magician_cost && can_train_mg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -2859,7 +2859,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_magician);
 						
 					}
-		if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[11] <= 0 && our_gold_amount >= global.unit_necromancer_cost && can_train_nc == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training magician";
@@ -2873,7 +2873,7 @@ else {
 						
 					}
 		// Halberd training
-		if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[5] <= 0 && our_gold_amount >= global.unit_halberd_cost && can_train_hb == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training halberdier";
@@ -2887,7 +2887,7 @@ else {
 						
 					}
 		// Knight training
-		if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[3] <= 0 && our_gold_amount >= global.unit_knight_cost && can_train_kn == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training knight";
@@ -2900,7 +2900,7 @@ else {
 						instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",ai_knight);
 						
 					}
-		if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[4] <= 0 && our_gold_amount >= global.unit_arbalest_cost && can_train_ab == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training arbalest";
@@ -2913,7 +2913,7 @@ else {
 						
 						}
 		// are we able to train ranger?
-		if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[2] <= 0 && our_gold_amount >= global.unit_ranger_cost && can_train_rg == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 							// alarm is at 0s, and we have the funds, and this unit is available.
 							// Debug
 							ai_choice = "Counter P. SM + Range, training ranger";
@@ -2927,7 +2927,7 @@ else {
 						
 						}
 		// pikeman training
-		if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[1] <= 0 && our_gold_amount >= global.unit_pikeman_cost && can_train_pm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training pikeman";
@@ -2941,7 +2941,7 @@ else {
 						
 					}
 		// swordman training
-		if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && allied_unit_amount < global.player_unit_cap){
+		if (alarm[0] <= 0 && our_gold_amount >= global.unit_swordman_cost && can_train_sm == true && global.ally_2_unit_count < global.ally_2_unit_cap){
 						// alarm is at 0s, and we have the funds, and this unit is available.
 						// Debug
 						ai_choice = "Counter P. SM + Range, training swordman";
