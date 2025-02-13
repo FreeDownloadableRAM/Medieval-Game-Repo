@@ -1,22 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ui_vs_ai_back_but_p_page",
+  "%Name":"obj_ui_vs_ai_next_but_a_page",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ui_vs_ai_back_but_p_page",
+  "name":"obj_ui_vs_ai_next_but_a_page",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_vs_ai_nxt_page_bck_page_buts",
     "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_nxt_page_bck_page_buts.yy",
   },
   "parentObjectId":{
-    "name":"obj_ui_button_gen",
-    "path":"objects/obj_ui_button_gen/obj_ui_button_gen.yy",
+    "name":"obj_ui_vs_ai_back_but_p_page",
+    "path":"objects/obj_ui_vs_ai_back_but_p_page/obj_ui_vs_ai_back_but_p_page.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
