@@ -10,11 +10,22 @@ else {
 	// Count down the unit train timer
 	
 	
-	if (mouse_x < (x + button_width_from_center + 1) && mouse_x > (x - button_width_from_center - 1)
-			&& mouse_y < (y + button_height_from_center + 1) && mouse_y > (y - button_height_from_center - 1)){
+	if ((mouse_x < (x + ((button_width_from_center + 16) * button_scale_x) )) && (mouse_x > (x - (button_width_from_center * button_scale_x)))
+		&& (mouse_y < (y + button_height_from_center)) && (mouse_y > (y - button_height_from_center))){
 		
 		// We are within button bounds and we clicked
-		room_goto(rm_main_menu);
+		if (global.slot_one_eco_gen_multiplier < 9){
+			// increment up by one
+			global.slot_one_eco_gen_multiplier ++;
+		
+		}
+		else {
+			// reset back to one
+			global.slot_one_eco_gen_multiplier = 1;
+		
+		}
+		// update internal multiplier value
+		number_value = global.slot_one_eco_gen_multiplier;
 			
 
 	}

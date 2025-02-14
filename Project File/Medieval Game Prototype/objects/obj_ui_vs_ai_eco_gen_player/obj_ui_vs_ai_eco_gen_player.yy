@@ -11,8 +11,8 @@
   "name":"obj_ui_vs_ai_eco_gen_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_vs_ai_eco_option_buts",
-    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_eco_option_buts.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_eco_option_buts/gr_player.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_button_gen",
