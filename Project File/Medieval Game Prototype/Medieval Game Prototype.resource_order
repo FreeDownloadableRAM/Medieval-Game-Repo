@@ -839,6 +839,7 @@
     {"name":"spr_nc_indx_col_plte_08_summon","order":11,"path":"sprites/spr_nc_indx_col_plte_08_summon/spr_nc_indx_col_plte_08_summon.yy",},
     {"name":"spr_nc_unit_icon","order":11,"path":"sprites/spr_nc_unit_icon/spr_nc_unit_icon.yy",},
     {"name":"spr_nc_unlock_icon","order":9,"path":"sprites/spr_nc_unlock_icon/spr_nc_unlock_icon.yy",},
+    {"name":"spr_numbers_0_to_9_hl","order":3,"path":"sprites/spr_numbers_0_to_9_hl/spr_numbers_0_to_9_hl.yy",},
     {"name":"spr_pale_green_tree","order":7,"path":"sprites/spr_pale_green_tree/spr_pale_green_tree.yy",},
     {"name":"spr_peachy_orange_tree","order":5,"path":"sprites/spr_peachy_orange_tree/spr_peachy_orange_tree.yy",},
     {"name":"spr_pear_orange_yellow_tree","order":6,"path":"sprites/spr_pear_orange_yellow_tree/spr_pear_orange_yellow_tree.yy",},

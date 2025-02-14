@@ -459,3 +459,37 @@ global.slot_five_colour = 4;
 global.slot_six_colour = 5;
 global.slot_seven_colour = 6;
 global.slot_eight_colour = 7;
+
+// This is eco modifiers for ai vs mode
+// gold gen
+// 1 = 100% (no changes), 2 = 200% (2 times as much), 3 = 300%, etc...
+global.slot_one_eco_gen_multiplier = 1; 
+global.slot_two_eco_gen_multiplier = 1;
+global.slot_three_eco_gen_multiplier = 1;
+global.slot_four_eco_gen_multiplier = 1; 
+global.slot_five_eco_gen_multiplier = 1;
+global.slot_six_eco_gen_multiplier = 1;
+global.slot_seven_eco_gen_multiplier = 1;
+global.slot_eight_eco_gen_multiplier = 1;
+
+// gold capacity
+// 1 = 100% (no changes), 2 = 200% (2 times as much), 3 = 300%, etc...
+global.slot_one_eco_cap_multiplier = 1; 
+global.slot_two_eco_cap_multiplier = 1;
+global.slot_three_eco_cap_multiplier = 1;
+global.slot_four_eco_cap_multiplier = 1; 
+global.slot_five_eco_cap_multiplier = 1;
+global.slot_six_eco_cap_multiplier = 1;
+global.slot_seven_eco_cap_multiplier = 1;
+global.slot_eight_eco_cap_multiplier = 1;
+
+// gold starting amount
+// 1 = 100% (no changes), 2 = 200% (2 times as much), 3 = 300%, etc...
+global.slot_one_eco_start_multiplier = 1; 
+global.slot_two_eco_start_multiplier = 1;
+global.slot_three_eco_start_multiplier = 1;
+global.slot_four_eco_start_multiplier = 1; 
+global.slot_five_eco_start_multiplier = 1;
+global.slot_six_eco_start_multiplier = 1;
+global.slot_seven_eco_start_multiplier = 1;
+global.slot_eight_eco_start_multiplier = 1;
