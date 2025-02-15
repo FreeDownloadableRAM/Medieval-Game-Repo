@@ -923,6 +923,7 @@
     {"id":{"name":"spr_hb_indx_col_plte_07_dead","path":"sprites/spr_hb_indx_col_plte_07_dead/spr_hb_indx_col_plte_07_dead.yy",},},
     {"id":{"name":"spr_hb_unit_icon","path":"sprites/spr_hb_unit_icon/spr_hb_unit_icon.yy",},},
     {"id":{"name":"spr_hb_unlock_icon","path":"sprites/spr_hb_unlock_icon/spr_hb_unlock_icon.yy",},},
+    {"id":{"name":"spr_ice","path":"sprites/spr_ice/spr_ice.yy",},},
     {"id":{"name":"spr_king_blue_00_idle","path":"sprites/spr_king_blue_00_idle/spr_king_blue_00_idle.yy",},},
     {"id":{"name":"spr_king_red_00_idle","path":"sprites/spr_king_red_00_idle/spr_king_red_00_idle.yy",},},
     {"id":{"name":"spr_kn_00_idle_enemy","path":"sprites/spr_kn_00_idle_enemy/spr_kn_00_idle_enemy.yy",},},

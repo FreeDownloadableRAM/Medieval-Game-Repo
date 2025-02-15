@@ -516,3 +516,15 @@ global.ally_3_enabled = true;
 global.enemy_2_enabled = true;
 global.enemy_3_enabled = true;
 global.enemy_4_enabled = true;
+
+// map settings
+// 0 = default (forest), 1 = rocky canyons, 2 = desert hills, 3 = swamp lands
+// 4 = autumn forest, 5 = ice valley, 6 = castle town, 7 = volcano / black mountain ranges
+global.ai_vs_mode_map_theme = 0; // 8 options, 0 - 7
+
+// affects what music will play in vs mode.
+// 0 = conflicting interests, 1 = medieval warfare, 2 = liberty awaits
+// 3 = standing orders, 4 = price paid, 5 = rebel alliance
+// 6 = nearing journeys end, 7 = the elites, 8 = travel at night
+// 9 = last stand
+global.ai_vs_mode_music_track = 0;

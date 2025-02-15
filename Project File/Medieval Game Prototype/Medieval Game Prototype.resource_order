@@ -776,6 +776,7 @@
     {"name":"spr_hb_indx_col_plte_07_dead","order":15,"path":"sprites/spr_hb_indx_col_plte_07_dead/spr_hb_indx_col_plte_07_dead.yy",},
     {"name":"spr_hb_unit_icon","order":5,"path":"sprites/spr_hb_unit_icon/spr_hb_unit_icon.yy",},
     {"name":"spr_hb_unlock_icon","order":5,"path":"sprites/spr_hb_unlock_icon/spr_hb_unlock_icon.yy",},
+    {"name":"spr_ice","order":7,"path":"sprites/spr_ice/spr_ice.yy",},
     {"name":"spr_kn_01_ready_enemy","order":1,"path":"sprites/spr_kn_01_ready_enemy/spr_kn_01_ready_enemy.yy",},
     {"name":"spr_kn_01_ready_indx","order":1,"path":"sprites/spr_kn_01_ready_indx/spr_kn_01_ready_indx.yy",},
     {"name":"spr_kn_01_ready","order":1,"path":"sprites/spr_kn_01_ready/spr_kn_01_ready.yy",},
