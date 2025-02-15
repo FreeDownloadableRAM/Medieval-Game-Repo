@@ -506,3 +506,13 @@ global.slot_five_eco_start_multiplier = 1;
 global.slot_six_eco_start_multiplier = 1;
 global.slot_seven_eco_start_multiplier = 1;
 global.slot_eight_eco_start_multiplier = 1;
+
+// is ai enabled? (VS MODE)
+// player is ALWAYS enabled, so theres no variable here to track if its on or off
+// this is the case with slot 4, enemy 1. no variable here to affect them, they will be spawned regardless.
+global.ally_1_enabled = true;
+global.ally_2_enabled = true;
+global.ally_3_enabled = true;
+global.enemy_2_enabled = true;
+global.enemy_3_enabled = true;
+global.enemy_4_enabled = true;
