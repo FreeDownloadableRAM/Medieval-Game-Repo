@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ui_vs_ai_next_but_p_page",
+  "%Name":"obj_ui_vs_ai_unit_toggles_nc_s_0",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ui_vs_ai_next_but_p_page",
+  "name":"obj_ui_vs_ai_unit_toggles_nc_s_0",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_vs_ai_nxt_page_bck_page_buts",
-    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_nxt_page_bck_page_buts.yy",
+    "name":"gr_player",
+    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_unit_toggles/gr_player.yy",
   },
   "parentObjectId":{
-    "name":"obj_ui_vs_ai_back_but_p_page",
-    "path":"objects/obj_ui_vs_ai_back_but_p_page/obj_ui_vs_ai_back_but_p_page.yy",
+    "name":"obj_ui_vs_ai_unit_toggles_ab_s_0",
+    "path":"objects/obj_ui_vs_ai_unit_toggles_ab_s_0/obj_ui_vs_ai_unit_toggles_ab_s_0.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ui_bbut_bg",
-    "path":"sprites/spr_ui_bbut_bg/spr_ui_bbut_bg.yy",
+    "name":"spr_nc_unit_icon",
+    "path":"sprites/spr_nc_unit_icon/spr_nc_unit_icon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

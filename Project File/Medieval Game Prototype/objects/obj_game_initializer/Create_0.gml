@@ -61,6 +61,19 @@ global.player_cp_count = 0;
 global.player_nc_count = 0;
 global.player_gh_count = 0;
 
+// this is for vs mode in particular, NOT CAMPAIGN
+global.player_can_train_sm = true;
+global.player_can_train_pm = true;
+global.player_can_train_rg = true;
+global.player_can_train_kn = true;
+global.player_can_train_ab = true;
+global.player_can_train_hb = true;
+global.player_can_train_mg = true;
+global.player_can_train_cp = true;
+global.player_can_train_nc = true;
+global.player_can_train_gh = true;
+
+
 // ally 1
 // ally ai 1 unit ai trackers // slot 1
 global.ally_1_sm_count = 0;

@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ui_vs_ai_next_but_p_page",
+  "%Name":"obj_ui_vs_ai_eco_start_enemy_4",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ui_vs_ai_next_but_p_page",
+  "name":"obj_ui_vs_ai_eco_start_enemy_4",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_vs_ai_nxt_page_bck_page_buts",
-    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_nxt_page_bck_page_buts.yy",
+    "name":"gr_enemy_4",
+    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_vs_ai_menu/gr_vs_ai_eco_option_buts/gr_enemy_4.yy",
   },
   "parentObjectId":{
-    "name":"obj_ui_vs_ai_back_but_p_page",
-    "path":"objects/obj_ui_vs_ai_back_but_p_page/obj_ui_vs_ai_back_but_p_page.yy",
+    "name":"obj_ui_vs_ai_eco_gen_player",
+    "path":"objects/obj_ui_vs_ai_eco_gen_player/obj_ui_vs_ai_eco_gen_player.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ui_bbut_bg",
-    "path":"sprites/spr_ui_bbut_bg/spr_ui_bbut_bg.yy",
+    "name":"spr_numbers_0_to_9",
+    "path":"sprites/spr_numbers_0_to_9/spr_numbers_0_to_9.yy",
   },
   "spriteMaskId":null,
   "visible":true,
