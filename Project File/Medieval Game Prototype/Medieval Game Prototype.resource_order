@@ -608,6 +608,7 @@
     {"name":"rm_lvl_end","order":7,"path":"rooms/rm_lvl_end/rm_lvl_end.yy",},
     {"name":"rm_lvl_select","order":1,"path":"rooms/rm_lvl_select/rm_lvl_select.yy",},
     {"name":"rm_vs_ai_menu_enemy","order":1,"path":"rooms/rm_vs_ai_menu_enemy/rm_vs_ai_menu_enemy.yy",},
+    {"name":"rm_vs_ai_menu_map","order":4,"path":"rooms/rm_vs_ai_menu_map/rm_vs_ai_menu_map.yy",},
     {"name":"rm_vs_ai_menu_opposition","order":2,"path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},
     {"name":"rm_vs_ai_menu_player","order":3,"path":"rooms/rm_vs_ai_menu_player/rm_vs_ai_menu_player.yy",},
     {"name":"snd_msc_02_medieval_warfare_loopable","order":1,"path":"sounds/snd_msc_02_medieval_warfare_loopable/snd_msc_02_medieval_warfare_loopable.yy",},

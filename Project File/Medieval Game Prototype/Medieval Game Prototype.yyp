@@ -732,6 +732,7 @@
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"rm_vs_ai_menu_allies","path":"rooms/rm_vs_ai_menu_allies/rm_vs_ai_menu_allies.yy",},},
     {"id":{"name":"rm_vs_ai_menu_enemy","path":"rooms/rm_vs_ai_menu_enemy/rm_vs_ai_menu_enemy.yy",},},
+    {"id":{"name":"rm_vs_ai_menu_map","path":"rooms/rm_vs_ai_menu_map/rm_vs_ai_menu_map.yy",},},
     {"id":{"name":"rm_vs_ai_menu_opposition","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},},
     {"id":{"name":"rm_vs_ai_menu_player","path":"rooms/rm_vs_ai_menu_player/rm_vs_ai_menu_player.yy",},},
     {"id":{"name":"shd_indx_col_swapper","path":"shaders/shd_indx_col_swapper/shd_indx_col_swapper.yy",},},
@@ -1302,6 +1303,7 @@
     {"roomId":{"name":"rm_vs_ai_menu_player","path":"rooms/rm_vs_ai_menu_player/rm_vs_ai_menu_player.yy",},},
     {"roomId":{"name":"rm_vs_ai_menu_enemy","path":"rooms/rm_vs_ai_menu_enemy/rm_vs_ai_menu_enemy.yy",},},
     {"roomId":{"name":"rm_vs_ai_menu_opposition","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},},
+    {"roomId":{"name":"rm_vs_ai_menu_map","path":"rooms/rm_vs_ai_menu_map/rm_vs_ai_menu_map.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
