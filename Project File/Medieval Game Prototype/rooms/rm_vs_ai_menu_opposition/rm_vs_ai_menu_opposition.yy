@@ -49,6 +49,7 @@
     {"name":"inst_309396D8","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},
     {"name":"inst_386E0FED","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},
     {"name":"inst_361B6F7E","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},
+    {"name":"inst_15623274","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -107,6 +108,7 @@
             {"$GMRInstance":"v1","%Name":"inst_309396D8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_309396D8","objectId":{"name":"obj_ui_vs_ai_is_enabled_e2","path":"objects/obj_ui_vs_ai_is_enabled_e2/obj_ui_vs_ai_is_enabled_e2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":896.0,},
             {"$GMRInstance":"v1","%Name":"inst_386E0FED","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_386E0FED","objectId":{"name":"obj_ui_vs_ai_is_enabled_e3","path":"objects/obj_ui_vs_ai_is_enabled_e3/obj_ui_vs_ai_is_enabled_e3.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1216.0,"y":896.0,},
             {"$GMRInstance":"v1","%Name":"inst_361B6F7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_361B6F7E","objectId":{"name":"obj_ui_vs_ai_is_enabled_e4","path":"objects/obj_ui_vs_ai_is_enabled_e4/obj_ui_vs_ai_is_enabled_e4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1856.0,"y":896.0,},
+            {"$GMRInstance":"v1","%Name":"inst_15623274","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_15623274","objectId":{"name":"obj_ui_vs_ai_next_but_o_page","path":"objects/obj_ui_vs_ai_next_but_o_page/obj_ui_vs_ai_next_but_o_page.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1824.0,"y":1040.0,},
           ],"layers":[],"name":"ui_interactables","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
       ],"name":"functionality_layer","properties":[],"resourceType":"GMRLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRLayer":"","%Name":"text_layer","depth":300,"effectEnabled":true,"effectType":null,"gridX":64,"gridY":64,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
