@@ -62,10 +62,10 @@ eco_up_ch_thres_lv_6 = 0.1;
 global.enemy_2_order = 0;
 
 // reset enemy gold amount
-our_gold_amount = global.enemy_2_gold_start_amount;
+our_gold_amount = global.enemy_2_gold_start_amount * global.slot_six_eco_start_multiplier;
 
-our_gold_gen = global.enemy_2_gold_gen;
-our_gold_cap = global.enemy_2_gold_cap;
+our_gold_gen = global.enemy_2_gold_gen * global.slot_six_eco_gen_multiplier;
+our_gold_cap = global.enemy_2_gold_cap * global.slot_six_eco_cap_multiplier;
 
 // reinforcement properties
 // here we define the quantity of each unit type to spawn when we reach a certain threshold
@@ -103,3 +103,16 @@ lstand_nc_amount = 0;
 
 // track if we spawned last stand units
 lstand_spawned = false;
+
+// reset unit counters
+global.enemy_2_unit_count = 0;
+global.enemy_2_sm_count = 0;
+global.enemy_2_pm_count = 0;
+global.enemy_2_rg_count = 0;
+global.enemy_2_kn_count = 0;
+global.enemy_2_ab_count = 0;
+global.enemy_2_hb_count = 0;
+global.enemy_2_mg_count = 0;
+global.enemy_2_cp_count = 0;
+global.enemy_2_nc_count = 0;
+global.enemy_2_gh_count = 0;

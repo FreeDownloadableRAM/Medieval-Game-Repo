@@ -25,6 +25,8 @@ global.player_ab_count = 0;
 global.player_hb_count = 0;
 global.player_mg_count = 0;
 global.player_cp_count = 0;
+global.player_nc_count = 0;
+global.player_gh_count = 0;
 
 // Enemy unit ai trackers
 global.enemy_sm_count = 0;
@@ -35,6 +37,8 @@ global.enemy_ab_count = 0;
 global.enemy_hb_count = 0;
 global.enemy_mg_count = 0;
 global.enemy_cp_count = 0;
+global.enemy_nc_count = 0;
+global.enemy_gh_count = 0;
 
 // Health
 global.player_castle_health = global.starting_player_castle_health;

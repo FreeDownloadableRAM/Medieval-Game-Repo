@@ -1,9 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-// Inherit the parent event
-event_inherited();
-
 // override certain variables
 // Training Modifiers
 // Training pool, what units are we allowed to train?
@@ -65,10 +62,10 @@ eco_up_ch_thres_lv_6 = 0.8;
 global.ally_2_order = 0;
 
 // reset enemy gold amount
-our_gold_amount = global.ally_2_gold_start_amount;
+our_gold_amount = global.ally_2_gold_start_amount * global.slot_three_eco_start_multiplier;
 
-our_gold_gen = global.ally_2_gold_gen;
-our_gold_cap = global.ally_2_gold_cap;
+our_gold_gen = global.ally_2_gold_gen * global.slot_three_eco_gen_multiplier;
+our_gold_cap = global.ally_2_gold_cap * global.slot_three_eco_cap_multiplier;
 
 // reinforcement properties
 // here we define the quantity of each unit type to spawn when we reach a certain threshold
@@ -106,3 +103,16 @@ lstand_nc_amount = 0;
 
 // track if we spawned last stand units
 lstand_spawned = false;
+
+// reset unit counters
+global.ally_2_unit_count = 0;
+global.ally_2_sm_count = 0;
+global.ally_2_pm_count = 0;
+global.ally_2_rg_count = 0;
+global.ally_2_kn_count = 0;
+global.ally_2_ab_count = 0;
+global.ally_2_hb_count = 0;
+global.ally_2_mg_count = 0;
+global.ally_2_cp_count = 0;
+global.ally_2_nc_count = 0;
+global.ally_2_gh_count = 0;

@@ -64,9 +64,7 @@ else {
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a3);
 		*/
 		
-		instance_create_layer(x,global.spawn_height,"NPCs",obj_halberdier);
-		instance_create_layer(x,global.spawn_height,"NPCs",obj_knight);
-		instance_create_layer(x,global.spawn_height,"NPCs",obj_magician);
+		
 	}
 	
 	

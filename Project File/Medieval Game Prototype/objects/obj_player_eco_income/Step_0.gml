@@ -46,13 +46,13 @@ else {
 		
 		// Gold Income
 		// formula in algebriac form is 5x^{2}+5
-		if (global.player_gold_amount > (global.player_gold_cap - ((global.player_gold_gen * (player_eco_lv * player_eco_lv)) + global.player_gold_gen))){
+		if (global.player_gold_amount > ((global.player_gold_cap * global.slot_one_eco_cap_multiplier) - (((global.player_gold_gen * global.slot_one_eco_gen_multiplier) * (player_eco_lv * player_eco_lv)) + (global.player_gold_gen * global.slot_one_eco_gen_multiplier)))){
 			// If we are going to go above the gold cap, do nothing.
 
 		}
 		else{
 			// We will not reach gold cap
-			global.player_gold_amount = global.player_gold_amount + ((global.player_gold_gen * (player_eco_lv * player_eco_lv)) + global.player_gold_gen);
+			global.player_gold_amount = global.player_gold_amount + (((global.player_gold_gen  * global.slot_one_eco_gen_multiplier) * (player_eco_lv * player_eco_lv)) + (global.player_gold_gen * global.slot_one_eco_gen_multiplier));
 	
 		}
 		

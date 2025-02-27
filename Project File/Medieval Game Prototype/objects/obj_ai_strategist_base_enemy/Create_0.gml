@@ -216,10 +216,10 @@ attack_population_threshold = 20;
 global.enemy_order = 0;
 
 // reset enemy gold amount
-our_gold_amount = global.enemy_gold_start_amount;
+our_gold_amount = global.enemy_gold_start_amount * global.slot_five_eco_start_multiplier;
 
-our_gold_gen = global.enemy_gold_gen;
-our_gold_cap = global.enemy_gold_cap;
+our_gold_gen = global.enemy_gold_gen * global.slot_five_eco_gen_multiplier;
+our_gold_cap = global.enemy_gold_cap * global.slot_five_eco_cap_multiplier;
 
 // Prevent forever games
 ai_patience = irandom_range((300*fps),(420*fps)); // 5 to 8 mins randomly

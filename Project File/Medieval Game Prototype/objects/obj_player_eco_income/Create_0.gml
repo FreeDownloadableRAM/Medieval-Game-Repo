@@ -1,5 +1,5 @@
 /// set starting player gold
-global.player_gold_amount = global.player_gold_start_amount;
+global.player_gold_amount = global.player_gold_start_amount * global.slot_one_eco_start_multiplier;
 
 // Upgrade tiers will be doubling, ex. 50 -> 100 -> 200 -> 400 -> 800 -> 1600 etc.
 // gold income per tier will not double but will go up by a set amount, itself + 5

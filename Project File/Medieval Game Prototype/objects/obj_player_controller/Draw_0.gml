@@ -25,6 +25,6 @@ if (room == rm_lvl_select || room == rm_main_menu){
 else {
 	// draw income / gold info
 	draw_text(x - 16,y - 48, "player unit count: " + string(global.player_unit_count) + "/" + string(global.player_unit_cap));
-	draw_text(x - 16,y - 32, "player gold amount: " + string(global.player_gold_amount)+ "/" + string(global.player_gold_cap));
+	draw_text(x - 16,y - 32, "player gold amount: " + string(global.player_gold_amount)+ "/" + string(global.player_gold_cap * global.slot_one_eco_cap_multiplier));
 
 }

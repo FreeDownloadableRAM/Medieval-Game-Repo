@@ -216,10 +216,10 @@ attack_population_threshold = 20;
 global.ally_1_order = 1;
 
 // reset enemy gold amount
-our_gold_amount = global.ally_1_gold_start_amount;
+our_gold_amount = global.ally_1_gold_start_amount * global.slot_two_eco_start_multiplier;
 
-our_gold_gen = global.ally_1_gold_gen;
-our_gold_cap = global.ally_1_gold_cap;
+our_gold_gen = global.ally_1_gold_gen * global.slot_two_eco_gen_multiplier;
+our_gold_cap = global.ally_1_gold_cap * global.slot_two_eco_cap_multiplier;
 
 // Prevent forever games
 ai_patience = irandom_range((300*fps),(420*fps)); // 5 to 8 mins randomly
@@ -260,3 +260,16 @@ lstand_nc_amount = 0;
 
 // track if we spawned last stand units
 lstand_spawned = false;
+
+// reset unit counters
+global.ally_1_unit_count = 0;
+global.ally_1_sm_count = 0;
+global.ally_1_pm_count = 0;
+global.ally_1_rg_count = 0;
+global.ally_1_kn_count = 0;
+global.ally_1_ab_count = 0;
+global.ally_1_hb_count = 0;
+global.ally_1_mg_count = 0;
+global.ally_1_cp_count = 0;
+global.ally_1_nc_count = 0;
+global.ally_1_gh_count = 0;
