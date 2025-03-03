@@ -14,7 +14,7 @@ else {
 			&& mouse_y < (y + button_height_from_center + 1) && mouse_y > (y - button_height_from_center - 1)){
 		
 		// We are within button bounds and we clicked
-		room_goto(rm_vs_ai_menu_player);
+		room_goto(rm_play_menu);
 			
 
 	}
