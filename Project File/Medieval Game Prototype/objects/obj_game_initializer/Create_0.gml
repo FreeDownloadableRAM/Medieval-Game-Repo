@@ -439,16 +439,16 @@ global.starting_player_castle_health_enemy = 2500;
 // game is non linear, you can complete all levels in multiple orders.
 // As long as you cleared
 // the nation next to whatever you wish to take on, you can take on the adjacent nations.
-global.lvl_1_clear = true;
-global.lvl_2_clear = true;
-global.lvl_3_clear = true;
-global.lvl_4_clear = true;
-global.lvl_5_clear = true;
-global.lvl_6_clear = true;
-global.lvl_7_clear = true;
-global.lvl_8_clear = true;
-global.lvl_9_clear = true;
-global.lvl_10_clear = true;
+global.lvl_1_clear = false;
+global.lvl_2_clear = false;
+global.lvl_3_clear = false;
+global.lvl_4_clear = false;
+global.lvl_5_clear = false;
+global.lvl_6_clear = false;
+global.lvl_7_clear = false;
+global.lvl_8_clear = false;
+global.lvl_9_clear = false;
+global.lvl_10_clear = false;
 
 // global audio controllers
 global.music_amp_decimal = 0.5;
