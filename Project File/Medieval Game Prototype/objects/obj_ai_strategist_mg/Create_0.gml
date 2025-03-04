@@ -15,7 +15,7 @@ can_train_mg = true;
 can_train_nc = false;
 
 // starting units
-instance_create_layer(enemy_spawn_location_x,enemy_spawn_location_y,"NPCs",obj_magician_enemy);
+instance_create_layer(unit_spawn_location_x,unit_spawn_location_y,"NPCs",obj_magician_enemy);
 
 // set eco level
 ai_eco_lv = 5; // 0 is base, // 7 is max
