@@ -754,6 +754,7 @@
     {"id":{"name":"rm_vs_ai_menu_map","path":"rooms/rm_vs_ai_menu_map/rm_vs_ai_menu_map.yy",},},
     {"id":{"name":"rm_vs_ai_menu_opposition","path":"rooms/rm_vs_ai_menu_opposition/rm_vs_ai_menu_opposition.yy",},},
     {"id":{"name":"rm_vs_ai_menu_player","path":"rooms/rm_vs_ai_menu_player/rm_vs_ai_menu_player.yy",},},
+    {"id":{"name":"scr_save_functions","path":"scripts/scr_save_functions/scr_save_functions.yy",},},
     {"id":{"name":"shd_indx_col_swapper","path":"shaders/shd_indx_col_swapper/shd_indx_col_swapper.yy",},},
     {"id":{"name":"snd_msc_01_conflicting_interests_loopable","path":"sounds/snd_msc_01_conflicting_interests_loopable/snd_msc_01_conflicting_interests_loopable.yy",},},
     {"id":{"name":"snd_msc_02_medieval_warfare_loopable","path":"sounds/snd_msc_02_medieval_warfare_loopable/snd_msc_02_medieval_warfare_loopable.yy",},},

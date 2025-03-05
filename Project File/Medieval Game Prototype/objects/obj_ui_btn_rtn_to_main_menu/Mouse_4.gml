@@ -13,6 +13,9 @@ else {
 	if (mouse_x < (x + button_width_from_center + 1) && mouse_x > (x - button_width_from_center - 1)
 			&& mouse_y < (y + button_height_from_center + 1) && mouse_y > (y - button_height_from_center - 1)){
 		
+		// save game data
+		save_game();
+		
 		// We are within button bounds and we clicked
 		room_goto(rm_main_menu);
 		
