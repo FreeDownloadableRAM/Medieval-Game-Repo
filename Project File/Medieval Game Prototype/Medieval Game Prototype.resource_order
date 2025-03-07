@@ -401,6 +401,7 @@
     {"name":"obj_msc_08_player","order":7,"path":"objects/obj_msc_08_player/obj_msc_08_player.yy",},
     {"name":"obj_msc_09_player","order":8,"path":"objects/obj_msc_09_player/obj_msc_09_player.yy",},
     {"name":"obj_msc_12_player","order":9,"path":"objects/obj_msc_12_player/obj_msc_12_player.yy",},
+    {"name":"obj_msc_mmenu","order":10,"path":"objects/obj_msc_mmenu/obj_msc_mmenu.yy",},
     {"name":"obj_nat_slct_spwnr","order":2,"path":"objects/obj_nat_slct_spwnr/obj_nat_slct_spwnr.yy",},
     {"name":"obj_necro_proj_enemy","order":4,"path":"objects/obj_necro_proj_enemy/obj_necro_proj_enemy.yy",},
     {"name":"obj_necro_proj","order":2,"path":"objects/obj_necro_proj/obj_necro_proj.yy",},

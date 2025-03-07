@@ -472,6 +472,7 @@
     {"id":{"name":"obj_msc_09_player","path":"objects/obj_msc_09_player/obj_msc_09_player.yy",},},
     {"id":{"name":"obj_msc_12_player","path":"objects/obj_msc_12_player/obj_msc_12_player.yy",},},
     {"id":{"name":"obj_msc_audio_slider","path":"objects/obj_msc_audio_slider/obj_msc_audio_slider.yy",},},
+    {"id":{"name":"obj_msc_mmenu","path":"objects/obj_msc_mmenu/obj_msc_mmenu.yy",},},
     {"id":{"name":"obj_nat_slct_spwnr","path":"objects/obj_nat_slct_spwnr/obj_nat_slct_spwnr.yy",},},
     {"id":{"name":"obj_nation_select_generic","path":"objects/obj_nation_select_generic/obj_nation_select_generic.yy",},},
     {"id":{"name":"obj_necro_proj_enemy","path":"objects/obj_necro_proj_enemy/obj_necro_proj_enemy.yy",},},
