@@ -14,6 +14,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_magician_spell_hb_enemy","path":"objects/obj_magician_spell_hb_enemy/obj_magician_spell_hb_enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_ghoul_atk_htibox_enemy","path":"objects/obj_ghoul_atk_htibox_enemy/obj_ghoul_atk_htibox_enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_necro_proj_enemy","path":"objects/obj_necro_proj_enemy/obj_necro_proj_enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_catapult_proj_enemy","path":"objects/obj_catapult_proj_enemy/obj_catapult_proj_enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_generic_npc",
