@@ -64,6 +64,9 @@ else {
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a3);
 		*/
 		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_enemy);
+		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_e2);
+		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_e3);
+		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_e4);
 		
 	}
 	
