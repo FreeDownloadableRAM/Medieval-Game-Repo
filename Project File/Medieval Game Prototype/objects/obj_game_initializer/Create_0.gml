@@ -166,7 +166,7 @@ global.enemy_can_train_kn = true;
 global.enemy_can_train_ab = true;
 global.enemy_can_train_hb = true;
 global.enemy_can_train_mg = true;
-global.enemy_can_train_cp = false;
+global.enemy_can_train_cp = true;
 global.enemy_can_train_nc = true;
 global.enemy_can_train_gh = true;
 

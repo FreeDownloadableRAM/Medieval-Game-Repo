@@ -16,7 +16,7 @@ can_train_kn = global.enemy_can_train_kn;
 can_train_ab = global.enemy_can_train_ab;
 can_train_hb = global.enemy_can_train_hb;
 can_train_mg = global.enemy_can_train_mg;
-// can_train_cp = global.enemy_can_train_cp;
+can_train_cp = global.enemy_can_train_cp;
 can_train_nc = global.enemy_can_train_nc;
 
 // objects that we train ourselves
@@ -28,6 +28,7 @@ ai_arbalest = obj_arbalest_enemy;
 ai_halberdier = obj_halberdier_enemy;
 ai_magician = obj_magician_enemy;
 ai_necromancer = obj_necromancer_enemy;
+ai_catapult = obj_catapult_enemy;
 
 // Trackers
 // Here we keep track of the units the player is using, these values are taken from the units spawned by the player themself.
@@ -55,7 +56,7 @@ allied_ab_amount = global.enemy_ab_count + global.enemy_2_ab_count + global.enem
 allied_hb_amount = global.enemy_hb_count + global.enemy_2_hb_count + global.enemy_3_hb_count + global.enemy_4_hb_count;
 allied_mg_amount = global.enemy_mg_count + global.enemy_2_mg_count + global.enemy_3_mg_count + global.enemy_4_mg_count;
 // wip
-// ai_cp_amount = global.enemy_cp_count; // NOT AVAILABLE YET
+allied_cp_amount = global.enemy_cp_count + global.enemy_2_cp_count + global.enemy_3_cp_count + global.enemy_4_cp_count; // NOT AVAILABLE YET
 allied_nc_amount = global.enemy_nc_count + global.enemy_2_nc_count + global.enemy_3_nc_count + global.enemy_4_nc_count;
 allied_gh_amount = global.enemy_gh_count + global.enemy_2_gh_count + global.enemy_3_gh_count + global.enemy_4_gh_count;
 
@@ -79,11 +80,9 @@ ai_kn_train_delay = global.ai_train_delay_kn * fps;
 ai_ab_train_delay = global.ai_train_delay_ab * fps;
 ai_hb_train_delay = global.ai_train_delay_hb * fps;
 ai_mg_train_delay = global.ai_train_delay_mg * fps;
-
-
-
-// wip
 ai_nc_train_delay = global.ai_train_delay_nc * fps;
+ai_cp_train_delay = global.ai_train_delay_cp * fps;
+ai_cp_train_counter = 0;
 
 // Handle alarms
 // Whenever these reach zero, toggle a variable
@@ -237,7 +236,7 @@ reinf_kn_amount = 0;
 reinf_ab_amount = 0;
 reinf_hb_amount = 0;
 reinf_mg_amount = 0;
-// reinf_cp_amount = 0; NOT YET AVAILABLE
+reinf_cp_amount = 0; 
 reinf_nc_amount = 0;
 
 // last stand hp reinforcement threshold
@@ -255,7 +254,7 @@ lstand_kn_amount = 0;
 lstand_ab_amount = 0;
 lstand_hb_amount = 0;
 lstand_mg_amount = 0;
-// reinf_cp_amount = 0; NOT YET AVAILABLE
+lstand_cp_amount = 0; 
 lstand_nc_amount = 0;
 
 // track if we spawned last stand units

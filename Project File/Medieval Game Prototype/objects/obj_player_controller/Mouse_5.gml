@@ -63,10 +63,12 @@ else {
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a2);
 		instance_create_layer(x,global.spawn_height,"NPCs",obj_swordman_a3);
 		*/
+		/*
 		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_enemy);
-		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_e2);
-		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_e3);
-		instance_create_layer(x,global.spawn_height - 32,"NPCs",obj_catapult_e4);
+		instance_create_layer(x+16,global.spawn_height - 32,"NPCs",obj_catapult_e2);
+		instance_create_layer(x+32,global.spawn_height - 32,"NPCs",obj_catapult_e3);
+		instance_create_layer(x-16,global.spawn_height - 32,"NPCs",obj_catapult_e4);
+		*/
 		
 	}
 	
