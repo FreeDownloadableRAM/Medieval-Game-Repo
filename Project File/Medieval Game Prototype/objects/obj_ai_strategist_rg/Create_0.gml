@@ -12,6 +12,7 @@ can_train_kn = false;
 can_train_ab = false;
 can_train_hb = false;
 can_train_mg = false;
+can_train_cp = false;
 
 // since this is the default first lvl, we make the ai very hesitant to upgrade eco
 

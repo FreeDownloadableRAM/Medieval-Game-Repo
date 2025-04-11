@@ -94,7 +94,7 @@ global.ally_1_can_train_kn = true;
 global.ally_1_can_train_ab = true;
 global.ally_1_can_train_hb = true;
 global.ally_1_can_train_mg = true;
-global.ally_1_can_train_cp = false;
+global.ally_1_can_train_cp = true;
 global.ally_1_can_train_nc = true;
 global.ally_1_can_train_gh = true;
 
@@ -118,7 +118,7 @@ global.ally_2_can_train_kn = true;
 global.ally_2_can_train_ab = true;
 global.ally_2_can_train_hb = true;
 global.ally_2_can_train_mg = true;
-global.ally_2_can_train_cp = false;
+global.ally_2_can_train_cp = true;
 global.ally_2_can_train_nc = true;
 global.ally_2_can_train_gh = true;
 
@@ -142,7 +142,7 @@ global.ally_3_can_train_kn = true;
 global.ally_3_can_train_ab = true;
 global.ally_3_can_train_hb = true;
 global.ally_3_can_train_mg = true;
-global.ally_3_can_train_cp = false;
+global.ally_3_can_train_cp = true;
 global.ally_3_can_train_nc = true;
 global.ally_3_can_train_gh = true;
 
@@ -190,7 +190,7 @@ global.enemy_2_can_train_kn = true;
 global.enemy_2_can_train_ab = true;
 global.enemy_2_can_train_hb = true;
 global.enemy_2_can_train_mg = true;
-global.enemy_2_can_train_cp = false;
+global.enemy_2_can_train_cp = true;
 global.enemy_2_can_train_nc = true;
 global.enemy_2_can_train_gh = true;
 
@@ -214,7 +214,7 @@ global.enemy_3_can_train_kn = true;
 global.enemy_3_can_train_ab = true;
 global.enemy_3_can_train_hb = true;
 global.enemy_3_can_train_mg = true;
-global.enemy_3_can_train_cp = false;
+global.enemy_3_can_train_cp = true;
 global.enemy_3_can_train_nc = true;
 global.enemy_3_can_train_gh = true;
 
@@ -238,7 +238,7 @@ global.enemy_4_can_train_kn = true;
 global.enemy_4_can_train_ab = true;
 global.enemy_4_can_train_hb = true;
 global.enemy_4_can_train_mg = true;
-global.enemy_4_can_train_cp = false;
+global.enemy_4_can_train_cp = true;
 global.enemy_4_can_train_nc = true;
 global.enemy_4_can_train_gh = true;
 

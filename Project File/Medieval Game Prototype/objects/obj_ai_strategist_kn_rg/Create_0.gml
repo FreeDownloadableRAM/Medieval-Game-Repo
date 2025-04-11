@@ -13,6 +13,11 @@ can_train_ab = false;
 can_train_hb = false;
 can_train_mg = false;
 can_train_nc = false;
+can_train_cp = false;
+
+// set eco level
+ai_eco_lv = 2; // 0 is base, // 7 is max
+
 
 // reinforcement properties
 reinf_kn_amount = 2;

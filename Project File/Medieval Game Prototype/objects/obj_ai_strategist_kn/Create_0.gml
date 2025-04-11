@@ -13,6 +13,7 @@ can_train_ab = false;
 can_train_hb = false;
 can_train_mg = false;
 can_train_nc = false;
+can_train_cp = false;
 
 ai_eco_lv = 1; // 0 is base, // 7 is max
 

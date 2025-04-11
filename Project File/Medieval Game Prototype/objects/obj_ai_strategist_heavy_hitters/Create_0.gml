@@ -13,6 +13,7 @@ can_train_ab = false;
 can_train_hb = true;
 can_train_mg = true;
 can_train_nc = false;
+can_train_cp = false;
 
 // reinforcement properties
 reinf_hb_amount = 2;
@@ -20,5 +21,4 @@ reinf_mg_amount = 1;
 
 lstand_hb_amount = 2;
 lstand_kn_amount = 3;
-
 lstand_mg_amount = 1;

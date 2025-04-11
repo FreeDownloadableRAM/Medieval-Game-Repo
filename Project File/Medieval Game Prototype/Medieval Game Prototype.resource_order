@@ -269,6 +269,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_ai_strategist_ally_2","order":5,"path":"objects/obj_ai_strategist_ally_2/obj_ai_strategist_ally_2.yy",},
     {"name":"obj_ai_strategist_ally_3","order":6,"path":"objects/obj_ai_strategist_ally_3/obj_ai_strategist_ally_3.yy",},
+    {"name":"obj_ai_strategist_artillery","order":4,"path":"objects/obj_ai_strategist_artillery/obj_ai_strategist_artillery.yy",},
     {"name":"obj_ai_strategist_base_ally","order":4,"path":"objects/obj_ai_strategist_base_ally/obj_ai_strategist_base_ally.yy",},
     {"name":"obj_ai_strategist_elites","order":1,"path":"objects/obj_ai_strategist_elites/obj_ai_strategist_elites.yy",},
     {"name":"obj_ai_strategist_enemy_2","order":1,"path":"objects/obj_ai_strategist_enemy_2/obj_ai_strategist_enemy_2.yy",},
@@ -278,7 +279,9 @@
     {"name":"obj_ai_strategist_heavy_hitters","order":2,"path":"objects/obj_ai_strategist_heavy_hitters/obj_ai_strategist_heavy_hitters.yy",},
     {"name":"obj_ai_strategist_kn_rg","order":2,"path":"objects/obj_ai_strategist_kn_rg/obj_ai_strategist_kn_rg.yy",},
     {"name":"obj_ai_strategist_kn","order":2,"path":"objects/obj_ai_strategist_kn/obj_ai_strategist_kn.yy",},
+    {"name":"obj_ai_strategist_magic_knights","order":5,"path":"objects/obj_ai_strategist_magic_knights/obj_ai_strategist_magic_knights.yy",},
     {"name":"obj_ai_strategist_melee_only","order":3,"path":"objects/obj_ai_strategist_melee_only/obj_ai_strategist_melee_only.yy",},
+    {"name":"obj_ai_strategist_mg_nc","order":3,"path":"objects/obj_ai_strategist_mg_nc/obj_ai_strategist_mg_nc.yy",},
     {"name":"obj_ai_strategist_mg","order":6,"path":"objects/obj_ai_strategist_mg/obj_ai_strategist_mg.yy",},
     {"name":"obj_ai_strategist_pm","order":3,"path":"objects/obj_ai_strategist_pm/obj_ai_strategist_pm.yy",},
     {"name":"obj_ai_strategist_rg_ab","order":1,"path":"objects/obj_ai_strategist_rg_ab/obj_ai_strategist_rg_ab.yy",},
