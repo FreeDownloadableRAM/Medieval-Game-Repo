@@ -16,7 +16,7 @@ can_train_kn = global.ally_1_can_train_kn;
 can_train_ab = global.ally_1_can_train_ab;
 can_train_hb = global.ally_1_can_train_hb;
 can_train_mg = global.ally_1_can_train_mg;
-// can_train_cp = global.enemy_can_train_cp;
+can_train_cp = global.ally_1_can_train_cp;
 can_train_nc = global.ally_1_can_train_nc;
 
 // objects that we train ourselves
@@ -28,6 +28,7 @@ ai_arbalest = obj_arbalest_a1;
 ai_halberdier = obj_halberdier_a1;
 ai_magician = obj_magician_a1;
 ai_necromancer = obj_necromancer_a1;
+ai_catapult = obj_catapult_a1;
 
 // Trackers
 // Here we keep track of the units the player is using, these values are taken from the units spawned by the player themself.
@@ -55,7 +56,7 @@ opposition_ab_amount = global.enemy_ab_count + global.enemy_2_ab_count + global.
 opposition_hb_amount = global.enemy_hb_count + global.enemy_2_hb_count + global.enemy_3_hb_count + global.enemy_4_hb_count;
 opposition_mg_amount = global.enemy_mg_count + global.enemy_2_mg_count + global.enemy_3_mg_count + global.enemy_4_mg_count;
 // wip
-opposition_cp_amount = global.enemy_cp_count; // NOT AVAILABLE YET
+opposition_cp_amount = global.enemy_cp_count + global.enemy_2_cp_count + global.enemy_3_cp_count + global.enemy_4_cp_count; 
 opposition_nc_amount = global.enemy_nc_count + global.enemy_2_nc_count + global.enemy_3_nc_count + global.enemy_4_nc_count;
 opposition_gh_amount = global.enemy_gh_count + global.enemy_2_gh_count + global.enemy_3_gh_count + global.enemy_4_gh_count;
 
@@ -79,8 +80,9 @@ ai_kn_train_delay = global.ai_train_delay_kn * fps;
 ai_ab_train_delay = global.ai_train_delay_ab * fps;
 ai_hb_train_delay = global.ai_train_delay_hb * fps;
 ai_mg_train_delay = global.ai_train_delay_mg * fps;
+ai_cp_train_delay = global.ai_train_delay_cp * fps;
 
-
+ai_cp_train_counter = 0;
 
 // wip
 ai_nc_train_delay = global.ai_train_delay_nc * fps;

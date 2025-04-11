@@ -104,7 +104,7 @@ backward_direction = -1;
 //ai_rally_distance_offset = (16 * (global.player_unit_count - 1)) + 16;
 
 // Random rally distance offset (random_range(-4,4)) * 4;
-ai_rally_distance_offset = (irandom_range(132,8)) * 4;
+ai_rally_distance_offset = (irandom_range(-132,8)) * 4;
 ai_attack_distance_offset = (irandom_range(0,16)) * 4;
 // ai_rally_distance_offset = 0;
 

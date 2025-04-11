@@ -11,7 +11,7 @@ can_train_kn = global.enemy_4_can_train_kn;
 can_train_ab = global.enemy_4_can_train_ab;
 can_train_hb = global.enemy_4_can_train_hb;
 can_train_mg = global.enemy_4_can_train_mg;
-// can_train_cp = global.enemy_can_train_cp;
+can_train_cp = global.enemy_4_can_train_cp;
 can_train_nc = global.enemy_4_can_train_nc;
 
 // objects that we train ourselves
@@ -23,6 +23,7 @@ ai_arbalest = obj_arbalest_e4;
 ai_halberdier = obj_halberdier_e4;
 ai_magician = obj_magician_e4;
 ai_necromancer = obj_necromancer_e4;
+ai_catapult = obj_catapult_e4;
 
 // AI modifiers
 // Here we tweak modifiers that influence how the ai determines importance of different variables.

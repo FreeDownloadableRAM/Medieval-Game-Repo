@@ -11,7 +11,7 @@ can_train_kn = global.ally_2_can_train_kn;
 can_train_ab = global.ally_2_can_train_ab;
 can_train_hb = global.ally_2_can_train_hb;
 can_train_mg = global.ally_2_can_train_mg;
-// can_train_cp = global.ally_can_train_cp;
+can_train_cp = global.ally_2_can_train_cp;
 can_train_nc = global.ally_2_can_train_nc;
 
 // objects that we train ourselves
@@ -23,6 +23,7 @@ ai_arbalest = obj_arbalest_a2;
 ai_halberdier = obj_halberdier_a2;
 ai_magician = obj_magician_a2;
 ai_necromancer = obj_necromancer_a2;
+ai_catapult = obj_catapult_a2;
 
 // AI modifiers
 // Here we tweak modifiers that influence how the ai determines importance of different variables.

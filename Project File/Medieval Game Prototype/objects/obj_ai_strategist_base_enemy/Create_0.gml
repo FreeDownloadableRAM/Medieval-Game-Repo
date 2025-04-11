@@ -130,7 +130,7 @@ opposition_hb_to_army_ratio = (opposition_hb_amount)/(global.player_unit_count +
 // Magician ratio to rest of army
 opposition_mg_to_army_ratio = (opposition_mg_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
-// Necromancer ratio to rest of army
+// Catapult ratio to rest of army
 opposition_cp_to_army_ratio = (opposition_cp_amount)/(global.player_unit_count + global.ally_1_unit_count + global.ally_2_unit_count + global.ally_3_unit_count);
 
 // Necromancer ratio to rest of army

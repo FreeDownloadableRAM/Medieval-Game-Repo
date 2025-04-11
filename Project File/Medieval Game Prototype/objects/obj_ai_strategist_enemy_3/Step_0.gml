@@ -29,6 +29,17 @@ else {
 	// In order from most preferential, to least.
 	// If the AI can afford it and its not on Cool down, they will go for it.
 	
+	// our counter is higher than our training delay restriction
+	if (ai_cp_train_counter > ai_cp_train_delay){
+		// stop counting up
+	
+	}
+	else {
+		ai_cp_train_counter ++;
+	
+	
+	}
+	
 	if ((ai_eco_up_save == false) && (global.enemy_3_unit_count < global.enemy_3_unit_cap) && allies_king_health > 0.25){
 		// ONLY spawn troops or attempt to when we are NOT saving up for eco upgrades.
 		// If we are in here, we are NOT planning to eco upgrade.
@@ -2837,6 +2848,23 @@ else {
 				}
 			}
 			
+		}
+		
+		// No matter what, if possible, always train catapults (unless we are training more than our max
+		// ratio, and are we allowed to train this unit type?
+		if ((allied_ranged_army_percent < allied_ranged_army_perc_targ) && (can_train_cp == true)){
+			// We can train ranged characters
+			// If we have enough money and the unit is not on cool down, train it.
+			if (ai_cp_train_counter >= ai_cp_train_delay){
+				// do we have money? 
+				if (our_gold_amount >= global.unit_catapult_cost){
+					// Train up catapult and reset train timer
+					instance_create_layer(unit_spawn_location_x,unit_spawn_location_y - 32,"NPCs",ai_catapult);
+					// timer reset
+					ai_cp_train_counter = 0;
+				}
+			
+			}
 		}
 		
 	}
