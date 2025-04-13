@@ -16,7 +16,7 @@ can_train_nc = true;
 can_train_cp = false;
 
 // set eco level
-ai_eco_lv = 6; // 0 is base, // 7 is max
+ai_eco_lv = 7; // 0 is base, // 7 is max
 
 
 // reinforcement properties

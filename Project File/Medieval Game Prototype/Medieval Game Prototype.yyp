@@ -323,6 +323,7 @@
     {"id":{"name":"obj_ai_strategist_melee_only","path":"objects/obj_ai_strategist_melee_only/obj_ai_strategist_melee_only.yy",},},
     {"id":{"name":"obj_ai_strategist_mg_nc","path":"objects/obj_ai_strategist_mg_nc/obj_ai_strategist_mg_nc.yy",},},
     {"id":{"name":"obj_ai_strategist_mg","path":"objects/obj_ai_strategist_mg/obj_ai_strategist_mg.yy",},},
+    {"id":{"name":"obj_ai_strategist_nc","path":"objects/obj_ai_strategist_nc/obj_ai_strategist_nc.yy",},},
     {"id":{"name":"obj_ai_strategist_pm","path":"objects/obj_ai_strategist_pm/obj_ai_strategist_pm.yy",},},
     {"id":{"name":"obj_ai_strategist_rg_ab","path":"objects/obj_ai_strategist_rg_ab/obj_ai_strategist_rg_ab.yy",},},
     {"id":{"name":"obj_ai_strategist_rg","path":"objects/obj_ai_strategist_rg/obj_ai_strategist_rg.yy",},},
