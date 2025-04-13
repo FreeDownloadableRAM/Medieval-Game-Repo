@@ -179,7 +179,7 @@ ai_order_situation = "Nothing";
 // This is to prevent the ai from attacking for a set period of time
 // a sort of grace period, so that they won't attack the player for a set duration.
 ai_restrict_attack_order = true;
-alarm_set(9,(10*fps)); // after 10 seconds, set ai_restrict_attack_order to false.
+alarm_set(9,(irandom_range(15,60) / (delta_time/1000000))); // after 15-60 seconds, set ai_restrict_attack_order to false.
 
 // Economic level tracker
 // formula in algebriac form is 5x^{2}+5
@@ -221,7 +221,7 @@ our_gold_gen = global.enemy_gold_gen * global.slot_five_eco_gen_multiplier;
 our_gold_cap = global.enemy_gold_cap * global.slot_five_eco_cap_multiplier;
 
 // Prevent forever games
-ai_patience = irandom_range((300*fps),(420*fps)); // 5 to 8 mins randomly
+ai_patience = ((irandom_range(5,8) * 60) / (delta_time/1000000)); // 5 to 8 mins randomly
 
 // reinforcement properties
 // here we define the quantity of each unit type to spawn when we reach a certain threshold

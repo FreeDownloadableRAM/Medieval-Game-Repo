@@ -1,15 +1,9 @@
 // draw debug text
 if (global.dev_mode == true){
 	
-	/*
-	draw_set_color(c_white);
-	draw_text(x,y - 80, "AI Attack delay Timer: " + string(character_attack_speed));
-	draw_text(x,y - 64, "Character Attack Animation Timer: " + string(character_attack_animation_duration));
-	*/
 	
 }
 else{
-	// Dont draw if we arent
 
 }
 
@@ -93,4 +87,12 @@ draw_set_color(c_white);
 	draw_text(camera_get_view_x(view_camera[0]) + 160,y + 212, "KN alarm: " + string(alarm_get(3)));
 	draw_text(camera_get_view_x(view_camera[0]) + 160,y + 228, "AB alarm: " + string(alarm_get(4)));
 	draw_text(camera_get_view_x(view_camera[0]) + 160,y + 244, "HB alarm: " + string(alarm_get(5)));
+*/
+
+/*
+	// debug for delta time purposes
+	draw_set_color(c_white);
+	draw_text(x+720,y + 264, "ai patience: " + string(ai_patience));
+	draw_text(x+720,y + 280, "AI Attack delay Timer: " + string(alarm_get(9)));
+	draw_text(x+720,y + 312, "delta time value: " + string(delta_time/1000000));
 */
