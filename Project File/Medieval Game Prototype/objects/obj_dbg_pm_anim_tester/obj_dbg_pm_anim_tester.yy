@@ -18,8 +18,8 @@
   "name":"obj_dbg_pm_anim_tester",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_debug",
-    "path":"folders/Objects/gr_debug.yy",
+    "name":"gr_necessary_game_objects",
+    "path":"folders/Objects/gr_debug/gr_gameplay_objects/gr_necessary_game_objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

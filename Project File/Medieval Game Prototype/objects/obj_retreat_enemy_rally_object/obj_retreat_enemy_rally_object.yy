@@ -6,8 +6,8 @@
   "name":"obj_retreat_enemy_rally_object",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_debug",
-    "path":"folders/Objects/gr_debug.yy",
+    "name":"gr_necessary_game_objects",
+    "path":"folders/Objects/gr_debug/gr_gameplay_objects/gr_necessary_game_objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

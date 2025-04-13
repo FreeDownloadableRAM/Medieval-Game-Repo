@@ -19,8 +19,8 @@
   "name":"obj_castle_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_debug",
-    "path":"folders/Objects/gr_debug.yy",
+    "name":"gr_standard_deathmatch",
+    "path":"folders/Objects/gr_debug/gr_gameplay_objects/gr_gamemode_controllers/gr_standard_deathmatch.yy",
   },
   "parentObjectId":{
     "name":"obj_castle_base",
