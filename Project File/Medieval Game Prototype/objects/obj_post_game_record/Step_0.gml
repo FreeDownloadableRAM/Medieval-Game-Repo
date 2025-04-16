@@ -5,19 +5,19 @@ if (global.is_game_paused == true){
 }
 else {
 	// Follow camera
-	if (global.player_castle_health_enemy <= 0){
+	if (global.game_winner == 1){
 		
 		sprite_index = spr_win_graphic;
 	
 	}
-	else if (global.player_castle_health <= 0){
+	else if (global.game_winner == 2){
 		
 		sprite_index = spr_lose_graphic;
 	
 	}
 	else {
 		// Set to win
-		sprite_index = spr_win_graphic;
+		sprite_index = spr_dbg_invisible;
 	
 	}
 	x = camera_get_view_x(view_camera[0]) + 768;

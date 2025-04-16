@@ -23,7 +23,10 @@
     "name":"gr_player",
     "path":"folders/Objects/gr_parents/generic_character/gr_allies/gr_player.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_unit_base",
+    "path":"objects/obj_unit_base/obj_unit_base.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -522,6 +522,13 @@ global.enemy_4_enabled = true;
 // 4 = autumn forest, 5 = ice valley, 6 = castle town, 7 = volcano / black mountain ranges
 global.ai_vs_mode_map_theme = 0; // 8 options, 0 - 7
 
+// what kind of game mode is it?
+// 0 = default, king vs king, 1 = KoTH
+global.game_mode = 0;
+
+// track if player has won or enemy has won
+global.game_winner = 0; // 0 = no one, 1 = player, 2 = enemy
+
 // affects what music will play in vs mode.
 // 0 = conflicting interests, 1 = medieval warfare, 2 = liberty awaits
 // 3 = standing orders, 4 = price paid, 5 = rebel alliance

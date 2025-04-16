@@ -52,4 +52,4 @@ else {
 }
 
 // reset alarm
-alarm_set(7,(1*fps));
+alarm_set(7,(1 / (delta_time/1000000)));

@@ -8,6 +8,11 @@ if (can_play_lvl == true && freeze_menu_slct == false){
 	if (mouse_check_button_released(mb_left)){
 		// We clicked
 		room_goto(lvl_dstnation);
+		// set game mode
+		global.game_mode = n_gamemode;
+		
+		// reset game win condition
+		global.game_winner = 0;
 	
 	}
 	

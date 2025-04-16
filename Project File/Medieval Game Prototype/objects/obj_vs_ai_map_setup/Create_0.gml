@@ -3,6 +3,9 @@
 // then we create the music player object based off of the map theme selected.
 // we want all conditionals to be checked here regardless so, no else ifs, only ifs
 
+// reset game tracker
+global.game_winner = 0;
+
 // always place
 // this allows player to train units
 instance_create_layer(x,y,"initial_objects",obj_vs_ai_p_unit_slct_spwnr);
@@ -44,7 +47,19 @@ if (global.enemy_4_enabled = true){
 
 // depending on game mode, we create king objects or not // for now, since there is only 1 gamemode, 
 // we use that only.
+// 0 is death match, 1 = KoTH
+if (global.game_mode == 0){
+	// place kings
 
+}
+else if (global.game_mode == 1){
+	// place camp
+
+}
+// do nothing
+else {
+
+}
 
 // constants that will be created no matter what are the rally flags and retreat wooden barricades.
 // the rally flag will change positions based off of game mode. 

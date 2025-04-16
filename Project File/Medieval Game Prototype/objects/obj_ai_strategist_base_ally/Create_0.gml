@@ -100,13 +100,13 @@ alarm_set(10,ai_mg_train_delay); // magician training delay time
 alarm_set(11,ai_nc_train_delay); // necromancer training delay time
 
 // We DONT want to calculate ratios and other operations EVERY frame, so we only calculate that whenever alarm[6] is triggered.
-alarm_set(6,(3*fps)); // every 3 seconds
+alarm_set(6,(3 / (delta_time/1000000))); // every 3 seconds
 
 // Update personal variables every second
-alarm_set(7,(1*fps)); // every second
+alarm_set(7,(1 / (delta_time/1000000))); // every second
 
 // We only want to consider upgrading our economy every 7 seconds
-alarm_set(8,(7*fps)); // every 7 seconds
+alarm_set(8,(7 / (delta_time/1000000))); // every 7 seconds
 
 // Player army composition modifiers, the player army composition is tracked here.
 // Ranged units to melee units ratio

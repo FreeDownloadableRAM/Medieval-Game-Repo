@@ -21,6 +21,7 @@ n_flag = spr_lvl_09_flag;
 // unit unlock info
 n_unit_unlock = spr_dbg_invisible;
 n_unit_lock_icon = spr_dbg_invisible;
+n_gamemode = 0;
 // is unit unlocked? if so, set sub image to the unlock frame
 if (global.lvl_9_clear == true){
 	n_is_unit_unlocked = 0;
