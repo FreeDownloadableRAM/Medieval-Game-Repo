@@ -20,8 +20,8 @@ ai_eco_lv = 3; // 0 is base, // 7 is max
 
 
 // reinforcement properties
-reinf_pm_amount = 3;
-reinf_kn_amount = 2;
+//reinf_pm_amount = 3;
+//reinf_kn_amount = 2;
 
-lstand_pm_amount = 2;
-lstand_kn_amount = 3;
+//lstand_pm_amount = 2;
+//lstand_kn_amount = 3;

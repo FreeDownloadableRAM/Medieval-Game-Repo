@@ -13,3 +13,11 @@ sprite_index = spr_rg_08_projectile;
 //Clear Timer
 //alarm_set(0,((43/9)*fps)); // make the timer as long as the character attack animation arrow launch frame
 alarm_set(0,1);
+
+
+// particle type
+trail_particle = part_type_create();
+part_type_sprite(trail_particle,spr_projectile_trail,0,0,0);
+part_type_alpha3(trail_particle,1,1,0);
+part_type_life(trail_particle,60,60);
+part_type_size(trail_particle,1,1,0,0);

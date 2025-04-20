@@ -1,7 +1,6 @@
 /// Here is what we run when the game begins
 // This will be on the room before entering the main menu
 
-
 // Dev Globals
 global.dev_mode = false;
 
@@ -535,3 +534,4 @@ global.game_winner = 0; // 0 = no one, 1 = player, 2 = enemy
 // 6 = nearing journeys end, 7 = the elites, 8 = travel at night
 // 9 = last stand
 global.ai_vs_mode_music_track = 0;
+

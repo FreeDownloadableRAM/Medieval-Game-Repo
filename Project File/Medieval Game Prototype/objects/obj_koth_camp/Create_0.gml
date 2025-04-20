@@ -22,3 +22,32 @@ y = 512;
 // for both sides
 global.player_castle_health = global.starting_player_castle_health * 0.4;
 global.player_castle_health_enemy = global.starting_player_castle_health_enemy * 0.4;
+
+// reset unit counters
+// Reset trackers
+global.player_unit_count = 0;
+global.player_unit_count_enemy = 0;
+
+// Player Trackers
+global.player_sm_count = 0;
+global.player_pm_count = 0;
+global.player_rg_count = 0;
+global.player_kn_count = 0;
+global.player_ab_count = 0;
+global.player_hb_count = 0;
+global.player_mg_count = 0;
+global.player_cp_count = 0;
+global.player_nc_count = 0;
+global.player_gh_count = 0;
+
+// Enemy unit ai trackers
+global.enemy_sm_count = 0;
+global.enemy_pm_count = 0;
+global.enemy_rg_count = 0;
+global.enemy_kn_count = 0;
+global.enemy_ab_count = 0;
+global.enemy_hb_count = 0;
+global.enemy_mg_count = 0;
+global.enemy_cp_count = 0;
+global.enemy_nc_count = 0;
+global.enemy_gh_count = 0;
