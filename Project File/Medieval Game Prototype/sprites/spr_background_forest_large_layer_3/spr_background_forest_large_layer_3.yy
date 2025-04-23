@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"gr_backgrounds",
-    "path":"folders/Sprites/gr_objects/gr_scenery/gr_backgrounds.yy",
+    "name":"gr_forests",
+    "path":"folders/Sprites/gr_objects/gr_scenery/gr_backgrounds/gr_forests.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -38,8 +38,9 @@ if (object_exists(obj_player_controller) == true){
 	layer_x(layer_get_id("Distant_Background_1"), (background_map[? layer_get_id("Distant_Background_1")] * round((_cx)) + arrayxoffset[11]));
 	layer_x(layer_get_id("Distant_Background_2"), (background_map[? layer_get_id("Distant_Background_2")] * round((_cx)) + arrayxoffset[12]));
 	layer_x(layer_get_id("Distant_Background_3"), (background_map[? layer_get_id("Distant_Background_3")] * round((_cx)) + arrayxoffset[13]));
-	layer_x(layer_get_id("Furthest_Background"), (background_map[? layer_get_id("Furthest_Background")] * round((_cx)) + arrayxoffset[14]));
-	layer_x(layer_get_id("Skybox"), (background_map[? layer_get_id("Skybox")] * round((_cx)) + arrayxoffset[15]));
+	layer_x(layer_get_id("Distant_Background_4"), (background_map[? layer_get_id("Distant_Background_4")] * round((_cx)) + arrayxoffset[14]));
+	layer_x(layer_get_id("Furthest_Background"), (background_map[? layer_get_id("Furthest_Background")] * round((_cx)) + arrayxoffset[15]));
+	layer_x(layer_get_id("Skybox"), (background_map[? layer_get_id("Skybox")] * round((_cx)) + arrayxoffset[16]));
 	
 	
 	

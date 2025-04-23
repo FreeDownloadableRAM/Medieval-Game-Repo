@@ -20,10 +20,11 @@ background_map[? layer_get_id("Tree_Layer_10_1")] = 0.6;
 background_map[? layer_get_id("Distant_Background_1")] = 0.7; // Can only use the values between 0 and 1
 background_map[? layer_get_id("Distant_Background_2")] = 0.75; // Can only use the values between 0 and 1
 background_map[? layer_get_id("Distant_Background_3")] = 0.8; // Can only use the values between 0 and 1
-background_map[? layer_get_id("Furthest_Background")] = 0.85; // Can only use the values between 0 and 1
-background_map[? layer_get_id("Skybox")] = 0.9; // Higher the fraction, the further it is away
+background_map[? layer_get_id("Distant_Background_4")] = 0.85; // Can only use the values between 0 and 1
+background_map[? layer_get_id("Furthest_Background")] = 0.9; // Can only use the values between 0 and 1
+background_map[? layer_get_id("Skybox")] = 0.95; // Higher the fraction, the further it is away
 
 
 // Array
-arrayxoffset = [180,48,64,194,156,128,0,98,-94,0,2,0,0,0,0,0];
+arrayxoffset = [180,48,64,194,156,128,0,98,-94,0,2,0,0,0,0,0,0];
 xoffsetcounter = 0;
