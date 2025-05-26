@@ -9,7 +9,7 @@
   "bitRate":320,
   "compression":0,
   "conversionMode":0,
-  "duration":117.35933,
+  "duration":117.37948,
   "name":"snd_msc_11",
   "parent":{
     "name":"gr_battle_music",
