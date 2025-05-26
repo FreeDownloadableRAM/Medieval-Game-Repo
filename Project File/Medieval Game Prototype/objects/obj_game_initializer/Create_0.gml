@@ -448,6 +448,15 @@ global.lvl_7_clear = false;
 global.lvl_8_clear = false;
 global.lvl_9_clear = false;
 global.lvl_10_clear = false;
+global.lvl_11_clear = false;
+global.lvl_12_clear = false;
+global.lvl_13_clear = false;
+global.lvl_14_clear = false;
+global.lvl_15_clear = false;
+global.lvl_16_clear = false;
+global.lvl_17_clear = false;
+global.lvl_18_clear = false;
+global.lvl_19_clear = false;
 
 // global audio controllers
 global.music_amp_decimal = 0.5;

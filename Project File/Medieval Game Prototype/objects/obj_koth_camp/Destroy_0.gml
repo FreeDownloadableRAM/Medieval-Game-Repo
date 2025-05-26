@@ -27,6 +27,42 @@ else if (room == rm_lvl_06_magical_forest){
 else if (room == rm_lvl_07_alliance_of_arms){
 	// Set clear
 	global.lvl_7_clear = true;
+	
+}
+else if (room == rm_lvl_08_highlands){
+	// Set clear
+	global.lvl_8_clear = true;
+	
+}
+else if (room == rm_lvl_09_portland){
+	// Set clear
+	global.lvl_9_clear = true;
+	
+}
+else if (room == rm_lvl_10_ice_mountains){
+	// Set clear
+	global.lvl_10_clear = true;
+	
+}
+else if (room == rm_lvl_11_ice_fields){
+	// Set clear
+	global.lvl_11_clear = true;
+	
+}
+else if (room == rm_lvl_12_island){
+	// Set clear
+	global.lvl_12_clear = true;
+	
+}
+else if (room == rm_lvl_16_tropical_shores){
+	// Set clear
+	global.lvl_16_clear = true;
+	
+}
+else if (room == rm_lvl_19_volcano){
+	// Set clear
+	global.lvl_19_clear = true;
+	
 }
 else{
 	// Dont unlock anything

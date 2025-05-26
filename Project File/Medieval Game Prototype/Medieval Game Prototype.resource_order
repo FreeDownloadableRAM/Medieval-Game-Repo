@@ -689,7 +689,7 @@
     {"name":"rm_lvl_11_ice_fields","order":12,"path":"rooms/rm_lvl_11_ice_fields/rm_lvl_11_ice_fields.yy",},
     {"name":"rm_lvl_12_island","order":13,"path":"rooms/rm_lvl_12_island/rm_lvl_12_island.yy",},
     {"name":"rm_lvl_16_tropical_shores","order":14,"path":"rooms/rm_lvl_16_tropical_shores/rm_lvl_16_tropical_shores.yy",},
-    {"name":"rm_lvl_end","order":11,"path":"rooms/rm_lvl_end/rm_lvl_end.yy",},
+    {"name":"rm_lvl_19_volcano","order":11,"path":"rooms/rm_lvl_19_volcano/rm_lvl_19_volcano.yy",},
     {"name":"rm_lvl_select","order":1,"path":"rooms/rm_lvl_select/rm_lvl_select.yy",},
     {"name":"rm_play_menu","order":3,"path":"rooms/rm_play_menu/rm_play_menu.yy",},
     {"name":"rm_saves_menu","order":4,"path":"rooms/rm_saves_menu/rm_saves_menu.yy",},

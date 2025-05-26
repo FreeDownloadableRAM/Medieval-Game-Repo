@@ -20,6 +20,8 @@ function save_game(){
 		lvl_8_clear : global.lvl_8_clear,
 		lvl_9_clear : global.lvl_9_clear,
 		lvl_10_clear : global.lvl_10_clear,
+		lvl_11_clear : global.lvl_11_clear,
+		lvl_12_clear : global.lvl_12_clear,
 		
 		// options trackers
 		music_volume : global.music_amp_decimal,
@@ -68,6 +70,8 @@ function load_game(){
 		global.lvl_8_clear = _struct.lvl_8_clear;
 		global.lvl_9_clear = _struct.lvl_9_clear;
 		global.lvl_10_clear = _struct.lvl_10_clear;
+		global.lvl_11_clear = _struct.lvl_11_clear;
+		global.lvl_12_clear = _struct.lvl_12_clear;
 		
 		// options
 		// music
