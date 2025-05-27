@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lvl_12_n",
-    "path":"sprites/spr_lvl_12_n/spr_lvl_12_n.yy",
+    "name":"spr_lvl_16_n",
+    "path":"sprites/spr_lvl_16_n/spr_lvl_16_n.yy",
   },
   "spriteMaskId":null,
   "visible":true,

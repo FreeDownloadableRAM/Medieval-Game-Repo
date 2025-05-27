@@ -46,3 +46,51 @@ else {
 
 //image_xscale = 4; // scale up by 4 to fit
 //image_yscale = 4; // scale up by 4 to fit
+
+// ally 1
+// ally ai 1 unit ai trackers // slot 1
+global.ally_1_sm_count = 0;
+global.ally_1_pm_count = 0;
+global.ally_1_rg_count = 0;
+global.ally_1_kn_count = 0;
+global.ally_1_ab_count = 0;
+global.ally_1_hb_count = 0;
+global.ally_1_mg_count = 0;
+global.ally_1_cp_count = 0;
+global.ally_1_nc_count = 0;
+global.ally_1_gh_count = 0;
+
+global.ally_1_can_train_sm = false;
+global.ally_1_can_train_pm = true;
+global.ally_1_can_train_rg = true;
+global.ally_1_can_train_kn = true;
+global.ally_1_can_train_ab = true;
+global.ally_1_can_train_hb = false;
+global.ally_1_can_train_mg = false;
+global.ally_1_can_train_cp = true;
+global.ally_1_can_train_nc = false;
+global.ally_1_can_train_gh = false;
+
+// enemy 2
+// enemy ai 2 unit ai trackers // slot 5
+global.enemy_2_sm_count = 0;
+global.enemy_2_pm_count = 0;
+global.enemy_2_rg_count = 0;
+global.enemy_2_kn_count = 0;
+global.enemy_2_ab_count = 0;
+global.enemy_2_hb_count = 0;
+global.enemy_2_mg_count = 0;
+global.enemy_2_cp_count = 0;
+global.enemy_2_nc_count = 0;
+global.enemy_2_gh_count = 0;
+
+global.enemy_2_can_train_sm = false;
+global.enemy_2_can_train_pm = true;
+global.enemy_2_can_train_rg = false;
+global.enemy_2_can_train_kn = true;
+global.enemy_2_can_train_ab = false;
+global.enemy_2_can_train_hb = false;
+global.enemy_2_can_train_mg = false;
+global.enemy_2_can_train_cp = true;
+global.enemy_2_can_train_nc = false;
+global.enemy_2_can_train_gh = false;
