@@ -8,7 +8,7 @@ if (instance_exists(obj_player_controller)){
 				&& (obj_player_controller.y < vertical_deadzone_bottom)){ // pos is based off top left
 		
 		x_towards = (camera_get_view_x(view_camera[0]) + (camera_width / 2)) + 256; // make camera less "slidey"
-		y_towards = follow_object.y; // we are only going to move camera horizontally
+		//y_towards = follow_object.y; // we are only going to move camera horizontally
 		
 		
 	}
@@ -18,7 +18,7 @@ if (instance_exists(obj_player_controller)){
 				&& (obj_player_controller.y < vertical_deadzone_bottom)){
 		
 		x_towards = (camera_get_view_x(view_camera[0]) + (camera_width / 2)) - 256;
-		y_towards = follow_object.y; // we are only going to move camera horizontally
+		//y_towards = follow_object.y; // we are only going to move camera horizontally
 		
 		
 	}
@@ -41,7 +41,7 @@ if (instance_exists(obj_player_controller)){
 	// do this regardless
 	// move this object towards our target marker
 	x += clamp((x_towards - x)/ease_in_factor,-8,8);
-	y += clamp((y_towards - y)/ease_in_factor,-8,8);
+	//y += clamp((y_towards - y)/ease_in_factor,-8,8);
 	
 	// update and
 	// set camera position 
