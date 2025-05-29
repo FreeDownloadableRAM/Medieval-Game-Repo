@@ -27,6 +27,7 @@
     {"name":"inst_6CDBABB","path":"rooms/rm_lvl_07_alliance_of_arms/rm_lvl_07_alliance_of_arms.yy",},
     {"name":"inst_3791A8AA","path":"rooms/rm_lvl_07_alliance_of_arms/rm_lvl_07_alliance_of_arms.yy",},
     {"name":"inst_2272F573","path":"rooms/rm_lvl_07_alliance_of_arms/rm_lvl_07_alliance_of_arms.yy",},
+    {"name":"inst_48C41BF9","path":"rooms/rm_lvl_07_alliance_of_arms/rm_lvl_07_alliance_of_arms.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -64,6 +65,7 @@
         {"$GMRInstance":"v1","%Name":"inst_6483B083_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6483B083_1_1_1_1_1_1_1","objectId":{"name":"obj_msc_06_player","path":"objects/obj_msc_06_player/obj_msc_06_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":-64.0,},
         {"$GMRInstance":"v1","%Name":"inst_66301B5A_1_1_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_66301B5A_1_1_1_1_1_1_1","objectId":{"name":"obj_ai_strategist_melee_only","path":"objects/obj_ai_strategist_melee_only/obj_ai_strategist_melee_only.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":-64.0,},
         {"$GMRInstance":"v1","%Name":"inst_6CDBABB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6CDBABB","objectId":{"name":"obj_scenery_creator_ground_sand","path":"objects/obj_scenery_creator_ground_sand/obj_scenery_creator_ground_sand.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":-64.0,},
+        {"$GMRInstance":"v1","%Name":"inst_48C41BF9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_48C41BF9","objectId":{"name":"obj_camera_manager","path":"objects/obj_camera_manager/obj_camera_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":-64.0,},
       ],"layers":[],"name":"initial_objects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"projectile_effects","depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"projectile_effects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRLayer":"","%Name":"Buildings","depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
@@ -195,7 +197,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":864,"hspeed":10,"hview":864,"inherit":false,"objectId":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},"vborder":32,"visible":true,"vspeed":10,"wport":1536,"wview":1536,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":32,"hport":864,"hspeed":10,"hview":864,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":10,"wport":1536,"wview":1536,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

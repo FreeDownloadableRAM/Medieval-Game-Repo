@@ -7,7 +7,7 @@ if (object_exists(obj_player_controller) == true){
 	//var _xspd = round(obj_player_controller.x);
 	var _xspd = 0;
 	_cx += _xspd
-	camera_set_view_pos(view_camera[0], _cx, 0);
+	//camera_set_view_pos(view_camera[0], _cx, 0);
 	
 	
 	/*

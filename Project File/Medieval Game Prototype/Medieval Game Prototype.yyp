@@ -378,6 +378,7 @@
     {"id":{"name":"obj_arbalest_enemy","path":"objects/obj_arbalest_enemy/obj_arbalest_enemy.yy",},},
     {"id":{"name":"obj_arbalest","path":"objects/obj_arbalest/obj_arbalest.yy",},},
     {"id":{"name":"obj_army_spawner","path":"objects/obj_army_spawner/obj_army_spawner.yy",},},
+    {"id":{"name":"obj_camera_manager","path":"objects/obj_camera_manager/obj_camera_manager.yy",},},
     {"id":{"name":"obj_castle_base","path":"objects/obj_castle_base/obj_castle_base.yy",},},
     {"id":{"name":"obj_castle_enemy","path":"objects/obj_castle_enemy/obj_castle_enemy.yy",},},
     {"id":{"name":"obj_castle_player","path":"objects/obj_castle_player/obj_castle_player.yy",},},
@@ -1503,7 +1504,6 @@
     {"roomId":{"name":"rm_lvl_02_piercing_winds","path":"rooms/rm_lvl_02_piercing_winds/rm_lvl_02_piercing_winds.yy",},},
     {"roomId":{"name":"rm_lvl_03_ruby_wet_lands","path":"rooms/rm_lvl_03_ruby_wet_lands/rm_lvl_03_ruby_wet_lands.yy",},},
     {"roomId":{"name":"rm_lvl_04_warm_farm_fields","path":"rooms/rm_lvl_04_warm_farm_fields/rm_lvl_04_warm_farm_fields.yy",},},
-    {"roomId":{"name":"rm_lvl_05_city_of_light","path":"rooms/rm_lvl_05_city_of_light/rm_lvl_05_city_of_light.yy",},},
     {"roomId":{"name":"rm_lvl_06_magical_forest","path":"rooms/rm_lvl_06_magical_forest/rm_lvl_06_magical_forest.yy",},},
     {"roomId":{"name":"rm_lvl_07_alliance_of_arms","path":"rooms/rm_lvl_07_alliance_of_arms/rm_lvl_07_alliance_of_arms.yy",},},
     {"roomId":{"name":"rm_lvl_09_portland","path":"rooms/rm_lvl_09_portland/rm_lvl_09_portland.yy",},},
@@ -1521,6 +1521,7 @@
     {"roomId":{"name":"rm_lvl_11_ice_fields","path":"rooms/rm_lvl_11_ice_fields/rm_lvl_11_ice_fields.yy",},},
     {"roomId":{"name":"rm_lvl_12_island","path":"rooms/rm_lvl_12_island/rm_lvl_12_island.yy",},},
     {"roomId":{"name":"rm_lvl_16_tropical_shores","path":"rooms/rm_lvl_16_tropical_shores/rm_lvl_16_tropical_shores.yy",},},
+    {"roomId":{"name":"rm_lvl_05_city_of_light","path":"rooms/rm_lvl_05_city_of_light/rm_lvl_05_city_of_light.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
