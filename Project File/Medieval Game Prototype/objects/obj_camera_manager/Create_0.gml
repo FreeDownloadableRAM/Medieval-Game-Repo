@@ -6,14 +6,14 @@ camera_width = camera_get_view_width(view_camera[0]);
 camera_height = camera_get_view_height(view_camera[0]);
 
 // move camera towards this
-x_towards = x;
-y_towards = y;
+x_towards = camera_width;
+y_towards = camera_height;
 
 // how strong do we want the slow down effect to be?
 ease_in_factor = 25;
 
-x = camera_width * 2;
-
+x = camera_width;
+y = camera_height;
 // control properties
 vertical_deadzone_top = 128;
 vertical_deadzone_bottom = 768;

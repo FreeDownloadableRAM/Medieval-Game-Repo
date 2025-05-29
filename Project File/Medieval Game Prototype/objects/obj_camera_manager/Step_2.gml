@@ -7,31 +7,43 @@ if (instance_exists(obj_player_controller)){
 			&& (obj_player_controller.y > vertical_deadzone_top)
 				&& (obj_player_controller.y < vertical_deadzone_bottom)){ // pos is based off top left
 		
-		x_towards = follow_object.x;
+		x_towards = (camera_get_view_x(view_camera[0]) + (camera_width / 2)) + 256; // make camera less "slidey"
 		y_towards = follow_object.y; // we are only going to move camera horizontally
-	
+		
+		
 	}
 	else if ((obj_player_controller.x < ((camera_get_view_x(view_camera[0])) + 48))
 			&& (obj_player_controller.y > vertical_deadzone_top)
 				&& (obj_player_controller.y < vertical_deadzone_bottom)){
 		
-		x_towards = follow_object.x;
+		x_towards = (camera_get_view_x(view_camera[0]) + (camera_width / 2)) - 256;
 		y_towards = follow_object.y; // we are only going to move camera horizontally
+		
 		
 	}
 	else {
+		
+		
+	}
 	
-	
+	// re center object that chases player mouse if we are too far right or left to prevent latency
+	if (x_towards > (camera_get_view_x(view_camera[0]) + camera_width * 0.5)){
+		x = camera_get_view_x(view_camera[0]) + camera_width / 2;
+		
+	}
+	if (x_towards < (camera_get_view_x(view_camera[0]) + camera_width * 0.5)){
+		x = camera_get_view_x(view_camera[0]) + camera_width / 2;
+		
 	}
 	
 	
 	// do this regardless
-	x += clamp((x_towards - x)/ease_in_factor,-16,16);
-	y += clamp((y_towards - y)/ease_in_factor,-16,16);
+	x += clamp((x_towards - x)/ease_in_factor,-8,8);
+	y += clamp((y_towards - y)/ease_in_factor,-8,8);
+	
 	
 	// set camera position 
 	camera_set_view_pos(view_camera[0], clamp((x - (camera_width * 0.5)),0, 3456 - camera_width),0);
-	
 	
 	/*
 	
