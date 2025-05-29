@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_dbg_dangerous_wildlife",
-    "path":"sprites/spr_dbg_dangerous_wildlife/spr_dbg_dangerous_wildlife.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
