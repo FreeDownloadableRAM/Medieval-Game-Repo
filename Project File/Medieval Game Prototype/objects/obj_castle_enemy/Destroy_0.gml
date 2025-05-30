@@ -69,9 +69,14 @@ else if (room == rm_lvl_14_forest_plains){
 	global.lvl_14_clear = true;
 	
 }
-else if (room == rm_lvl_16_tropical_shores){
+else if (room == rm_lvl_14_forest_plains){
 	// Set clear
-	global.lvl_16_clear = true;
+	global.lvl_14_clear = true;
+	
+}
+else if (room == rm_lvl_15_fertile_coast){
+	// Set clear
+	global.lvl_15_clear = true;
 	
 }
 else if (room == rm_lvl_19_volcano){
