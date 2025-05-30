@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ns_lvl_12",
+  "%Name":"obj_msc_11_player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ns_lvl_12",
+  "name":"obj_msc_11_player",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_children",
-    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_lvl_select/gr_children.yy",
+    "path":"folders/Objects/gr_sounds/gr_music/gr_children.yy",
   },
   "parentObjectId":{
-    "name":"obj_nation_select_generic",
-    "path":"objects/obj_nation_select_generic/obj_nation_select_generic.yy",
+    "name":"obj_generic_music_player",
+    "path":"objects/obj_generic_music_player/obj_generic_music_player.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_lvl_12_n",
-    "path":"sprites/spr_lvl_12_n/spr_lvl_12_n.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

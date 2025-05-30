@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ns_lvl_12",
+  "%Name":"obj_ns_lvl_14",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ns_lvl_12",
+  "name":"obj_ns_lvl_14",
   "overriddenProperties":[],
   "parent":{
     "name":"gr_children",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lvl_12_n",
-    "path":"sprites/spr_lvl_12_n/spr_lvl_12_n.yy",
+    "name":"spr_lvl_14_n",
+    "path":"sprites/spr_lvl_14_n/spr_lvl_14_n.yy",
   },
   "spriteMaskId":null,
   "visible":true,

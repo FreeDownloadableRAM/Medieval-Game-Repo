@@ -33,7 +33,8 @@ else {
 d_this_n_info = false;
 
 // Can we select this level?
-if (global.lvl_10_clear == true){
+if (global.lvl_9_clear == true || global.lvl_10_clear == true
+		|| global.lvl_11_clear == true || global.lvl_12_clear == true || global.lvl_13_clear == true){
 	// If we cleared any of these levels, we can play this one
 	can_play_lvl = true;
 }
@@ -47,50 +48,3 @@ else {
 //image_xscale = 4; // scale up by 4 to fit
 //image_yscale = 4; // scale up by 4 to fit
 
-// ally 1
-// ally ai 1 unit ai trackers // slot 1
-global.ally_1_sm_count = 0;
-global.ally_1_pm_count = 0;
-global.ally_1_rg_count = 0;
-global.ally_1_kn_count = 0;
-global.ally_1_ab_count = 0;
-global.ally_1_hb_count = 0;
-global.ally_1_mg_count = 0;
-global.ally_1_cp_count = 0;
-global.ally_1_nc_count = 0;
-global.ally_1_gh_count = 0;
-
-global.ally_1_can_train_sm = false;
-global.ally_1_can_train_pm = true;
-global.ally_1_can_train_rg = true;
-global.ally_1_can_train_kn = true;
-global.ally_1_can_train_ab = false;
-global.ally_1_can_train_hb = false;
-global.ally_1_can_train_mg = false;
-global.ally_1_can_train_cp = false;
-global.ally_1_can_train_nc = false;
-global.ally_1_can_train_gh = false;
-
-// enemy 2
-// enemy ai 2 unit ai trackers // slot 5
-global.enemy_2_sm_count = 0;
-global.enemy_2_pm_count = 0;
-global.enemy_2_rg_count = 0;
-global.enemy_2_kn_count = 0;
-global.enemy_2_ab_count = 0;
-global.enemy_2_hb_count = 0;
-global.enemy_2_mg_count = 0;
-global.enemy_2_cp_count = 0;
-global.enemy_2_nc_count = 0;
-global.enemy_2_gh_count = 0;
-
-global.enemy_2_can_train_sm = true;
-global.enemy_2_can_train_pm = true;
-global.enemy_2_can_train_rg = true;
-global.enemy_2_can_train_kn = false;
-global.enemy_2_can_train_ab = false;
-global.enemy_2_can_train_hb = false;
-global.enemy_2_can_train_mg = false;
-global.enemy_2_can_train_cp = false;
-global.enemy_2_can_train_nc = false;
-global.enemy_2_can_train_gh = false;

@@ -1,10 +1,10 @@
 /// @description Nation Icon Properties
 // Here we set the sprites
-icon_nation = spr_lvl_16_n;
-icon_nation_hlight = spr_lvl_16_nh;
-lvl_dstnation = rm_lvl_16_tropical_shores;
-icon_nation_cmplt = spr_lvl_16_cmplt;
-lvl_complete = global.lvl_16_clear;
+icon_nation = spr_lvl_13_n;
+icon_nation_hlight = spr_lvl_13_nh;
+lvl_dstnation = rm_lvl_13_arctic_snow;
+icon_nation_cmplt = spr_lvl_13_cmplt;
+lvl_complete = global.lvl_13_clear;
 
 sprite_index = spr_lvl_01_n; // by default, in step, we will use the defined sprites from above
 
@@ -15,7 +15,7 @@ freeze_menu_slct = true;
 alarm_set(0,60);
 
 // Nation Info
-n_flag = spr_lvl_16_flag; 
+n_flag = spr_lvl_13_flag; 
 
 // unit unlock info
 n_unit_unlock = spr_dbg_invisible;
@@ -23,7 +23,7 @@ n_unit_lock_icon = spr_dbg_invisible;
 n_gamemode = 0;
 
 // is unit unlocked? if so, set sub image to the unlock frame
-if (global.lvl_7_clear == true || global.lvl_14_clear == true){
+if (global.lvl_13_clear == true){
 	n_is_unit_unlocked = 0;
 }
 else {
@@ -33,8 +33,7 @@ else {
 d_this_n_info = false;
 
 // Can we select this level?
-if (global.lvl_7_clear == true || global.lvl_9_clear == true || 
-		global.lvl_14_clear == true || global.lvl_15_clear == true || global.lvl_18_clear == true){
+if (global.lvl_12_clear == true || global.lvl_14_clear == true){
 	// If we cleared any of these levels, we can play this one
 	can_play_lvl = true;
 }

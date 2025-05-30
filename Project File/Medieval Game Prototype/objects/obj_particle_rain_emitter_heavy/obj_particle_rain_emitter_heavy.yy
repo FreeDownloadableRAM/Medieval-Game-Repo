@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ns_lvl_12",
+  "%Name":"obj_particle_rain_emitter_heavy",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ns_lvl_12",
+  "name":"obj_particle_rain_emitter_heavy",
   "overriddenProperties":[],
   "parent":{
-    "name":"gr_children",
-    "path":"folders/Objects/gr_user_control/gr_user_interface/gr_menus/gr_lvl_select/gr_children.yy",
+    "name":"gr_particle_game_objects",
+    "path":"folders/Objects/gr_debug/gr_gameplay_objects/gr_particle_game_objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_nation_select_generic",
-    "path":"objects/obj_nation_select_generic/obj_nation_select_generic.yy",
+    "name":"obj_particle_rain_emitter_light",
+    "path":"objects/obj_particle_rain_emitter_light/obj_particle_rain_emitter_light.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_lvl_12_n",
-    "path":"sprites/spr_lvl_12_n/spr_lvl_12_n.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
