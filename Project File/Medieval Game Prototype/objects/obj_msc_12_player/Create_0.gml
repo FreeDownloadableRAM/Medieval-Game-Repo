@@ -16,7 +16,7 @@ track_length = ((amount_of_bars * beats_p_bar) * (60 / music_bpm)) * 60;
 track_timer = track_length;
 
 // Audio track to play
-music_track = snd_msc_09_we_travel_at_night_loopable;
+music_track = snd_msc_12_enemys_last_stand;
 
 
 // play music track

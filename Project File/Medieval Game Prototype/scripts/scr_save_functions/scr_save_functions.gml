@@ -22,6 +22,12 @@ function save_game(){
 		lvl_10_clear : global.lvl_10_clear,
 		lvl_11_clear : global.lvl_11_clear,
 		lvl_12_clear : global.lvl_12_clear,
+		lvl_13_clear : global.lvl_13_clear,
+		lvl_14_clear : global.lvl_14_clear,
+		lvl_15_clear : global.lvl_15_clear,
+		lvl_16_clear : global.lvl_16_clear,
+		lvl_17_clear : global.lvl_17_clear,
+		lvl_18_clear : global.lvl_18_clear,
 		
 		// options trackers
 		music_volume : global.music_amp_decimal,
@@ -72,6 +78,12 @@ function load_game(){
 		global.lvl_10_clear = _struct.lvl_10_clear;
 		global.lvl_11_clear = _struct.lvl_11_clear;
 		global.lvl_12_clear = _struct.lvl_12_clear;
+		global.lvl_13_clear = _struct.lvl_13_clear;
+		global.lvl_14_clear = _struct.lvl_14_clear;
+		global.lvl_15_clear = _struct.lvl_15_clear;
+		global.lvl_16_clear = _struct.lvl_16_clear;
+		global.lvl_17_clear = _struct.lvl_17_clear;
+		global.lvl_18_clear = _struct.lvl_18_clear;
 		
 		// options
 		// music
