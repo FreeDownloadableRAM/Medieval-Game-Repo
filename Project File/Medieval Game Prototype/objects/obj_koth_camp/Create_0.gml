@@ -1,5 +1,5 @@
 // King of the Hill Properties
-score_threshold = 100;
+score_threshold = 50;
 score_timer = 3; // every 3 seconds, add points
 score_increment = 1;
 
