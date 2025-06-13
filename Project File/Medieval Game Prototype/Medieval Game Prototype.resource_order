@@ -1249,6 +1249,7 @@
     {"name":"spr_tall_grass_3","order":6,"path":"sprites/spr_tall_grass_3/spr_tall_grass_3.yy",},
     {"name":"spr_ui_ai_ordr_but_col_pal","order":5,"path":"sprites/spr_ui_ai_ordr_but_col_pal/spr_ui_ai_ordr_but_col_pal.yy",},
     {"name":"spr_ui_ai_ordr_but_def_hl","order":1,"path":"sprites/spr_ui_ai_ordr_but_def_hl/spr_ui_ai_ordr_but_def_hl.yy",},
+    {"name":"spr_ui_ai_ordr_but_def_slct","order":6,"path":"sprites/spr_ui_ai_ordr_but_def_slct/spr_ui_ai_ordr_but_def_slct.yy",},
     {"name":"spr_ui_ai_ordr_but_ordr_hl","order":4,"path":"sprites/spr_ui_ai_ordr_but_ordr_hl/spr_ui_ai_ordr_but_ordr_hl.yy",},
     {"name":"spr_ui_ai_ordr_but_ordr_slct","order":3,"path":"sprites/spr_ui_ai_ordr_but_ordr_slct/spr_ui_ai_ordr_but_ordr_slct.yy",},
     {"name":"spr_ui_ai_ordr_but_ordr","order":2,"path":"sprites/spr_ui_ai_ordr_but_ordr/spr_ui_ai_ordr_but_ordr.yy",},

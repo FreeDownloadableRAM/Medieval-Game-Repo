@@ -4207,5 +4207,9 @@ else {
 	
 	}
 	
+	// for ui updates
+	ui_ai_order = global.ally_1_order;
+	
+	
 }
 

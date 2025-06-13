@@ -275,3 +275,16 @@ global.ally_1_mg_count = 0;
 global.ally_1_cp_count = 0;
 global.ally_1_nc_count = 0;
 global.ally_1_gh_count = 0;
+
+// UI Placement
+ui_placement_offset_x = 448; 
+ui_placement_offset_x_atk = 512; 
+ui_placement_offset_x_retr = 384; 
+ui_placement_offset_y = 816;
+
+ui_ai_order = 0;
+
+// colour palette properties
+colour_palette_index = global.slot_two_colour; // 0 def, 1-3 allies, 4 enemy def, 5-7 enemy allies
+
+col_pal_ui = spr_ui_ai_ordr_but_col_pal;
