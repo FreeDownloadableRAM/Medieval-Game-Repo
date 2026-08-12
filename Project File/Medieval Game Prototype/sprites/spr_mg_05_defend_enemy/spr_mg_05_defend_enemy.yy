@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_mg_05_defend_enemy",
   "bboxMode":2,
   "bbox_bottom":127,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2de444a4-31be-44ff-81f4-79aa5d9e252a","name":"2de444a4-31be-44ff-81f4-79aa5d9e252a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8b85b205-3b8e-4b83-a8b0-a79d14663d50","name":"8b85b205-3b8e-4b83-a8b0-a79d14663d50","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d7fe456a-1e74-4e7e-8713-e981b27ade7a","name":"d7fe456a-1e74-4e7e-8713-e981b27ade7a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3e9a37ea-db19-4aa9-ab5d-d3c705841da2","name":"3e9a37ea-db19-4aa9-ab5d-d3c705841da2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"28600973-94d0-4cc8-92eb-ae0105af1ae4","name":"28600973-94d0-4cc8-92eb-ae0105af1ae4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5d0e7835-a63f-4671-a54a-cf36ee86dc17","name":"5d0e7835-a63f-4671-a54a-cf36ee86dc17","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6b83ed6d-65ae-4849-af95-f288aaca7855","name":"6b83ed6d-65ae-4849-af95-f288aaca7855","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b84bed86-095c-4926-a2fe-7919ca06bf0b","name":"b84bed86-095c-4926-a2fe-7919ca06bf0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2de444a4-31be-44ff-81f4-79aa5d9e252a","name":"2de444a4-31be-44ff-81f4-79aa5d9e252a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8b85b205-3b8e-4b83-a8b0-a79d14663d50","name":"8b85b205-3b8e-4b83-a8b0-a79d14663d50","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d7fe456a-1e74-4e7e-8713-e981b27ade7a","name":"d7fe456a-1e74-4e7e-8713-e981b27ade7a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3e9a37ea-db19-4aa9-ab5d-d3c705841da2","name":"3e9a37ea-db19-4aa9-ab5d-d3c705841da2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"28600973-94d0-4cc8-92eb-ae0105af1ae4","name":"28600973-94d0-4cc8-92eb-ae0105af1ae4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5d0e7835-a63f-4671-a54a-cf36ee86dc17","name":"5d0e7835-a63f-4671-a54a-cf36ee86dc17","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6b83ed6d-65ae-4849-af95-f288aaca7855","name":"6b83ed6d-65ae-4849-af95-f288aaca7855","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b84bed86-095c-4926-a2fe-7919ca06bf0b","name":"b84bed86-095c-4926-a2fe-7919ca06bf0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -39,7 +39,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_mg_05_defend_enemy",
     "autoRecord":true,
     "backdropHeight":768,
@@ -75,30 +75,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2de444a4-31be-44ff-81f4-79aa5d9e252a","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8e5bb6bc-f27d-40f5-ad19-9ab1bca05707","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8b85b205-3b8e-4b83-a8b0-a79d14663d50","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"702fa4c9-6dc2-467c-afe2-6e13556d03af","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d7fe456a-1e74-4e7e-8713-e981b27ade7a","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cd739a6f-1450-4e24-bf84-c50153bdbc48","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3e9a37ea-db19-4aa9-ab5d-d3c705841da2","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f9babcb0-75ed-413c-96f3-be79968f7a88","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"28600973-94d0-4cc8-92eb-ae0105af1ae4","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cca2a1d0-f99c-446a-a620-257148922165","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d0e7835-a63f-4671-a54a-cf36ee86dc17","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"89f79280-3dbe-4525-89c3-212bbaf54b99","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b83ed6d-65ae-4849-af95-f288aaca7855","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"93740094-8a49-4992-b690-f76667e420b3","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b84bed86-095c-4926-a2fe-7919ca06bf0b","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"88e558c4-4a79-41f2-b841-8ffa70b42400","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2de444a4-31be-44ff-81f4-79aa5d9e252a","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8e5bb6bc-f27d-40f5-ad19-9ab1bca05707","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8b85b205-3b8e-4b83-a8b0-a79d14663d50","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"702fa4c9-6dc2-467c-afe2-6e13556d03af","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d7fe456a-1e74-4e7e-8713-e981b27ade7a","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cd739a6f-1450-4e24-bf84-c50153bdbc48","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3e9a37ea-db19-4aa9-ab5d-d3c705841da2","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f9babcb0-75ed-413c-96f3-be79968f7a88","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"28600973-94d0-4cc8-92eb-ae0105af1ae4","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cca2a1d0-f99c-446a-a620-257148922165","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d0e7835-a63f-4671-a54a-cf36ee86dc17","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"89f79280-3dbe-4525-89c3-212bbaf54b99","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b83ed6d-65ae-4849-af95-f288aaca7855","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"93740094-8a49-4992-b690-f76667e420b3","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b84bed86-095c-4926-a2fe-7919ca06bf0b","path":"sprites/spr_mg_05_defend_enemy/spr_mg_05_defend_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"88e558c4-4a79-41f2-b841-8ffa70b42400","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

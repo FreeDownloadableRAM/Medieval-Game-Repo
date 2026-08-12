@@ -389,7 +389,7 @@ global.knight_atk_duration = 180;
 global.unit_knight_cost = 125;
 
 // Arbalest
-global.arbalest_atk = 30; 
+global.arbalest_atk = 40; 
 global.arbalest_atk_duration = (32/12) * 60; //32 frames. 12 fps, 60 fps
 global.unit_arbalest_cost = 175;
 global.arbalest_bolt_weight = 0.005; // kg

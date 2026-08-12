@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_msc_11",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":320,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":9,
   "conversionMode":0,
-  "duration":117.37948,
+  "duration":117.3795,
+  "exportDir":"",
   "name":"snd_msc_11",
   "parent":{
     "name":"gr_battle_music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_msc_11.wav",
-  "type":0,
   "volume":1.0,
 }

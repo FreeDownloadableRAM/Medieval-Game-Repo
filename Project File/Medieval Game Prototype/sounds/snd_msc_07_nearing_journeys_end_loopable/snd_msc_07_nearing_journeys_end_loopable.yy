@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_msc_07_nearing_journeys_end_loopable",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":320,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":9,
   "conversionMode":0,
   "duration":176.56119,
+  "exportDir":"",
   "name":"snd_msc_07_nearing_journeys_end_loopable",
   "parent":{
     "name":"gr_battle_music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_msc_07_nearing_journeys_end_loopable.wav",
-  "type":0,
   "volume":1.0,
 }

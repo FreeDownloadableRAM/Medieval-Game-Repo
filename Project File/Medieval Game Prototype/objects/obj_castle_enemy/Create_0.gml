@@ -1,6 +1,6 @@
 // Castle Properties
-castle_health = global.player_castle_health;
-castle_health_max = global.player_castle_health;
+castle_health = global.starting_player_castle_health_enemy;
+castle_health_max = global.starting_player_castle_health_enemy;
 
 // Defence Properties
 castle_slash_defence = 0.5; 

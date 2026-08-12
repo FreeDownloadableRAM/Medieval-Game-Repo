@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_nc_06_death_1_enemy",
   "bboxMode":0,
   "bbox_bottom":127,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0ab6126d-8e0b-4623-8aed-fa55c88cfbf9","name":"0ab6126d-8e0b-4623-8aed-fa55c88cfbf9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5d8c6926-5359-48d6-b2f0-b2798652d417","name":"5d8c6926-5359-48d6-b2f0-b2798652d417","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ed56a4aa-4de7-4037-b0ae-fdb56c49983d","name":"ed56a4aa-4de7-4037-b0ae-fdb56c49983d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cd2d4324-5feb-40e7-9055-4604f91b42d0","name":"cd2d4324-5feb-40e7-9055-4604f91b42d0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e171ca6d-0edf-426b-a3ce-fe83be5a33bd","name":"e171ca6d-0edf-426b-a3ce-fe83be5a33bd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7f6f2805-f0be-4087-8eaa-a95dc961c210","name":"7f6f2805-f0be-4087-8eaa-a95dc961c210","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2896f0bf-ce74-480a-93f5-12f57cc29dfe","name":"2896f0bf-ce74-480a-93f5-12f57cc29dfe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0066fb57-a72b-4205-953a-ed88d14627fc","name":"0066fb57-a72b-4205-953a-ed88d14627fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0ab6126d-8e0b-4623-8aed-fa55c88cfbf9","name":"0ab6126d-8e0b-4623-8aed-fa55c88cfbf9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5d8c6926-5359-48d6-b2f0-b2798652d417","name":"5d8c6926-5359-48d6-b2f0-b2798652d417","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ed56a4aa-4de7-4037-b0ae-fdb56c49983d","name":"ed56a4aa-4de7-4037-b0ae-fdb56c49983d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cd2d4324-5feb-40e7-9055-4604f91b42d0","name":"cd2d4324-5feb-40e7-9055-4604f91b42d0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e171ca6d-0edf-426b-a3ce-fe83be5a33bd","name":"e171ca6d-0edf-426b-a3ce-fe83be5a33bd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7f6f2805-f0be-4087-8eaa-a95dc961c210","name":"7f6f2805-f0be-4087-8eaa-a95dc961c210","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2896f0bf-ce74-480a-93f5-12f57cc29dfe","name":"2896f0bf-ce74-480a-93f5-12f57cc29dfe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0066fb57-a72b-4205-953a-ed88d14627fc","name":"0066fb57-a72b-4205-953a-ed88d14627fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -39,7 +39,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_nc_06_death_1_enemy",
     "autoRecord":true,
     "backdropHeight":768,
@@ -75,30 +75,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0ab6126d-8e0b-4623-8aed-fa55c88cfbf9","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"087305e4-e869-4b98-96b3-81e8b5232c5a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d8c6926-5359-48d6-b2f0-b2798652d417","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d82c1fea-0309-4132-a110-76d3b87b1724","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed56a4aa-4de7-4037-b0ae-fdb56c49983d","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"801b5908-6186-4333-a85c-9f6e0e08bd83","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd2d4324-5feb-40e7-9055-4604f91b42d0","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"188a09f3-fdcd-4db6-9fd1-1815dde97ee4","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e171ca6d-0edf-426b-a3ce-fe83be5a33bd","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"913173b9-2705-48fd-ba49-82f05e0262fd","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f6f2805-f0be-4087-8eaa-a95dc961c210","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3a49300d-46a1-4218-a7bd-2b16ee6e6eb6","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2896f0bf-ce74-480a-93f5-12f57cc29dfe","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0cb77e48-1ecb-4ac2-a99c-95fb70226c75","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0066fb57-a72b-4205-953a-ed88d14627fc","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"98fce1a9-2b61-44dd-b944-35301cdfc066","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0ab6126d-8e0b-4623-8aed-fa55c88cfbf9","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"087305e4-e869-4b98-96b3-81e8b5232c5a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5d8c6926-5359-48d6-b2f0-b2798652d417","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d82c1fea-0309-4132-a110-76d3b87b1724","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed56a4aa-4de7-4037-b0ae-fdb56c49983d","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"801b5908-6186-4333-a85c-9f6e0e08bd83","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd2d4324-5feb-40e7-9055-4604f91b42d0","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"188a09f3-fdcd-4db6-9fd1-1815dde97ee4","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e171ca6d-0edf-426b-a3ce-fe83be5a33bd","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"913173b9-2705-48fd-ba49-82f05e0262fd","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f6f2805-f0be-4087-8eaa-a95dc961c210","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3a49300d-46a1-4218-a7bd-2b16ee6e6eb6","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2896f0bf-ce74-480a-93f5-12f57cc29dfe","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0cb77e48-1ecb-4ac2-a99c-95fb70226c75","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0066fb57-a72b-4205-953a-ed88d14627fc","path":"sprites/spr_nc_06_death_1_enemy/spr_nc_06_death_1_enemy.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"98fce1a9-2b61-44dd-b944-35301cdfc066","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
